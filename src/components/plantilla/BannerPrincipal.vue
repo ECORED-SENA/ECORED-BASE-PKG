@@ -22,14 +22,15 @@
 </template>
 
 <script>
-import { global } from '../../config/global'
 import mixins from '../../mixins/plantillaMixins'
 export default {
   name: 'BannerPrincipal',
   mixins: [mixins],
-  data: () => ({
-    globalData: global,
-  }),
+  computed: {
+    globalData() {
+      return this.$config.global
+    },
+  },
 }
 </script>
 

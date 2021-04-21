@@ -36,7 +36,6 @@ section
 
 </template>
 <script>
-import { menuPrincipal } from '../config/global'
 import BannerPrincipal from '../components/plantilla/BannerPrincipal'
 import CreditosComp from '../components/plantilla/CreditosComp'
 import Footer from '../components/plantilla/Footer'
@@ -47,10 +46,10 @@ export default {
     CreditosComp,
     Footer,
   },
-  data: () => ({
-    menuPrincipalData: menuPrincipal,
-  }),
   computed: {
+    menuPrincipalData() {
+      return this.$config.menuPrincipal
+    },
     desarrolloContenidosData() {
       const allMenuData = [
         ...this.menuPrincipalData.menu,

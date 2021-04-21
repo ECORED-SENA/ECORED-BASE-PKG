@@ -24,17 +24,16 @@
 </template>
 
 <script>
-import { creditos } from '../../config/global'
 import CreditosItem from './CreditosItem'
 export default {
   name: 'CreditosComp',
   components: {
     CreditosItem,
   },
-  data: () => ({
-    creditosData: creditos,
-  }),
   computed: {
+    creditosData() {
+      return this.$config.creditos
+    },
     contenidoInstruccional() {
       const contenido = this.creditosData.contenidoInstruccional
       const half = Math.round(contenido.length / 2)

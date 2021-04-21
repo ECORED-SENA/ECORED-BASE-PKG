@@ -30,6 +30,9 @@ export default {
   name: 'SlyderB',
   components: { ScrollHorizontal },
   mixins: [slyderMixins],
+  mounted() {
+    this.selected = this.getId(0)
+  },
 }
 </script>
 

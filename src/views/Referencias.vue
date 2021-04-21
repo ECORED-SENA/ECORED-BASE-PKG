@@ -9,17 +9,16 @@
       hr.my-3
 </template>
 <script>
-import { referencias } from '../config/global'
 import BannerInterno from '../components/plantilla/BannerInterno'
 export default {
   name: 'Referencias',
   components: {
     BannerInterno,
   },
-  data: () => ({
-    referenciasData: referencias,
-  }),
   computed: {
+    referenciasData() {
+      return this.$config.referencias
+    },
     orderedData() {
       const ArrayOrdered = [...this.referenciasData].sort((a, b) => {
         const afl = a.referencia.split(' ')[0].toLowerCase()

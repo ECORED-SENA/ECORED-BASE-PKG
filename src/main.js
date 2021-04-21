@@ -12,6 +12,9 @@ import './styles/_styles.sass'
 import '@/components/GlobalComponents'
 import '@/mixins/globalMixins'
 
+import config from './config/global'
+Vue.prototype.$config = config
+
 Vue.config.productionTip = false
 
 new Vue({

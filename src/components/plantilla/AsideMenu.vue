@@ -56,14 +56,15 @@ aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
 </template>
 
 <script>
-import { menuPrincipal } from '../../config/global'
 export default {
   name: 'AsideMenu',
-  data: () => ({
-    menuData: menuPrincipal && menuPrincipal.menu,
-    subMenuData: menuPrincipal && menuPrincipal.subMenu,
-  }),
   computed: {
+    menuData() {
+      return this.$config.menuPrincipal.menu
+    },
+    subMenuData() {
+      return this.$config.menuPrincipal.subMenu
+    },
     menuOpen() {
       return this.$store.getters.isMenuOpen
     },

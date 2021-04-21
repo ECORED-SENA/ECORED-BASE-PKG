@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { global } from '../../config/global'
 export default {
   name: 'BannerInterno',
   props: {
@@ -22,9 +21,12 @@ export default {
       default: '',
     },
   },
-  data: () => ({
-    globalData: global,
-  }),
+  data: () => ({}),
+  computed: {
+    globalData() {
+      return this.$config.global
+    },
+  },
 }
 </script>
 

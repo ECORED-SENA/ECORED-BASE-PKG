@@ -22,15 +22,16 @@
 </template>
 
 <script>
-import { menuPrincipal } from '../../config/global'
 export default {
   name: 'BarraAvance',
   data: () => ({
-    menuData: menuPrincipal.menu,
     cursoSelection: null,
     idSelecctionArr: [],
   }),
   computed: {
+    menuData() {
+      return this.$config.menuPrincipal.menu
+    },
     showBarra() {
       const enIntro = this.$route.fullPath.includes('/introduccion')
       const enCurso = this.$route.fullPath.includes('/curso')

@@ -27,15 +27,14 @@ header.header.container-fluid
 </template>
 
 <script>
-import { global } from '../../config/global'
 import plantillaMixins from '../../mixins/plantillaMixins'
 export default {
   name: 'Header',
   mixins: [plantillaMixins],
-  data: () => ({
-    globalData: global,
-  }),
   computed: {
+    globalData() {
+      return this.$config && this.$config.global
+    },
     isInicio() {
       return this.$route.name === 'inicio'
     },

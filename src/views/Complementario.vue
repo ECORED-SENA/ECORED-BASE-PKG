@@ -20,16 +20,17 @@
 
 </template>
 <script>
-import { complementario } from '../config/global'
 import BannerInterno from '../components/plantilla/BannerInterno'
 export default {
   name: 'MaterialComplementario',
   components: {
     BannerInterno,
   },
-  data: () => ({
-    complementarioData: complementario,
-  }),
+  computed: {
+    complementarioData() {
+      return this.$config.complementario
+    },
+  },
 }
 </script>
 
