@@ -37,8 +37,8 @@ export default {
       this.elements = this.$slots.default.map((elemento, index) => ({
         id: this.mainId + index + 1,
         html: elemento.elm.outerHTML,
-        titulo: elemento.data?.attrs?.titulo,
-        icono: elemento.data?.attrs?.icono,
+        titulo: elemento.data && elemento.data.attrs && elemento.data.attrs.titulo,
+        icono: elemento.data && elemento.data.attrs && elemento.data.attrsicono,
       }))
       this.selected = this.selected > 0 ? this.selected : this.elements[0].id
       this.stateStr = this.getStateStr()

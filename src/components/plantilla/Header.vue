@@ -28,10 +28,10 @@ header.header.container-fluid
 
 <script>
 import { global } from '../../config/global'
-import mixins from '../../mixins/plantillaMixins'
+import plantillaMixins from '../../mixins/plantillaMixins'
 export default {
   name: 'Header',
-  mixins: [mixins],
+  mixins: [plantillaMixins],
   data: () => ({
     globalData: global,
   }),
