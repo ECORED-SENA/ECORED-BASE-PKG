@@ -37,7 +37,7 @@ export default {
 <style lang="sass" scoped>
 .banner-principal
   p, h1
-    color: $white
+    color: $color-banner-text
 
   .tarjeta
     background-color: $color-curso-a
