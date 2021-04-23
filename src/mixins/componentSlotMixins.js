@@ -39,7 +39,8 @@ export default {
         html: elemento.elm.outerHTML,
         titulo:
           elemento.data && elemento.data.attrs && elemento.data.attrs.titulo,
-        icono: elemento.data && elemento.data.attrs && elemento.data.attrsicono,
+        icono:
+          elemento.data && elemento.data.attrs && elemento.data.attrs.icono,
       }))
       this.selected = this.selected > 0 ? this.selected : this.elements[0].id
       this.stateStr = this.getStateStr()
