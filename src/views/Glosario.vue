@@ -14,18 +14,20 @@
 
 <script>
 import BannerInterno from '../components/plantilla/BannerInterno'
+import plantillaMixins from '../mixins/plantillaMixins'
 export default {
   name: 'Glosario',
   components: {
     BannerInterno,
   },
+  mixins: [plantillaMixins],
   computed: {
     glosarioData() {
       return this.$config.glosario
     },
     orderedData() {
       const sortedData = [...this.glosarioData].reduce((r, e) => {
-        const letra = e.termino[0].toLowerCase()
+        const letra = this.quitarAcentos(e.termino[0].toLowerCase())
         if (!r[letra]) r[letra] = { letra, terminos: [e] }
         else r[letra].terminos.push(e)
         return r

@@ -1,10 +1,10 @@
 <template lang="pug">
 .banner-principal
-  .container.tarjeta.p-4.ps-sm-5.pe-sm-5.pt-sm-5.pb-0(
+  .container.tarjeta.p-4.p-sm-5.pb-0(
     :style="{'background-image': `url(${globalData.fondoBannerPrincipal})`}"
   )
-    .row.justify-content-around
-      .col-lg-7.col-xxl-5.banner-principal__info.pb-4.pb-sm-5
+    .row.justify-content-around.align-items-center
+      .col-lg-7.col-xxl-5.banner-principal__info
         //- .banner-principal__programa
         //-   span.text-small.insignia.me-2 Programa
         //-   p.text-small.mb-0 {{globalData.programaFormacion}}

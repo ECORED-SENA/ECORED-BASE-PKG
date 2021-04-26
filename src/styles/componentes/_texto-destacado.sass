@@ -1,3 +1,20 @@
+@mixin comillas
+  position: relative
+  &:before, &:after
+    content: ''
+    display: inline-block
+    width: 36px
+    height: 31px
+    background-image: url('../assets/componentes/icon-bloque-texto-c.svg')
+    background-repeat: no-repeat
+  &:before
+    margin-right: 15px
+    transform: rotate(180deg)
+  &:after
+    margin-left: 15px
+    vertical-align: top
+    margin-top: 5px
+
 .bloque-texto-a
   background-color: $color-sistema-d
   position: relative
@@ -32,24 +49,8 @@
     bottom: 0
     left: 35%
     right: 0
-  & > div
-    position: relative
   &__texto
-    &:before, &:after
-      content: ''
-      display: inline-block
-      width: 36px
-      height: 31px
-      flex-shrink: 0
-      background-image: url('../assets/componentes/icon-bloque-texto-c.svg')
-      background-repeat: no-repeat
-    &:before
-      margin-right: 15px
-      transform: rotate(180deg)
-    &:after
-      margin-left: 15px
-      align-self: flex-end
-
+    @include comillas
 
 
 .bloque-texto-c
@@ -70,3 +71,72 @@
     background-color: $color-curso-b
     position: relative
     left: calc(100% - 30px)
+
+.bloque-texto-d
+  border-top: 1px solid $color-curso-b
+  @extend .bloque-texto-b
+  &__texto
+    @include comillas
+  &__autor
+    text-align: right
+    position: relative
+
+.bloque-texto-e
+  background-color: $color-curso-d
+  &__texto
+    @include comillas
+  &__autor
+    @extend .bloque-texto-d__autor  
+
+.bloque-texto-f
+  display: flex;
+  flex-direction: column
+  position: relative
+  padding-bottom: 50px
+  &:before
+    content: ''
+    display: block
+    background-color: $color-curso-d
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 50px
+  &__comillas
+    @include comillas
+    position: initial
+    &:before, &:after
+      position: absolute
+
+    &:before
+      top: 0
+      left: 40px
+      margin: 0
+      transform: translate(-50%,-50%) rotate(180deg)
+
+    &:after
+      top: calc(100% - 50px)
+      right: 10px
+      margin: 0
+      transform: translate(-50%,-50%)
+  &__texto
+    position: relative
+  
+  &__autor
+    text-align: center
+    position: relative
+
+  &__avatar
+    position: relative
+    height: 50px
+    &__img
+      background-color: $white
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100px
+      border-radius: 50%
+      overflow: hidden
+      border: 5px solid $white
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3)
