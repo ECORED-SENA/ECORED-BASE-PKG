@@ -5,8 +5,8 @@ p
   a
     text-decoration: underline 
 .boton
-  background-color: $btn-bg-color
-  color: $btn-color !important
+  background-color: $color-btn-fondo
+  color: $color-btn-texto !important
   padding: 10px 15px
   border-radius: $base-border-radius
   display: inline-block
@@ -15,13 +15,13 @@ p
   transform: scale(1)
 
   span, i
-    color: $btn-color
+    color: $color-btn-texto
 
   span + i
     margin-left: 8px
 
   &:hover
-    color: $btn-color
+    color: $color-btn-texto
     transform: scale(1.05)
 
   &--sm
@@ -29,8 +29,9 @@ p
     padding: 5px 10px
 
   &--b
-    background-color: $color-curso-b
+    background-color: $color-btn-b-fondo
+    color: $color-btn-b-texto
     span, i
-      color: $white
+      color: $color-btn-b-texto
     &:active, &:focus, &:hover
-      background-color: $color-curso-b
+      background-color: $color-btn-b-fondo

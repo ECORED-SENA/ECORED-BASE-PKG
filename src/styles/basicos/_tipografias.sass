@@ -44,7 +44,7 @@
   &__numero
     min-width: 45px
     height: 45px
-    background-color: $color-curso-b
+    background-color: $color-acento-contenido
     margin-right: 15px
     position: relative
 
@@ -65,7 +65,7 @@
     display: block
     height: 3px
     width: 140px
-    border-left: solid 50px $color-curso-b
+    border-left: solid 50px $color-acento-contenido
     background-color: $color-sistema-f
 
 
@@ -74,8 +74,8 @@
   margin-right: 5px
   &--morada
     @extend .etiqueta
-    color: $white
-    background-color: $color-curso-a
+    color: $color-etiqueta-texto
+    background-color: $color-etiqueta-fondo
 
 .cajon
   position: relative
@@ -90,15 +90,15 @@
 
   &--azul
     @extend .cajon
-    background-color: lighten($color-curso-d, 20%)
+    background-color: lighten($color-secundario, 20%)
     &:before
-      background-color: $color-curso-d
+      background-color: $color-secundario
 
   &--rojo
     @extend .cajon
-    background-color: lighten($color-curso-b, 30%)
+    background-color: lighten($color-acento-contenido, 30%)
     &:before
-      background-color: $color-curso-b
+      background-color: $color-acento-contenido
 
 .lista-ol
   li
@@ -118,7 +118,7 @@
     li
       display: flex
     &__vineta
-      background-color: $color-curso-b
+      background-color: $color-acento-contenido
       display: inline-block
       min-width: 24px
       height: 24px
@@ -154,7 +154,7 @@
   &--color
     @extend .lista-ul
     i
-      color: $color-curso-b
+      color: $color-acento-contenido
 
 
 

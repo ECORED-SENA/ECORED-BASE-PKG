@@ -89,7 +89,7 @@ export default {
     &::after
       content: ""
       position: absolute
-      border-left: 3px solid $color-curso-b
+      border-left: 3px solid $color-acento-contenido
       z-index: 1
 
   .bottom::after
@@ -112,7 +112,7 @@ export default {
       height: 40px
 
     .hor-line
-      border-top: 3px solid $color-curso-b
+      border-top: 3px solid $color-acento-contenido
       margin: 0
       top: 17px
       position: relative
@@ -122,7 +122,7 @@ export default {
       overflow: hidden
 
       &__linea
-        border: 3px solid $color-curso-b
+        border: 3px solid $color-acento-contenido
         width: 100%
         position: relative
         border-radius: 15px
@@ -148,7 +148,7 @@ export default {
   width: 50px
   height: 50px
   border-radius: 50%
-  background-color: $color-curso-b
+  background-color: $color-acento-contenido
   z-index: 2
   position: relative
   div

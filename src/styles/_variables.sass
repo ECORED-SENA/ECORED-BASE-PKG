@@ -55,47 +55,44 @@ $color-banner-text: $white
 
 $color-fondo-anexo: #F6F6F6
 $color-texto-anexo: #006DF0
+
 //
 // Colores Curso ===================================
 //
 
-$color-curso-a: #522981
-$color-curso-b: #FF4A69
-$color-curso-c: #FFCD0D
-$color-curso-d: #7DD3E9
+$color-primario: #522981
+$color-secundario: #7DD3E9
+$color-acento-contenido: #FF4A69
+$color-acento-botones: #FFCD0D
 
-$color-primario: #0F2771
-$color-secundario: #7CC5FF
-$color-acento-contenido: #EA3065
-$color-acento-botones: #FFD947
-
-
-// Colores tipografia
-$color-tipografia: $color-sistema-texto
-
-$heading-color: $color-sistema-texto
+// Color Tipografias
 $color-headers: $color-sistema-texto
 
+$color-tipografia: $color-sistema-texto
+
+$color-etiqueta-fondo: $color-primario
+$color-etiqueta-texto: $white
+
+//color Links
+$color-link: $color-primario
+$color-link-hover: darken($color-primario, 25%)
+
+// Color Botones
+$color-btn-fondo: $color-acento-botones
+$color-btn-texto: $color-primario
+
+$color-btn-b-fondo: $color-acento-contenido
+$color-btn-b-texto: $white
+
+// Colores Seleccion
+$selection-color: $blue !important
+$selection-font-color: $white !important
 
 // Colores y estados de validacion
 $color-success: lighten($green, 10%)
 $color-info: lighten($light-blue, 15%)
 $color-warning: lighten($yellow, 15%)
 $color-danger: desaturate($red, 15%)
-
-
-// Colores links
-$action-color: $color-curso-a
-$link-color: $action-color
-$link-hover-color: darken($action-color, 25%)
-
-// Colores botones
-$btn-bg-color: $color-curso-c
-$btn-color: $color-curso-a
-
-// Colores Seleccion
-$selection-color: $blue
-$selection-font-color: $white
 
 // Tipografias -----------------------------------------------------
 $base-thin-font-weight: 100
@@ -150,7 +147,7 @@ $base-border: 1px solid $base-border-color
 $placeholder-color: $light-gray
 $form-background-color: white
 $form-box-shadow: inset 0 1px 3px rgba($black, 0.06)
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3)
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($color-primario, $lightness: -5%, $alpha: -0.3)
 
 // Tables -----------------------------------------------------
 $table-header-bg-color: $color-sistema-f

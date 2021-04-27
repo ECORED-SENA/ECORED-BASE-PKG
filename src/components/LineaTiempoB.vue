@@ -39,7 +39,7 @@ export default {
 
   &__icon
     padding-top: 100%
-    background-color: $color-curso-d
+    background-color: $color-secundario
     border-radius: 50%
     position: relative
     &:after
@@ -47,7 +47,7 @@ export default {
       display: block
       width: 15px
       height: 4px
-      background-color: $color-curso-d
+      background-color: $color-secundario
       position: absolute
       left: 100%
       top: 50%

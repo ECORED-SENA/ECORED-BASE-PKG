@@ -3,7 +3,7 @@ a
   font-size: $link-font-size
   font-weight: $link-font-weight
   text-decoration: none
-  color: $link-color
+  color: $color-link
   background-color: transparent
   transition: all $base-duration $base-timing
   -webkit-text-decoration-skip: objects
@@ -15,7 +15,7 @@ a
     outline-width: 0
 
   &:active, &:focus, &:hover
-    color: $link-hover-color
+    color: $color-link-hover
 
 button,[type='button'],[type='reset'],[type='submit'] 
   appearance: none
@@ -24,8 +24,8 @@ button,[type='button'],[type='reset'],[type='submit']
   vertical-align: middle
   border: 0
   border-radius: $base-border-radius
-  color: $white
-  background-color: $link-color
+  color: $color-btn-texto
+  background-color: $color-btn-fondo
   font-family: $link-font-family
   font-weight: $link-font-weight
   font-size: $link-font-size
@@ -41,15 +41,15 @@ button,[type='button'],[type='reset'],[type='submit']
   transition: background-color $base-duration $base-timing
 
   &:hover, &:focus
-    background-color: $link-hover-color
-    color: $white
+    background-color: $color-btn-fondo
+    color: $color-btn-texto
 
   &:disabled
     cursor: not-allowed
     opacity: 0.5
 
     &:hover
-      background-color: $action-color
+      background-color: $color-btn-fondo
 
 
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner

@@ -358,9 +358,9 @@ export default {
       position: absolute
       width: 100%
       top: 0
-      background-color: $color-curso-c
+      background-color: $color-acento-botones
       &:before, &:after
-        background-color: $color-curso-c
+        background-color: $color-acento-botones
 
   &__boton
     &--regresar

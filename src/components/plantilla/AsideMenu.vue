@@ -155,7 +155,7 @@ export default {
               top: 0
               width: 4px
               border-radius: 2px
-              background-color: $color-curso-b
+              background-color: $color-acento-contenido
 
       &__lnk
         display: flex

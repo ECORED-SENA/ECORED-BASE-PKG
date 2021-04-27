@@ -40,7 +40,7 @@ export default {
     color: $color-banner-text
 
   .tarjeta
-    background-color: $color-curso-a
+    background-color: $color-primario
     background-size: cover
     background-position: center
 
