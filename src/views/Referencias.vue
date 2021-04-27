@@ -10,19 +10,21 @@
 </template>
 <script>
 import BannerInterno from '../components/plantilla/BannerInterno'
+import plantillaMixins from '../mixins/plantillaMixins'
 export default {
   name: 'Referencias',
   components: {
     BannerInterno,
   },
+  mixins: [plantillaMixins],
   computed: {
     referenciasData() {
       return this.$config.referencias
     },
     orderedData() {
       const ArrayOrdered = [...this.referenciasData].sort((a, b) => {
-        const afl = a.referencia.split(' ')[0].toLowerCase()
-        const bfl = b.referencia.split(' ')[0].toLowerCase()
+        const afl = this.quitarAcentos(a.referencia.split(' ')[0].toLowerCase())
+        const bfl = this.quitarAcentos(b.referencia.split(' ')[0].toLowerCase())
         if (afl < bfl) return -1
         if (afl > bfl) return 1
         return 0
