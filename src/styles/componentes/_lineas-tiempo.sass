@@ -178,3 +178,118 @@
 
       img
         width: 40px
+
+
+.linea-tiempo-c
+  display: flex
+  flex-direction: column
+  &__header
+    display: flex
+    &__items
+      display: flex
+      flex: auto
+    &__item
+      flex: 1
+      // border: 1px solid gray
+      display: flex
+      flex-direction: column
+      align-items: center
+      cursor: pointer
+
+      &__line-container
+        width: 100%
+        display: flex
+        align-items: center
+
+        &:after, &:before
+          content: ''
+          display: block
+          width: 50%
+          height: 3px
+          background-color: $lighter-gray
+
+      &__dot
+        min-width: 20px
+        max-width: 20px
+        min-height: 20px
+        max-height: 20px
+        border: 3px solid $lighter-gray
+        // background-color: $color-sistema-f
+        border-radius: 50%
+
+      &--active
+        .linea-tiempo-c__header__item
+          &__year
+            font-weight: $base-black-font-weight
+          &__line-container
+            &:before
+              background-color: $color-acento-contenido
+          &__dot
+            border-color: $color-acento-contenido
+            position: relative
+            &:after
+              content: ''
+              display: block
+              width: 9px
+              height: 9px
+              background-color: $color-acento-contenido
+              border-radius: 50%
+              position: absolute
+              left: 50%
+              top: 50%
+              transform: translate(-50%, -50%)
+
+
+      &--before
+        .linea-tiempo-c__header__item
+          &__line-container
+            &:before, &:after
+              background-color: $color-acento-contenido
+          &__dot
+            border-color: $color-acento-contenido
+
+    &__btn
+      min-width: 50px
+      max-width: 50px
+      min-height: 50px
+      max-height: 50px
+      flex: auto
+      border-radius: 50%
+      border: 2px solid $lighter-gray
+      background-color: $white
+      position: relative
+      cursor: pointer
+      transition: border-color 0.2s ease-in-out
+      i
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-45%, -45%)
+        // color: $lighten-gray
+        font-size: 1.3em
+        display: block
+        line-height: 1em
+      &:hover
+        border-color: $color-acento-contenido
+
+
+      &--left, &--right
+        @extend .linea-tiempo-c__header__btn
+
+      &--left
+        margin-right: 20px
+
+      &--right
+        margin-left: 20px
+
+  @media (max-width: $bp-max-sm)
+    &__header
+      &__items
+        flex-wrap: wrap
+        justify-content: center
+      &__item
+        flex: none
+        min-width: 25%
+        margin-bottom: 10px
+      &__btn
+        display: none

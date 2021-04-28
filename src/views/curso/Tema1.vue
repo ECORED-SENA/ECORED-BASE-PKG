@@ -794,13 +794,73 @@
     LineaTiempoA.mb-5(:datos="datosLineaTiempoA")
 
     LineaTiempoB.mb-5(:datos="datosLineaTiempoB")
-    
+
+    .tarjeta.tarjeta--gris.p-4.mb-5
+      LineaTiempoC
+
+        .row(titulo="1761")
+          .col-md-6.mb-4.mb-md-0
+            p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+        
+          .col-md-6
+            figure
+              img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+              figcaption Leyenda de la imagen
+
+
+        .row(titulo="1798")
+          .col-md-6.mb-4.mb-md-0
+            p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+        
+          .col-md-6
+            figure
+              img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+              figcaption Leyenda de la imagen
+
+
+        .row(titulo="1887")
+          .col-md-6.mb-4.mb-md-0
+            p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+        
+          .col-md-6
+            figure
+              img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+              figcaption Leyenda de la imagen
+
+        div(titulo="1889")
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+        .row(titulo="1899")
+          .col-md-6.mb-4.mb-md-0
+            p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+        
+          .col-md-6
+            figure
+              img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+              figcaption Leyenda de la imagen
+
+        div(titulo="1901")
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+        div(titulo="1930")
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+        div(titulo="1987")
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
     #t_1_13.h4 Pasos
 
     PasosA.mb-5(tipo="n" :datos="datosPasosA")
 
     PasosA.mb-5(tipo="l" :datos="datosPasosA")
-
 
     #t_1_14.h4 Llamados a la acción
 
