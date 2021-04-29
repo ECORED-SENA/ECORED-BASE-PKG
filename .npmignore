@@ -8,3 +8,4 @@ node_modules
 /src/views/curso
 /src/App.vue
 /src/main.js
+/public
