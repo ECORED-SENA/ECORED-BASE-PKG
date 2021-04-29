@@ -1024,6 +1024,24 @@
         .h3.text-center Sterility leads to<br>susceptibility
         p Remember it’s called the creative process, it’s not the creative moment. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the possibility of failure.
 
+    .tarjeta-Avatar-b.mb-5
+      img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      .tarjeta.tarjeta--azul.p-4
+        .h4 John Doe
+        p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta-Avatar-b.mb-5
+      img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      .tarjeta.tarjeta--amarilla.p-4
+        .h4 John Doe
+        p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta-Avatar-b.mb-5
+      img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      .tarjeta.tarjeta--roja.p-4
+        .h4 Greatness isn’t the height
+        p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
     .row.mb-5
       .col-md-6.col-lg.mb-5
         .tarjeta-Avatar
