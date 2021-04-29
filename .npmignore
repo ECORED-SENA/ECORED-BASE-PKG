@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+.npmrc
+/dist
+/src/assets
+/src/config
+/src/router
+/src/views/curso
+/src/App.vue
+/src/main.js
