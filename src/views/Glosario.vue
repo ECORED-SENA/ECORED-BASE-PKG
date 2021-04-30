@@ -26,12 +26,20 @@ export default {
       return this.$config.glosario
     },
     orderedData() {
-      const sortedData = [...this.glosarioData].reduce((r, e) => {
+      const newGlosarioData = [...this.glosarioData]
+      newGlosarioData.forEach(element => {
+        element.significado =
+          element.significado.charAt(0).toLowerCase() +
+          element.significado.slice(1)
+      })
+
+      const sortedData = [...newGlosarioData].reduce((r, e) => {
         const letra = this.quitarAcentos(e.termino[0].toLowerCase())
         if (!r[letra]) r[letra] = { letra, terminos: [e] }
         else r[letra].terminos.push(e)
         return r
       }, {})
+
       const soloLetras = Object.keys(sortedData).sort()
       const newSortedData = []
 
