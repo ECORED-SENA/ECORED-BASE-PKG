@@ -1,16 +1,23 @@
 <template lang="pug">
-.horizontal-scroll__wrapper(ref='hContainer')
-  .horizontal-scroll(:style='{ transform: `translate(${scrollVal}px,0px)` }')
+.horizontal-scroll__wrapper.px-0(ref="hContainer")
+  .horizontal-scroll(
+    :class="[{'horizontal-scroll--item-fw':itemFullWidth}]"
+    :style="[{transform: `translate(${scrollVal}px,0px)`}]"
+  )
     slot
 </template>
 
 <script>
 export default {
-  name: 'HorizontalScroll',
+  name: 'ScrollHorizontal',
   props: {
     selectedId: {
       type: String,
       default: '',
+    },
+    itemFullWidth: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -88,9 +95,10 @@ export default {
   width: 100%
   transition: transform 0.5s ease-in-out
   align-items: center
-  & ::v-deep > div
-    flex-grow: 0
-    flex-shrink: 0
-    width: 100%
-    margin: 0 !important
+  &--item-fw
+    & ::v-deep > div
+      flex-grow: 0
+      flex-shrink: 0
+      width: 100%
+      margin: 0 !important
 </style>

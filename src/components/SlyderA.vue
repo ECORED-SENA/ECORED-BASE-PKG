@@ -9,7 +9,7 @@
       :class="{'slyder-a__bullets__item--active' : selected === bullet.id}"
       @click="selected = bullet.id"
     )
-  ScrollHorizontal(v-if="elements.length" :selectedId="'sl-' + selected")
+  ScrollHorizontal(v-if="elements.length" :selectedId="'sl-' + selected" item-full-width)
     .slyder-a__item(
       v-for="item in elements"
       :key="'sl-key-'+item.id"

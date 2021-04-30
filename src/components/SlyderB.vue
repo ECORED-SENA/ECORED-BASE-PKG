@@ -1,6 +1,6 @@
 <template lang="pug">
 .slyder-b
-  ScrollHorizontal(v-if="datos.length" :selectedId="selected")
+  ScrollHorizontal(v-if="datos.length" :selectedId="selected" item-full-width)
     .slyder-b__slyde(
       v-for="(item,index) in datos" 
       :key="'key-'+getId(index)"

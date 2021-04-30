@@ -566,7 +566,7 @@ div
 
   h1#t_1_8 Componentes
 
-  #t_1_9.h4 Slyders
+  #t_1_9.h4 Sliders
 
   p.mb-3 Es una sección dinámica que permite mostrar varios contenidos repartidos en diapositivas, su función principal es mostrar el contenido más importante de manera concisa y con la menor cantidad de texto posible, haciendo uso extensivo de imágenes o íconos de acompañamiento.
 

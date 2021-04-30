@@ -3,14 +3,14 @@ header.header.container-fluid
   .row.align-items-center.justify-content-between
     .col.col-sm-auto.d-flex.align-items-center.justify-content-between.justify-content-sm-start
       
-      .header__menu.me-5(v-if="$route.name != 'inicio'" @click="toggleMenu(!menuOpen)")
+      .header__menu.me-4.me-sm-5(v-if="$route.name != 'inicio'" @click="toggleMenu(!menuOpen)")
         .header__menu__btn(:class="{'header__menu__btn--open': menuOpen}")
           .line-2
           .line-1
           .line-3
         span MENÚ
 
-      img.header__logo.me-sm-5(src="@/assets/template/logo-sena-naranja.svg")
+      img.header__logo.me-4.me-sm-5(src="@/assets/template/logo-sena-naranja.svg")
 
       .d-none.d-md-flex.align-items-center(v-if="isInicio")
         a(href="#contenidos").me-5 Contenidos
@@ -61,6 +61,9 @@ export default {
   line-height: 1.1em
   &__logo
     width: 50px
+  &__componente-formativo
+    @media (max-width: $bp-max-xs)
+      font-size: 0.8em
 
 
 .header__menu
