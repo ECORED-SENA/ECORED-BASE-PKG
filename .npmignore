@@ -12,6 +12,7 @@ webpack.config.js
 .nvm
 .vscode/
 /dist
+/src/components/muestras
 /src/assets
 /src/config
 /src/router
