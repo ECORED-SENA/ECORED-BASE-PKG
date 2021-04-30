@@ -102,7 +102,11 @@
 
 .lista-ol
   li
+    display: flex
     margin-bottom: 10px
+
+    > span:first-of-type
+      margin-right: 5px
 
   &--separador
     li
@@ -138,23 +142,27 @@
   &--separador
     @extend .lista-ul
     @extend .lista-ol--separador
-  i
-    margin-right: 7px
   li
+    > i:first-of-type
+      position: relative
+      top: 4px
+      margin-right: 7px
     ul
       padding-left: 15px
       .lista-ul__vineta
         &:before
           content: '- '
   &__vineta
+    top: 0 !important
     &:before
       content: '• '
       line-height: 1em
 
   &--color
     @extend .lista-ul
-    i
-      color: $color-acento-contenido
+    li
+      > i:first-of-type
+        color: $color-acento-contenido
 
 
 
