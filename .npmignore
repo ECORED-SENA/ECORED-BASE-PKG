@@ -18,5 +18,5 @@ webpack.config.js
 /src/router
 /src/views/curso
 /src/App.vue
-/src/main.js
 /public
+/src/main.js
