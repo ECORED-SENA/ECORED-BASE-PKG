@@ -22,7 +22,7 @@
     )
       .acordion__contenido__item.pb-3(:ref="elm.id" v-html="elm.html")
 
-  .acordion-slot
+  .hidden-slot
     slot
 </template>
 
@@ -56,11 +56,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.acordion-slot
-  position: absolute
-  opacity: 0
-  height: 0
-  overflow: hidden
-  pointer-events: none
-</style>
+<style lang="sass"></style>

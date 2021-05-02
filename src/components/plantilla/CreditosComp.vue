@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .creditos
   color: $color-sistema-b
 

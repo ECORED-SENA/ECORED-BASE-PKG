@@ -11,14 +11,17 @@
           img(:src='item.imagen', :alt='item.leyendaImagen')
           figcaption(v-if="item.leyendaImagen") {{item.leyendaImagen}}
       .slyder-c__content
-        .slyder-c__content__header.d-block.d-md-flex.mb-4
-          .h3.mb-2.mb-md-0 {{item.titulo}}
-          .slyder__action
-            .slyder__pagination {{index+1}}/{{datos.length}}
-            a.slyder__btn(v-if="index -1 >= 0" @click="selected = getId(index -1)")
-              i.fas.fa-angle-left
-            a.slyder__btn(v-if="index != datos.length -1" @click="selected = getId(index +1)")
-              i.fas.fa-angle-right
+        .slyder-c__content__header.mb-4
+          .row
+            .col
+              .h3.mb-2.mb-md-0 {{item.titulo}}
+            .col-auto
+              .slyder__action
+                .slyder__pagination {{index+1}}/{{datos.length}}
+                a.slyder__btn(v-if="index -1 >= 0" @click="selected = getId(index -1)")
+                  i.fas.fa-angle-left
+                a.slyder__btn(v-if="index != datos.length -1" @click="selected = getId(index +1)")
+                  i.fas.fa-angle-right
         .slyder-c__content__body
           p.mb-3(v-html="item.texto")
 
@@ -37,4 +40,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass"></style>

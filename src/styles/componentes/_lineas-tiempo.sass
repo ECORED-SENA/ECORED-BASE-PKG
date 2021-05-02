@@ -180,6 +180,60 @@
         width: 40px
 
 
+
+.linea-tiempo-b
+  position: relative
+
+  &__icon
+    padding-top: 100%
+    background-color: $color-secundario
+    border-radius: 50%
+    position: relative
+    &:after
+      content: ''
+      display: block
+      width: 15px
+      height: 4px
+      background-color: $color-secundario
+      position: absolute
+      left: 100%
+      top: 50%
+      transform: translateY(-50%)
+    img
+      position: absolute
+      width: 80%
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+
+  &__row
+    margin-bottom: 50px
+    &:last-child
+      margin-bottom: 0
+    @media (min-width: $bp-min-md)
+      &:nth-child(odd)
+        flex-direction: row-reverse
+
+        .linea-tiempo-b__content
+          text-align: right
+
+        .linea-tiempo-b__icon
+          &:after
+            right: 100%
+            left: auto
+
+  &__line-row
+  &__line
+    margin-left: calc(50% - 2px)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      border-left: 4px dotted $color-sistema-b
+      top: 0
+      bottom: 0
+
+
 .linea-tiempo-c
   display: flex
   flex-direction: column

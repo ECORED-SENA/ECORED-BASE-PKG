@@ -84,7 +84,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .aside-menu
   position: sticky
   top: 70px

@@ -22,7 +22,7 @@
         v-html="elm.html"
       )
 
-  .tabs__slot
+  .hidden-slot
     slot
 
 </template>
@@ -35,10 +35,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.fade-enter-active, .fade-leave-active
-  transition: opacity .5s
-
-.fade-enter, .fade-leave-to
-  opacity: 0
-</style>
+<style lang="sass"></style>

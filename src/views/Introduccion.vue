@@ -40,6 +40,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.introduccion
-</style>
+<style lang="sass"></style>

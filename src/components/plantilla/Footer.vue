@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .footer
   background-color: $color-sistema-d
   border-bottom-right-radius: 0

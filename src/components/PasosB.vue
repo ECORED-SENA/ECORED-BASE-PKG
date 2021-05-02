@@ -1,39 +1,40 @@
 <template lang="pug">
-.linea-tiempo-c
-  .row.flex-nowrap.mx-0.linea-tiempo-c__header.mb-4
+.pasos-b
+  .row.flex-nowrap.mx-0.pasos-b__header.mb-4
     .col-2.col-sm-auto.px-0.me-sm-3
-      .linea-tiempo-c__header__btn--left(@click="selected = leftBtnId")
+      .pasos-b__header__btn--left(@click="selected = leftBtnId")
         i.fas.fa-angle-left
     .col-8.col-sm.px-0
-      .row.mx-0.flex-nowrap.linea-tiempo-c__header__items
+      .row.mx-0.flex-nowrap.pasos-b__header__items
         ScrollHorizontal(
           v-if="elements.length"
-          :selectedId="'ltc-header-' + (selected -1)"
+          :selectedId="'pb-header-' + (selected -1)"
         )
-          .col-6.col-sm-4.px-0.linea-tiempo-c__header__item(
+          .col-6.col-sm-4.px-0.pasos-b__header__item(
             v-for="(elm,index) of elements"
-            :key="'ltc-header-key-'+elm.id"
-            :id="'ltc-header-' +elm.id"
+            :key="'pb-header-key-'+elm.id"
+            :id="'pb-header-' +elm.id"
             :class="itemClasses(elm.id)"
-            @click="selected = elm.id"
           )
-            span.linea-tiempo-c__header__item__year {{elm.titulo}}
-            .linea-tiempo-c__header__item__line-container
-              .linea-tiempo-c__header__item__dot
+            .pasos-b__header__item__line-container
+              .pasos-b__header__item__dot 
+                span.text-bold {{index +1}}
+                i.fas.fa-check
+            .pasos-b__header__item__tittle.px-2.text-small {{elm.titulo}}
     .col-2.col-sm-auto.px-0.ms-sm-3.d-flex.justify-content-end
-      .linea-tiempo-c__header__btn--right(@click="selected = rightBtnId")
+      .pasos-b__header__btn--right(@click="selected = rightBtnId")
         i.fas.fa-angle-right
 
   .linea-tiempo-c__content
     ScrollHorizontal(
       v-if="elements.length"
-      :selectedId="'ltc-content-' + selected"
+      :selectedId="'pb-content-' + selected"
       item-full-width
     )
       .linea-tiempo-c__content__item(
         v-for="item in elements"
-        :key="'ltc-content-key-'+item.id"
-        :id="'ltc-content-'+item.id"
+        :key="'pb-content-key-'+item.id"
+        :id="'pb-content-'+item.id"
         v-html="item.html"
       )
     .hidden-slot
@@ -44,7 +45,7 @@
 import componentSlotMixins from '../mixins/componentSlotMixins'
 import ScrollHorizontal from './plantilla/ScrollHorizontal'
 export default {
-  name: 'LineaTiempoC',
+  name: 'PasosC',
   components: { ScrollHorizontal },
   mixins: [componentSlotMixins],
   data: () => ({
@@ -73,8 +74,8 @@ export default {
   methods: {
     itemClasses(id) {
       return [
-        { 'linea-tiempo-c__header__item--active': id === this.selected },
-        { 'linea-tiempo-c__header__item--before': id < this.selected },
+        { 'pasos-b__header__item--active': id === this.selected },
+        { 'pasos-b__header__item--before': id < this.selected },
         this.elements.length > 6 ? 'col-lg-2' : 'col-lg',
         this.elements.length >= 4 ? 'col-md-3' : 'col-md',
       ]

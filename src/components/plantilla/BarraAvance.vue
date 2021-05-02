@@ -309,7 +309,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .barra-avance
   display: flex
   align-items: center

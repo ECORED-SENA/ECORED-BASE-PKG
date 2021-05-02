@@ -9,7 +9,8 @@
     )
       .tabs-b__tab__icon(v-if="elm.icono")
         img(:src="elm.icono")
-      .tabs-b__tab__title {{elm.titulo}}
+      .tabs-b__tab__title 
+        span {{elm.titulo}}
   .tabs-b__content-item(
     v-for="elm of elements"
     :key="'tabs-content-'+elm.id"
@@ -17,7 +18,7 @@
     v-html="elm.html"
   )
 
-  .tabs__slot
+  .hidden-slot
     slot
 </template>
 
@@ -29,4 +30,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass"></style>

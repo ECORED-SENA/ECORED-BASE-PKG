@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .resultados-aprendizaje
   &__item
     margin-bottom: 20px
@@ -80,6 +80,7 @@ export default {
     &__texto
       display: flex
       align-items: center
+      color: $color-sistema-texto
 
     &__icono
       display: block

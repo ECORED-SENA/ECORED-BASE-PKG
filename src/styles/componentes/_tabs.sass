@@ -69,7 +69,10 @@
     &__title
       text-align: center
       font-size: $h6-font-size
-      line-height: $heading-line-height
+      line-height: 1.1em
+      display: flex
+      height: 100%
+      align-items: center
 
     &--active
       background-color: transparent
@@ -161,15 +164,6 @@
       .tabs-b__tab__title
         font-weight: $base-bold-font-weight
 
-
-
-.tabs
-  &__slot
-    position: absolute
-    opacity: 0
-    height: 0
-    overflow: hidden
-    pointer-events: none
 
 .fade-enter-active, .fade-leave-active
   transition: opacity .5s

@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .banner-principal
   p, h1
     color: $color-banner-text

@@ -16,7 +16,7 @@
       :id="'sl-'+item.id"
       v-html="item.html"
     )
-  .tabs__slot
+  .hidden-slot
     slot
 </template>
 
@@ -49,4 +49,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass"></style>

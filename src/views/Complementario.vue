@@ -8,12 +8,12 @@
           tr
             th(colspan='8' scope="col") Autor, (año del documento o material), Nombre del documento o material
             th(colspan='2' scope="col") Tipo de material
-            th(colspan='1' scope="col") Enlace
+            th(colspan='2' scope="col") Enlace
         tbody
           tr(v-for="(item, index) in complementarioData" :key="'complementario-'+index")
             td(colspan='8' scope="row") {{item.texto}}
             td(colspan='2') {{item.tipo}}
-            td(colspan='1')
+            td(colspan='2')
               .complementario__btn
                 a(:href="item.descarga ? obtenerLink(item.descarga) : item.link" target="_blank")
                   i.fas.fa-external-link-alt
@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .complementario
   &__btn
     a

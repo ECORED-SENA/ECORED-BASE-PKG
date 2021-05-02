@@ -1012,6 +1012,68 @@ div
 
   PasosA.mb-5(tipo="l" :datos="datosPasosA")
 
+  .tarjeta.tarjeta--gris.p-4.mb-5
+    PasosB
+
+      .row(titulo="Palabra")
+        .col-md-6.mb-4.mb-md-0
+          p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      
+        .col-md-6
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+
+      .row(titulo="I think it needs to be")
+        .col-md-6.mb-4.mb-md-0
+          p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      
+        .col-md-6
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+
+      .row(titulo="I have selected those elements")
+        .col-md-6.mb-4.mb-md-0
+          p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      
+        .col-md-6
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+      div(titulo="Etiam eu mauris sit amet")
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+      .row(titulo="Praesent luctus")
+        .col-md-6.mb-4.mb-md-0
+          p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      
+        .col-md-6
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+
+      div(titulo="arcu porta, vel finibus eros posuere")
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+      div(titulo="Praesent")
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+      div(titulo="Sed vehicula velit vel arcu porta,")
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+
   #t_1_14.h4 Llamados a la acción
 
   p.mb-2 Es un bloque de texto que destaca por su composición y diseño. Su principal función es incentivar al usuario a realizar una acción a través de un botón o hipervínculo, en este caso, con el fin de poder acceder a recursos como infografías, videos, documentos y sitios web externos e independientes del componente formativo.
