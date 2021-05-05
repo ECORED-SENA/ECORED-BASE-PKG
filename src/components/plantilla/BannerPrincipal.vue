@@ -40,10 +40,9 @@ export default {
     color: $color-banner-text
 
   .tarjeta
-    background-color: $color-primario
+    background-color: $color-banner-fondo
     background-size: cover
     background-position: center
-
 
   &__info
     display: flex

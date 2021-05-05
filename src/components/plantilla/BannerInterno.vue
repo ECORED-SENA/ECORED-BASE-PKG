@@ -40,13 +40,13 @@ export default {
     bottom: -50px
     left: 0
     right: 0
+    background-color: $color-banner-fondo
     background-size: cover
     background-position: center
 
   &__titulo
     display: flex
     align-items: center
-    // color: $color-banner-text
     &__icono
       display: block
       width: 32px
@@ -55,6 +55,7 @@ export default {
       background-color: $color-banner-text
       position: relative
       i
+        color: $color-banner-fondo
         position: absolute
         left: 50%
         top: 50%

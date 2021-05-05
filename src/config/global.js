@@ -423,7 +423,17 @@ export default {
         'que se representa según su altura y su anchura y no su profundidad.',
     },
     {
-      termino: 'Software',
+      termino: 'Interés Inferior del menor',
+      significado:
+        'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
+    },
+    {
+      termino: 'Interseccionalidad',
+      significado:
+        'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
+    },
+    {
+      termino: 'Interés superior del menor',
       significado:
         'término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas tareas en un sistema informático.',
     },

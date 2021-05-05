@@ -51,13 +51,18 @@ export default {
           const terminosOrdenados = []
           const soloTerminos = letraObj.terminos
             .map(termObj => termObj.termino)
-            .sort()
+            .sort((a, b) => {
+              const an = this.quitarAcentos(a)
+              const bn = this.quitarAcentos(b)
+              if (an < bn) return -1
+              if (bn < an) return 1
+              return 0
+            })
           soloTerminos.forEach(term => {
             terminosOrdenados.push(
               terminos.find(termino => termino.termino === term),
             )
           })
-
           terminos = terminosOrdenados
         }
         newSortedData.push({
