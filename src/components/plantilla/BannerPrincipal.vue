@@ -1,10 +1,10 @@
 <template lang="pug">
 .banner-principal
-  .container.tarjeta.p-4.p-sm-5.pb-0(
+  .container.tarjeta(
     :style="{'background-image': `url(${globalData.fondoBannerPrincipal})`}"
   )
-    .row.justify-content-around.align-items-center
-      .col-lg-7.col-xxl-5.banner-principal__info
+    .row.banner-principal__row
+      .col-lg-7.col-xxl-5.ps-4.ps-sm-5.py-4.py-sm-5.banner-principal__info
         //- .banner-principal__programa
         //-   span.text-small.insignia.me-2 Programa
         //-   p.text-small.mb-0 {{globalData.programaFormacion}}
@@ -17,7 +17,7 @@
             span.me-1 Iniciar
             i.fas.fa-angle-right
 
-      .d-none.d-lg-block.col-lg-5.align-self-end
+      .d-none.d-lg-block.col-lg-5.px-0.banner-principal__img
         img(:src="globalData.imagenBannerPrincipal")
 </template>
 
@@ -64,4 +64,34 @@ export default {
 
   &__descripcion
     margin-bottom: 20px
+
+  &__row
+    @if $banner-principal-img-x == 'derecha'
+      justify-content: space-between
+    @else
+      justify-content: space-around
+      .banner-principal__img
+        padding-right: 1.5rem!important
+      @media (min-width: $bp-min-sm)
+        .banner-principal__img
+          padding-right: 3rem!important
+
+  &__img
+    @if $banner-principal-img-y == 'arriba'
+      align-self: flex-start
+      padding-bottom: 1.5rem
+      @media (min-width: $bp-min-sm)
+        padding-bottom: 3rem!important
+    @else if $banner-principal-img-y == 'abajo'
+      align-self: flex-end
+      padding-top: 1.5rem
+      @media (min-width: $bp-min-sm)
+        padding-top: 3rem!important
+    @else
+      align-self: center
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem
+      @media (min-width: $bp-min-sm)
+        padding-top: 3rem!important
+        padding-bottom: 3rem!important
 </style>
