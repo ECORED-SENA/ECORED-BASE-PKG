@@ -35,7 +35,6 @@ div
 
   //- .cajon debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-  
   .row
     .col-lg-4
       .cajon.color-primario.p-4.mb-4
@@ -781,14 +780,20 @@ div
   //- TabsA debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   TabsA.color-acento-botones.mb-5
-    .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 1: The splendor asd asd asd as dasd")
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 1: The splendor asd asd asd as dasd")
       h4 PASO 1: The splendor
       p This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of 
         strong user style sheets
         |. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default. It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
-    .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 2: The splendor")
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 2: The splendor")
       h4 PASO 2: The splendor
 
       .row
@@ -802,28 +807,40 @@ div
             |. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default. It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
-    .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 3: The splendor")
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 3: The splendor")
       h4 PASO 3: The splendor
       p This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of 
         strong user style sheets
         |. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default. It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
-    .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 4: The splendor")
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 4: The splendor")
       h4 PASO 4: The splendor
       p This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of 
         strong user style sheets
         |. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default. It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
-    .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 5: The splendor")
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 5: The splendor")
       h4 PASO 5: The splendor
       p This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of 
         strong user style sheets
         |. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default. It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
-    .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 6: The splendor")
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 6: The splendor")
       h4 PASO 6: The splendor
       p This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of 
         strong user style sheets
@@ -1073,6 +1090,8 @@ div
   PasosA.color-acento-contenido.mb-5(tipo="l" :datos="datosPasosA")
 
   .tarjeta.tarjeta--gris.p-4.mb-5
+    //- PasosB debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     PasosB.color-acento-contenido
 
       .row(titulo="Palabra")
@@ -1169,7 +1188,11 @@ div
       | Se sugiere un párrafo de acompañamiento que no sobrepase las 3 líneas de texto en su extensión, cuya característica principal sea incentivar al aprendiz a consultar el recurso propuesto.
 
   .h5 Ejemplo: Llamado a la acción 1 Acción de infografías
-  .tarjeta.tarjeta--amarilla.p-4.p-md-5.mb-5
+
+  //- .tarjeta debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- estas clases tambien tienen un modificador --borde
+  .tarjeta.color-acento-botones.p-4.p-md-5.mb-5
     .row.justify-content-around.align-items-center
       .col-8.col-sm-6.col-md-4.mb-4.mb-md-0
         img(src="@/assets/componentes/ej-01.png")
@@ -1183,7 +1206,10 @@ div
           i.fas.fa-file-download
 
   .h5 Ejemplo: Llamado a la acción 2 Recursos externos
-  .tarjeta.tarjeta--morada.p-3.mb-5
+  //- .tarjeta debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- estas clases tambien tienen un modificador --borde
+  .tarjeta.color-primario.p-3.mb-5
     .row.justify-content-around.align-items-center
       .col-3.col-sm-2.col-lg-1
         img(src="@/assets/componentes/ej-02.svg")
@@ -1197,7 +1223,10 @@ div
               span Descargar
               i.fas.fa-file-download
 
-  .tarjeta.tarjeta--amarilla.p-3.mb-5
+  //- .tarjeta debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- estas clases tambien tienen un modificador --borde
+  .tarjeta.color-acento-botones.p-3.mb-5
     .row.justify-content-around.align-items-center
       .col-3.col-sm-2.col-lg-1
         img(src="@/assets/componentes/ej-02.svg")
@@ -1278,7 +1307,10 @@ div
 
   .row.mb-5
     .col-sm-6.col-lg-3.mb-4.mb-lg-0
-      .tarjeta.tarjeta--boton.p-4
+      //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta--boton.color-primario.p-4
         .row.justify-content-center.mb-3
           .col-7
             figure
@@ -1288,7 +1320,10 @@ div
         p.text-small Sed ut perspiciatis unde omnis iste natus error sit vtatem accusa ntium dol.
 
     .col-sm-6.col-lg-3.mb-4.mb-lg-0
-      .tarjeta.tarjeta--boton.p-4
+      //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta--boton.color-secundario.p-4
         .row.justify-content-center.mb-3
           .col-7
             figure
@@ -1298,7 +1333,10 @@ div
         p.text-small Sed ut perspiciatis unde omnis iste natus error sit vtatem accusa ntium dol.
 
     .col-sm-6.col-lg-3.mb-4.mb-sm-0
-      .tarjeta.tarjeta--boton.p-4
+      //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta--boton.color-acento-contenido.p-4
         .row.justify-content-center.mb-3
           .col-7
             figure
@@ -1308,7 +1346,10 @@ div
         p.text-small Sed ut perspiciatis unde omnis iste natus error sit vtatem accusa ntium dol.
 
     .col-sm-6.col-lg-3
-      .tarjeta.tarjeta--boton.p-4
+      //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta--boton.color-acento-botones.p-4
         .row.justify-content-center.mb-3
           .col-7
             figure
@@ -1319,7 +1360,10 @@ div
 
 
   .tarjeta--container.row.mb-5
-    .col-md.tarjeta.tarjeta--morada.p-5
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .col-md.tarjeta.color-primario.p-5
       .row.justify-content-center.mb-4
         .col-6
           figure
@@ -1328,7 +1372,10 @@ div
       .h3.text-center Celebrate your<br>failures
       p To surpass others is fucking tough, if you only do as you are told you don’t have it in you to succeed. Think about all the possibilities. You’ve been placed in the crucial moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
-    .col-md.tarjeta.tarjeta--amarilla.p-5
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .col-md.tarjeta.color-acento-botones.p-5
       .row.justify-content-center.mb-4
         .col-6
           figure
@@ -1337,7 +1384,10 @@ div
       .h3.text-center Sterility leads to<br>susceptibility
       p Remember it’s called the creative process, it’s not the creative moment. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the possibility of failure.
 
-    .col-md.tarjeta.tarjeta--roja.p-5
+    //- .tarjeta debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- estas clases tambien tienen un modificador --borde
+    .col-md.tarjeta.color-acento-contenido.p-5
       .row.justify-content-center.mb-4
         .col-6
           figure
@@ -1357,21 +1407,30 @@ div
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--amarilla.p-4
+        //- .tarjeta debe ir acompañado de una de una de estas clases => 
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- estas clases tambien tienen un modificador --borde
+        .tarjeta.color-acento-botones.p-4
           .h4 John Doe
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--roja.p-4
+        //- .tarjeta debe ir acompañado de una de una de estas clases => 
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- estas clases tambien tienen un modificador --borde
+        .tarjeta.color-acento-contenido.p-4
           .h4 Greatness isn’t the height
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--morada.p-4
+        //- .tarjeta debe ir acompañado de una de una de estas clases => 
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- estas clases tambien tienen un modificador --borde
+        .tarjeta.color-primario.p-4
           .h4 Greatness isn’t the height
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
@@ -1379,21 +1438,30 @@ div
     .col-md-6.col-lg.mb-5
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--morada.p-4
+        //- .tarjeta debe ir acompañado de una de una de estas clases => 
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- estas clases tambien tienen un modificador --borde
+        .tarjeta.color-primario.p-4
           .h4.text-center John Doe
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-md-6.col-lg.mb-5
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--amarilla.p-4
+        //- .tarjeta debe ir acompañado de una de una de estas clases => 
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- estas clases tambien tienen un modificador --borde
+        .tarjeta.color-acento-botones.p-4
           .h4.text-center John Doe
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-md-6.col-lg.mb-5
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--roja.p-4
+        //- .tarjeta debe ir acompañado de una de una de estas clases => 
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- estas clases tambien tienen un modificador --borde
+        .tarjeta.color-acento-contenido.p-4
           .h4.text-center Greatness isn’t the height
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
@@ -1429,18 +1497,46 @@ div
   #t_1_16.h4 Tarjetas con numero
 
   .row.mb-5
-    .col-md-6.mb-4.mb-md-0
-      .tarjeta-numerada.p-5
+    .col-md-6.col-xl.mb-4.mb-xl-0
+      //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta-numerada.color-primario.p-5
         .tarjeta-numerada__numero
           .h4 1
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
 
-    .col-md-6
-      .tarjeta-numerada.p-5
+    .col-md-6.col-xl.mb-4.mb-xl-0
+      //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta-numerada.color-secundario.p-5
         .tarjeta-numerada__numero
           .h4 2
+        p.text-center 
+          b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
+        p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
+
+    .col-md-6.col-xl.mb-4.mb-xl-0
+      //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta-numerada.color-acento-contenido.p-5
+        .tarjeta-numerada__numero
+          .h4 3
+        p.text-center 
+          b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
+        p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
+
+    .col-md-6.col-xl.mb-4.mb-xl-0
+      //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- estas clases tambien tienen un modificador --borde
+      .tarjeta-numerada.color-acento-botones.p-5
+        .tarjeta-numerada__numero
+          .h4 4
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas

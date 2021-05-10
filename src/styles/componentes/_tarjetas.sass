@@ -2,7 +2,6 @@
   border-radius: 20px
 
   &--container
-    // display: flex
     & > .tarjeta
       border-radius: 0
       &:first-child
@@ -11,7 +10,6 @@
       &:last-child
         border-top-right-radius: 20px
         border-bottom-right-radius: 20px
-    
 
   &--blanca
     background-color: $white
@@ -22,41 +20,58 @@
   &--azul
     background-color: $color-sistema-e
 
-  &--roja
-    background-color: $color-acento-contenido
-    *
-      color: $white
-
-  &--amarilla
-    background-color: $color-acento-botones
-
-    &--borde
-      background-color: lighten($color-acento-botones, 40%)
-      border: solid 4px $color-acento-botones
-
-  &--morada
-    background-color: $color-primario
-    *
-      color: $white
-
   &--boton
+    border-radius: 20px
     background-color: $color-sistema-h
     cursor: pointer
-    transition: background-color 0.3s ease-in-out 
+    transition: background-color 0.3s ease-in-out
 
-    &:active, &:focus, &:hover
-      background-color: $color-acento-contenido
-      *
-        color: $white
-        
+    &.color-primario
+      &:active, &:focus, &:hover
+        background-color: $color-primario
+        *
+          color: $white
+    &.color-secundario
+      &:active, &:focus, &:hover
+        background-color: $color-secundario
+        *
+          color: $white
+    &.color-acento-contenido
+      &:active, &:focus, &:hover
+        background-color: $color-acento-contenido
+        *
+          color: $white
+    &.color-acento-botones
+      &:active, &:focus, &:hover
+        background-color: $color-acento-botones
+        *
+          color: $white
+
   &--tabla
     background-color: $color-sistema-e
     &:nth-child(even)
       background-color: $color-sistema-g
 
-  
-  
-  
+  &.color-primario
+    background-color: $color-primario
+    *
+      color: $white
+  &.color-secundario
+    background-color: $color-secundario
+    *
+      color: $white
+  &.color-acento-contenido
+    background-color: $color-acento-contenido
+    *
+      color: $white
+  &.color-acento-botones
+    background-color: $color-acento-botones
+    *
+      color: $white
+    &--borde
+      background-color: lighten($color-acento-botones, 50%)
+      border: solid 4px $color-acento-botones
+
 // TARJETAS CON AVATAR
 .tarjeta-Avatar
   img
@@ -78,10 +93,8 @@
     margin-left: -7%
     padding-left: 10% !important
 
-
-
 .tarjeta-numerada
-  border: solid 2px $color-acento-contenido
+  border: solid 2px
   border-radius: 20px
   position: relative
   margin-left: 30px
@@ -89,15 +102,31 @@
     border-radius: 60px
     width: 60px
     height: 60px
-    background-color: $color-primario
     display: inline-block
     position: absolute  
     left: 0
     top: 25px
     transform: translateX(-50%)
     div
-      color: white
+      color: $white
       position: absolute
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
+
+  &.color-primario
+    border-color: $color-primario
+    .tarjeta-numerada__numero
+      background-color: $color-primario
+  &.color-secundario
+    border-color: $color-secundario
+    .tarjeta-numerada__numero
+      background-color: $color-secundario
+  &.color-acento-contenido
+    border-color: $color-acento-contenido
+    .tarjeta-numerada__numero
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    border-color: $color-acento-botones
+    .tarjeta-numerada__numero
+      background-color: $color-acento-botones
