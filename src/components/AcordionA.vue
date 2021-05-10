@@ -53,6 +53,13 @@ export default {
       return this.$store.getters.isMenuOpen
     },
   },
+  mounted() {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.domUpdated()
+      }, 5000)
+    })
+  },
 }
 </script>
 

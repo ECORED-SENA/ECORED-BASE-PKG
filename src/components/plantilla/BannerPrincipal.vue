@@ -5,9 +5,6 @@
   )
     .row.banner-principal__row
       .col-lg-7.col-xxl-5.ps-4.ps-sm-5.py-4.py-sm-5.banner-principal__info
-        //- .banner-principal__programa
-        //-   span.text-small.insignia.me-2 Programa
-        //-   p.text-small.mb-0 {{globalData.programaFormacion}}
         .banner-principal__componente
           h1.mb-0 {{globalData.componenteFormativo}}
         .banner-principal__descripcion
