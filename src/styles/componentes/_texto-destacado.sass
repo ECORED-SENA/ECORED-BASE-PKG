@@ -1,41 +1,36 @@
-@mixin comillas
-  position: relative
-  &:before, &:after
-    content: ''
-    display: inline-block
-    width: 36px
-    height: 31px
-    background-image: url('../assets/componentes/icon-bloque-texto-c.svg')
-    background-repeat: no-repeat
-  &:before
-    margin-right: 15px
-    transform: rotate(180deg)
-  &:after
-    margin-left: 15px
-    vertical-align: top
-    margin-top: 5px
-
 .bloque-texto-a
-  background-color: $color-sistema-d
   position: relative
   &:before
     content: ''
     display: block
-    background-color: $color-secundario
     position: absolute
     top: 0
     bottom: 0
-    left: 0
-    right: 45%
-
+    left: 50%
+    right: 0
   & > div
     position: relative
-
   &__texto
     background-color: $white
-
   p
     margin: 0
+
+  &.color-primario
+    background-color: lighten($color-primario, 55%)
+    &:before
+      background-color: $color-primario
+  &.color-secundario
+    background-color: lighten($color-secundario, 20%)
+    &:before
+      background-color: $color-secundario
+  &.color-acento-contenido
+    background-color: lighten($color-acento-contenido, 25%)
+    &:before
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    background-color: lighten($color-acento-botones, 30%)
+    &:before
+      background-color: $color-acento-botones
 
 
 .bloque-texto-b
@@ -43,50 +38,113 @@
   &:before
     content: ''
     display: block
-    background-color: $color-secundario
     position: absolute
     top: 40%
     bottom: 0
     left: 35%
     right: 0
   &__texto
-    @include comillas
+    position: relative
+  i
+    font-size: 2.5em
+    color: $color-acento-contenido
+    &:first-of-type
+      margin-right: 15px
+    &:last-of-type
+      margin-left: 15px
 
+  &.color-primario
+    &:before
+      background-color: $color-primario
+  &.color-secundario
+    &:before
+      background-color: $color-secundario
+  &.color-acento-contenido
+    &:before
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    &:before
+      background-color: $color-acento-botones
 
 .bloque-texto-c
-  background-color: $color-secundario
-  &:before, &:after
+  i
+    font-size: 2.5em
+    color: $color-acento-contenido
+  &:after
     content: ''
     display: block
-
-  &:before
-    width: 36px
-    height: 36px
-    background-image: url('../assets/componentes/icon-bloque-texto-c.svg')
-    background-repeat: no-repeat
-  
-  &:after
     width: 30px
     height: 30px
     background-color: $color-acento-contenido
     position: relative
     left: calc(100% - 30px)
+  &.color-primario
+    background-color: $color-primario
+  &.color-secundario
+    background-color: $color-secundario
+  &.color-acento-contenido
+    background-color: $color-acento-contenido
+  &.color-acento-botones
+    background-color: $color-acento-botones
 
 .bloque-texto-d
   border-top: 1px solid $color-acento-contenido
-  @extend .bloque-texto-b
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: 40%
+    bottom: 0
+    left: 35%
+    right: 0
   &__texto
-    @include comillas
+    position: relative
+  i
+    font-size: 2.5em
+    color: $color-acento-contenido
+    &:first-of-type
+      margin-right: 15px
+    &:last-of-type
+      margin-left: 15px
+      vertical-align: text-top
   &__autor
     text-align: right
     position: relative
+  &.color-primario
+    &:before
+      background-color: $color-primario
+  &.color-secundario
+    &:before
+      background-color: $color-secundario
+  &.color-acento-contenido
+    &:before
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    &:before
+      background-color: $color-acento-botones
 
 .bloque-texto-e
-  background-color: $color-secundario
   &__texto
-    @include comillas
+  i
+    font-size: 2.5em
+    color: $color-acento-contenido
+    &:first-of-type
+      margin-right: 15px
+    &:last-of-type
+      margin-left: 15px
+      vertical-align: text-top
   &__autor
-    @extend .bloque-texto-d__autor  
+    @extend .bloque-texto-d__autor
+  &.color-primario
+    background-color: $color-primario
+  &.color-secundario
+    background-color: $color-secundario
+  &.color-acento-contenido
+    background-color: $color-acento-contenido
+  &.color-acento-botones
+    background-color: $color-acento-botones
+
 
 .bloque-texto-f
   display: flex;
@@ -96,29 +154,31 @@
   &:before
     content: ''
     display: block
-    background-color: $color-secundario
     position: absolute
     top: 0
     left: 0
     right: 0
     bottom: 50px
   &__comillas
-    @include comillas
     position: initial
-    &:before, &:after
+    
+    i
       position: absolute
-
-    &:before
-      top: 0
-      left: 40px
-      margin: 0
-      transform: translate(-50%,-50%) rotate(180deg)
-
-    &:after
-      top: calc(100% - 50px)
-      right: 10px
-      margin: 0
-      transform: translate(-50%,-50%)
+      font-size: 2.5em
+      color: $color-acento-contenido
+      &:first-of-type
+        margin-right: 15px
+        top: 0
+        left: 40px
+        transform: translate(-50%,-50%) rotate(180deg)
+      &:last-of-type
+        margin-left: 15px
+        vertical-align: text-top
+        top: calc(100% - 50px)
+        right: 10px
+        margin: 0
+        transform: translate(-50%,-50%)
+  
   &__texto
     position: relative
   
@@ -140,3 +200,16 @@
       overflow: hidden
       border: 5px solid $white
       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3)
+
+  &.color-primario
+    &:before
+      background-color: $color-primario
+  &.color-secundario
+    &:before
+      background-color: $color-secundario
+  &.color-acento-contenido
+    &:before
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    &:before
+      background-color: $color-acento-botones

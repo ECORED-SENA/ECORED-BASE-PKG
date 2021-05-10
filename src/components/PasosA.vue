@@ -7,7 +7,7 @@
         .col-3.col-sm-2.col-lg-1.pasos-a__numero.text-center.d-inline-flex.justify-content-center.align-items-center(
           :class="getClass(index)"
         )
-          .circle
+          .pasos-a__circle
             .h4(v-if="tipo === 'n'") {{index + 1}}
             .h4(v-else-if="tipo === 'l'") {{abecedario[index]}}
 
@@ -35,7 +35,7 @@
         .col-3.col-sm-2.col-lg-1.pasos-a__numero.text-center.d-inline-flex.justify-content-center.align-items-center(
           :class="getClass(index)"
         )
-          .circle
+          .pasos-a__circle
             .h4(v-if="tipo === 'n'") {{index + 1}}
             .h4(v-else-if="tipo === 'l'") {{abecedario[index]}}
 

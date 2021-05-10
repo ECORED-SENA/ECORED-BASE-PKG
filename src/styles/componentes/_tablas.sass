@@ -15,7 +15,7 @@ table
   table
     min-width: 700px
   thead
-    border-top: 5px solid $color-acento-contenido
+    border-top: 5px solid
     color: $table-header-color
     background-color: $table-header-bg-color
 
@@ -25,6 +25,19 @@ table
     text-align: center
 
   tbody
+
+  &.color-primario
+    thead
+      border-color: $color-primario
+  &.color-secundario
+    thead
+      border-color: $color-secundario
+  &.color-acento-contenido
+    thead
+      border-color: $color-acento-contenido
+  &.color-acento-botones
+    thead
+      border-color: $color-acento-botones
 
   
 
@@ -54,6 +67,18 @@ table
     width: 200px
     border-right: $base-border
 
+  &.color-primario
+    .tabla-b__header
+      background-color: $color-primario
+  &.color-secundario
+    .tabla-b__header
+      background-color: $color-secundario
+  &.color-acento-contenido
+    .tabla-b__header
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    .tabla-b__header
+      background-color: $color-acento-botones
 
 .tabla-c
   @extend .tabla-b

@@ -72,10 +72,8 @@
 .etiqueta
   padding: 2px 6px 5px
   margin-right: 5px
-  &--morada
-    @extend .etiqueta
-    color: $color-etiqueta-texto
-    background-color: $color-etiqueta-fondo
+  color: $color-etiqueta-texto
+  background-color: $color-etiqueta-fondo
 
 .cajon
   position: relative
@@ -88,17 +86,22 @@
     top: 0
     left: 0
 
-  &--azul
-    @extend .cajon
+  &.color-primario
+    background-color: lighten($color-primario, 55%)
+    &:before
+      background-color: $color-primario
+  &.color-secundario
     background-color: lighten($color-secundario, 20%)
     &:before
       background-color: $color-secundario
-
-  &--rojo
-    @extend .cajon
+  &.color-acento-contenido
     background-color: lighten($color-acento-contenido, 30%)
     &:before
       background-color: $color-acento-contenido
+  &.color-acento-botones
+    background-color: lighten($color-acento-botones, 35%)
+    &:before
+      background-color: $color-acento-botones
 
 .lista-ol
   li

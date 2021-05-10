@@ -14,10 +14,8 @@
       margin-bottom: 0 !important
     &:hover, &:active, &:focus
       color: $color-sistema-a
-      background-color: $color-acento-botones
 
     &__selected
-      background-color: $color-acento-botones
       font-weight: $base-bold-font-weight
       
       @media (min-width: $bp-min-lg)
@@ -37,6 +35,39 @@
     opacity: 0
     &--active
       animation: tab-content-active 0.5s ease-in-out forwards
+
+  &.color-primario
+    .tabs-a__tab
+      &:hover, &:active, &:focus
+        background-color: $color-primario
+      &__selected
+        background-color: $color-primario
+        &:before
+          background-color: $color-primario
+  &.color-secundario
+    .tabs-a__tab
+      &:hover, &:active, &:focus
+        background-color: $color-secundario
+      &__selected
+        background-color: $color-secundario
+        &:before
+          background-color: $color-secundario
+  &.color-acento-contenido
+    .tabs-a__tab
+      &:hover, &:active, &:focus
+        background-color: $color-acento-contenido
+      &__selected
+        background-color: $color-acento-contenido
+        &:before
+          background-color: $color-acento-contenido
+  &.color-acento-botones
+    .tabs-a__tab
+      &:hover, &:active, &:focus
+        background-color: $color-acento-botones
+      &__selected
+        background-color: $color-acento-botones
+        &:before
+          background-color: $color-acento-botones
 
 @keyframes tab-content-active
   0%
@@ -76,7 +107,7 @@
 
     &--active
       background-color: transparent
-      border-top: 5px solid $color-acento-contenido !important
+      border-top: 5px solid !important
       border-bottom: none
       &:active, &:focus, &:hover
         background-color: transparent
@@ -107,6 +138,18 @@
 
   &__content-item
 
+  &.color-primario
+    .tabs-b__tab--active
+      border-top-color: $color-primario !important
+  &.color-secundario
+    .tabs-b__tab--active
+      border-top-color: $color-secundario !important
+  &.color-acento-contenido
+    .tabs-b__tab--active
+      border-top-color: $color-acento-contenido !important
+  &.color-acento-botones
+    .tabs-b__tab--active
+      border-top-color: $color-acento-botones !important
 
 .tabs-c
   border-bottom: 1px solid #AFAFAF
@@ -149,13 +192,13 @@
         display: none
 
     &--active
-      border-bottom: 4px solid $color-acento-contenido !important
+      border-bottom: 4px solid !important
       &:before
         width: 0
         height: 0
         border-left: 10px solid transparent
         border-right: 10px solid transparent
-        border-top: 10px solid $color-acento-contenido
+        border-top: 10px solid
         left: 50%
         top: calc(100% + 6px)
 
@@ -164,6 +207,26 @@
       .tabs-b__tab__title
         font-weight: $base-bold-font-weight
 
+  &.color-primario
+    .tabs-c__tab--active
+      border-bottom-color: $color-primario !important
+      &:before
+        border-top-color: $color-primario
+  &.color-secundario
+    .tabs-c__tab--active
+      border-bottom-color: $color-secundario !important
+      &:before
+        border-top-color: $color-secundario
+  &.color-acento-contenido
+    .tabs-c__tab--active
+      border-bottom-color: $color-acento-contenido !important
+      &:before
+        border-top-color: $color-acento-contenido
+  &.color-acento-botones
+    .tabs-c__tab--active
+      border-bottom-color: $color-acento-botones !important
+      &:before
+        border-top-color: $color-acento-botones
 
 .fade-enter-active, .fade-leave-active
   transition: opacity .5s

@@ -7,7 +7,6 @@
     width: 50%
     height: 70%
     bottom: -10px
-    background-color: $color-secundario
     border-radius: 10px
   
   figure
@@ -38,3 +37,24 @@
     .imagen-titulo
       &__titulo
         left: 0
+
+  &.color-primario
+    &:before
+      background-color: $color-primario
+    .imagen-titulo__titulo
+      background-color: $color-primario
+  &.color-secundario
+    &:before
+      background-color: $color-secundario
+    .imagen-titulo__titulo
+      background-color: $color-secundario
+  &.color-acento-contenido
+    &:before
+      background-color: $color-acento-contenido
+    .imagen-titulo__titulo
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    &:before
+      background-color: $color-acento-botones
+    .imagen-titulo__titulo
+      background-color: $color-acento-botones

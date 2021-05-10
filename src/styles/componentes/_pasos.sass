@@ -7,7 +7,7 @@
     &::after
       content: ""
       position: absolute
-      border-left: 3px solid $color-acento-contenido
+      border-left: 3px solid
       z-index: 1
 
   .bottom::after
@@ -30,7 +30,7 @@
       height: 40px
 
     .hor-line
-      border-top: 3px solid $color-acento-contenido
+      border-top: 3px solid
       margin: 0
       top: 17px
       position: relative
@@ -40,7 +40,7 @@
       overflow: hidden
 
       &__linea
-        border: 3px solid $color-acento-contenido
+        border: 3px solid
         width: 100%
         position: relative
         border-radius: 15px
@@ -62,20 +62,75 @@
       top: calc(50% - 3px)
 
 
-.circle
-  width: 50px
-  height: 50px
-  border-radius: 50%
-  background-color: $color-acento-contenido
-  z-index: 2
-  position: relative
-  div
-    color: #fff
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
+  &__circle
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    z-index: 2
+    position: relative
+    div
+      color: #fff
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
 
+  &.color-primario
+    .pasos-a
+      &__numero
+        &::after
+          border-left-color: $color-primario
+      &__linea
+        .hor-line
+          border-top-color: $color-primario
+
+        &__esquina
+          &__linea
+            border-color: $color-primario
+      &__circle
+        background-color: $color-primario
+  &.color-secundario
+    .pasos-a
+      &__numero
+        &::after
+          border-left-color: $color-secundario
+      &__linea
+        .hor-line
+          border-top-color: $color-secundario
+
+        &__esquina
+          &__linea
+            border-color: $color-secundario
+      &__circle
+        background-color: $color-secundario
+  &.color-acento-contenido
+    .pasos-a
+      &__numero
+        &::after
+          border-left-color: $color-acento-contenido
+      &__linea
+        .hor-line
+          border-top-color: $color-acento-contenido
+
+        &__esquina
+          &__linea
+            border-color: $color-acento-contenido
+      &__circle
+        background-color: $color-acento-contenido
+  &.color-acento-botones
+    .pasos-a
+      &__numero
+        &::after
+          border-left-color: $color-acento-botones
+      &__linea
+        .hor-line
+          border-top-color: $color-acento-botones
+
+        &__esquina
+          &__linea
+            border-color: $color-acento-botones
+      &__circle
+        background-color: $color-acento-botones
 
 
 .pasos-b
@@ -138,9 +193,7 @@
             &:before
               background-color: $color-success
           &__dot
-            border-color: $color-acento-contenido
             position: relative
-            background-color: $color-acento-contenido
             span
               color: $white
 
@@ -215,3 +268,24 @@
         max-width: 30px
         min-height: 30px
         max-height: 30px
+
+  &.color-primario
+    .pasos-b__header__item--active
+      .pasos-b__header__item__dot
+        border-color: $color-primario
+        background-color: $color-primario
+  &.color-secundario
+    .pasos-b__header__item--active
+      .pasos-b__header__item__dot
+        border-color: $color-secundario
+        background-color: $color-secundario
+  &.color-acento-contenido
+    .pasos-b__header__item--active
+      .pasos-b__header__item__dot
+        border-color: $color-acento-contenido
+        background-color: $color-acento-contenido
+  &.color-acento-botones
+    .pasos-b__header__item--active
+      .pasos-b__header__item__dot
+        border-color: $color-acento-botones
+        background-color: $color-acento-botones

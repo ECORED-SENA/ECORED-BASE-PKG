@@ -30,19 +30,30 @@ div
     | y 
     span.text-black BLACK 
     | o 
-    span.etiqueta--morada etiquetas
+    span.etiqueta etiquetas
     | de color (según paleta del programa). Así mismo, el ancho de los cajones textos permite variación en las doce (12) columnas.
 
-  .row.mb-5
+  //- .cajon debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  
+  .row
     .col-lg-4
-      .cajon--azul.p-4.mb-5.mb-lg-0
+      .cajon.color-primario.p-4.mb-4
         .h5 Cajón texto color
         p Se puede usar dos o más columnas para diagramar el texto, estos elementos pueden presentar contenedores que permitan diferenciar ideas o conceptos.
     .col-lg-8
-      .cajon--rojo.p-4
+      .cajon.color-secundario.p-4.mb-4
         .h5 Cajón texto color
         p Se puede usar dos o más columnas para diagramar el texto, estos elementos pueden presentar contenedores que permitan diferenciar ideas o conceptos.
-
+    .col-lg-8
+      .cajon.color-acento-contenido.p-4.mb-4
+        .h5 Cajón texto color
+        p Se puede usar dos o más columnas para diagramar el texto, estos elementos pueden presentar contenedores que permitan diferenciar ideas o conceptos.
+    .col-lg-4
+      .cajon.color-acento-botones.p-4.mb-4
+        .h5 Cajón texto color
+        p Se puede usar dos o más columnas para diagramar el texto, estos elementos pueden presentar contenedores que permitan diferenciar ideas o conceptos.
+    
   .row.mb-5
     .col-md-6
       .h4 La cantidad de texto “Destacado” sea menor a tres líneas en breakpoint xl de bootstrap y tendrá un tamaño máximo de h4
@@ -75,11 +86,13 @@ div
       i.lista-ul__vineta
       | Se sugiere una cantidad de texto igual o menor a 4 líneas de word tamaño carta.
 
-  .bloque-texto-a.p-4.p-md-5.mb-5
+  //- .bloque-texto-a debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  .bloque-texto-a.color-secundario.p-4.p-md-5.mb-5 
     .row.m-0.align-items-center.justify-content-between
       .col-lg-4.mb-4.mb-lg-0
-        .h2.mb-0 Whatever can be captured in words can be conquered with understanding. 
-      .col-lg-7
+        .h3.mb-0 Whatever can be captured in words can be conquered with understanding. 
+      .col-lg-8
         .bloque-texto-a__texto.p-4
           p Think about all the possibilities. A good composition is the result of a hierarchy consisting of clearly contrasting elements set with distinct alignments containing irregular intervals of negative space. Nothing of without working at it. Be impossible to ignore.
             br
@@ -88,17 +101,43 @@ div
 
   .row.mb-5
     .col-lg-6.mb-5.mb-lg-0
-      .bloque-texto-b.p-4
-        .bloque-texto-b__texto.h2.mb-0 Can we all just agree as the greater design community to stop talking about Comic Sans altogether?
+      //- .bloque-texto-b debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+      .bloque-texto-b.color-secundario.p-4
+        .bloque-texto-b__texto
+          i.fas.fa-quote-left
+          span.h2.mb-0 Can we all just agree as the greater design community to stop talking about Comic Sans altogether?
+          i.fas.fa-quote-right
+
     .col-lg-6
-      .bloque-texto-c.p-4
+      //- .bloque-texto-c debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+      .bloque-texto-c.color-secundario.p-4
+        i.fas.fa-quote-right
         .h2.mb-2 Then you’ll prove to yourself that you can survive anything.
         span - The graphic designer
 
   .row.mb-5
     .col-lg-6.mb-5.mb-lg-0
-      .bloque-texto-e.p-4
-        .h5.text-regular.bloque-texto-e__texto Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt augue in augue tempus, in dapibus justo interdum. Sed viverra sed odio quis rhoncus. In elementum purus massa, id venenatis purus ullamcorper ut. Vestibulum vel dictum dolor, nec fringilla orci. Nulla vestibulum, metus nec porttitor bibendum, lectus ligula viverra eros, eget tempor risus nulla pretium justo. Nullam turpis dolor, pharetra vel fermentum at, rutrum in elit. Maecenas vitae hendrerit libero, et ornare augue. Vestibulum iaculis, metus et accumsan malesuada.
+      //- .bloque-texto-d debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+      .bloque-texto-d.color-secundario.p-4
+        .bloque-texto-d__texto.mb-2
+          i.fas.fa-quote-left
+          span.h5.text-regular Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt augue in augue tempus, in dapibus justo interdum. Sed viverra sed odio quis rhoncus. In elementum purus massa, id venenatis purus ullamcorper ut. Vestibulum vel dictum dolor, nec fringilla orci. Nulla vestibulum, metus nec porttitor bibendum, lectus ligula viverra eros, eget tempor risus nulla pretium justo. Nullam turpis dolor, pharetra vel fermentum at, rutrum in elit. Maecenas vitae hendrerit libero, et ornare augue. Vestibulum iaculis, metus et accumsan malesuada, ligula sapien convallis risus, a iaculis velit ante at turpis. Vivamus bibendum tellus sed tincidunt rhoncus. Nam velit massa, porttitor eget quam et, porttitor viverra eros. Donec eget pharetra metus. Cras porta arcu eu mauris iaculis euismod. Sed fringilla vel nisl quis aliquam.
+          i.fas.fa-quote-right
+        .bloque-texto-d__autor 
+          .h5.mb-0 The graphic designer
+          .h6.mb-0 Lorem ipsum dolor sit amet
+
+    .col-lg-6
+      //- .bloque-texto-e debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+      .bloque-texto-e.color-secundario.p-4
+        .bloque-texto-e__text
+          i.fas.fa-quote-left
+          span.h5.text-regular Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt augue in augue tempus, in dapibus justo interdum. Sed viverra sed odio quis rhoncus. In elementum purus massa, id venenatis purus ullamcorper ut. Vestibulum vel dictum dolor, nec fringilla orci. Nulla vestibulum, metus nec porttitor bibendum, lectus ligula viverra eros, eget tempor risus nulla pretium justo. Nullam turpis dolor, pharetra vel fermentum at, rutrum in elit. Maecenas vitae hendrerit libero, et ornare augue. Vestibulum iaculis, metus et accumsan malesuada.
+          i.fas.fa-quote-right
         .row.align-items-end
           .col
             .bloque-texto-e__autor 
@@ -107,15 +146,12 @@ div
           .col-4
             img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
-    .col-lg-6
-      .bloque-texto-d.p-4
-        .h5.text-regular.bloque-texto-d__texto Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt augue in augue tempus, in dapibus justo interdum. Sed viverra sed odio quis rhoncus. In elementum purus massa, id venenatis purus ullamcorper ut. Vestibulum vel dictum dolor, nec fringilla orci. Nulla vestibulum, metus nec porttitor bibendum, lectus ligula viverra eros, eget tempor risus nulla pretium justo. Nullam turpis dolor, pharetra vel fermentum at, rutrum in elit. Maecenas vitae hendrerit libero, et ornare augue. Vestibulum iaculis, metus et accumsan malesuada, ligula sapien convallis risus, a iaculis velit ante at turpis. Vivamus bibendum tellus sed tincidunt rhoncus. Nam velit massa, porttitor eget quam et, porttitor viverra eros. Donec eget pharetra metus. Cras porta arcu eu mauris iaculis euismod. Sed fringilla vel nisl quis aliquam.
-        .bloque-texto-d__autor 
-          .h5.mb-0 The graphic designer
-          .h6.mb-0 Lorem ipsum dolor sit amet
-
-  .bloque-texto-f.pt-4.px-5.mb-5
+  //- .bloque-texto-f debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  .bloque-texto-f.color-secundario.pt-4.px-5.mb-5
     .bloque-texto-f__comillas
+      i.fas.fa-quote-left
+      i.fas.fa-quote-right
     .h5.text-regular.bloque-texto-f__texto Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt augue in augue tempus, in dapibus justo interdum. Sed viverra sed odio quis rhoncus. In elementum purus massa, id venenatis purus ullamcorper ut. Vestibulum vel dictum dolor, nec fringilla orci. Nulla vestibulum, metus nec porttitor bibendum, lectus ligula viverra eros, eget tempor risus nulla pretium justo. Nullam turpis dolor, pharetra vel fermentum at, rutrum in elit. Maecenas vitae hendrerit libero, et ornare augue. Vestibulum iaculis, metus et accumsan malesuada, ligula sapien convallis risus, a iaculis velit ante at turpis. Vivamus bibendum tellus sed tincidunt rhoncus. Nam velit massa, porttitor eget quam et, porttitor viverra eros. Donec eget pharetra metus. Cras porta arcu eu mauris iaculis euismod. Sed fringilla vel nisl quis aliquam.
     .bloque-texto-f__autor.mb-3
       .h5.mb-0 The graphic designer
@@ -425,7 +461,9 @@ div
       i.lista-ul__vineta
       | Se requiere que la información contenida dentro de las tablas propuestas en los materiales, se encuentre digitalizada únicamente en formato excel. 
 
-  .tabla-a.mb-5 
+  //- .tabla-a debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  .tabla-a.color-acento-botones.mb-5 
     table
       caption Leyenda de la tabla
       thead
@@ -454,7 +492,10 @@ div
           td Celda 3
           td Celda 4
           td Celda 5
-  .tabla-b.mb-5
+
+  //- .tabla-a debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  .tabla-b.color-acento-contenido.mb-5
     .tabla-b__header
       .h6.mb-0 Niveles del lenguaje
     table
@@ -542,7 +583,9 @@ div
 
   .row.justify-content-between
     .col-md-6.col-lg-4
-      .imagen-titulo--der
+      //- .imagen-titulo--der debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      .imagen-titulo--der.color-secundario
         figure.mb-5
           img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
@@ -550,7 +593,9 @@ div
           .h4.m-0 Titulo de imagen
     
     .col-md-6.col-lg-4
-      .imagen-titulo--izq
+      //- .imagen-titulo--izq debe ir acompañado de una de una de estas clases => 
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      .imagen-titulo--izq.color-acento-botones
         figure.mb-5
           img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
@@ -733,7 +778,9 @@ div
       i.lista-ul__vineta
       | No se debe utilizar dentro de la pestaña o tab vídeos.
 
-  TabsA.mb-5
+  //- TabsA debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  TabsA.color-acento-botones.mb-5
     .tarjeta.tarjeta--amarilla--borde.p-4(titulo="PASO 1: The splendor asd asd asd as dasd")
       h4 PASO 1: The splendor
       p This is a normal paragraph (<code>p</code> element). To add some length to it, let us mention that this page was primarily written for testing the effect of 
@@ -783,7 +830,9 @@ div
         |. You can use it for various other purposes as well, like just checking how your browser displays various HTML elements by default. It can also be useful when testing conversions from HTML format to other formats, since some elements can go wrong then.
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
-  TabsB.mb-5
+  //- TabsB debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  TabsB.color-acento-contenido.mb-5
     .py-4.py-md-5(titulo="The splendor of the mystery" :icono="require('@/assets/componentes/ej-04.svg')")
       .row
         .col-md-6.mb-4.mb-md-0
@@ -847,7 +896,9 @@ div
           .h4 Celebrate your failures 6
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
 
-  TabsC.mb-5
+  //- TabsC debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  TabsC.color-primario.mb-5
     .py-3.py-md-4(titulo="The splendor of the mystery")
       .row
         .col-md-6.mb-4.mb-md-0
@@ -941,13 +992,18 @@ div
       i.lista-ul__vineta
       | El peso de los anexos o archivos descargables no debe ser superior a 12MB.
 
-  LineaTiempoA.mb-5(:datos="datosLineaTiempoA")
+  //- LineaTiempoA debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  LineaTiempoA.color-acento-contenido.mb-5(:datos="datosLineaTiempoA")
 
-  LineaTiempoB.mb-5(:datos="datosLineaTiempoB")
+  //- LineaTiempoB debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  LineaTiempoB.color-secundario.mb-5(:datos="datosLineaTiempoB")
 
   .tarjeta.tarjeta--gris.p-4.mb-5
-    LineaTiempoC
-
+    //- LineaTiempoC debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+    LineaTiempoC.color-acento-contenido
       .row(titulo="1761")
         .col-md-6.mb-4.mb-md-0
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
@@ -1008,12 +1064,16 @@ div
 
   #t_1_13.h4 Pasos
 
-  PasosA.mb-5(tipo="n" :datos="datosPasosA")
+  //- PasosA debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  PasosA.color-primario.mb-5(tipo="n" :datos="datosPasosA")
 
-  PasosA.mb-5(tipo="l" :datos="datosPasosA")
+  //- PasosA debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  PasosA.color-acento-contenido.mb-5(tipo="l" :datos="datosPasosA")
 
   .tarjeta.tarjeta--gris.p-4.mb-5
-    PasosB
+    PasosB.color-acento-contenido
 
       .row(titulo="Palabra")
         .col-md-6.mb-4.mb-md-0
