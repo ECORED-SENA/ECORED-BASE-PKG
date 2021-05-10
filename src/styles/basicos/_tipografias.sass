@@ -21,17 +21,27 @@
 .text-small
   font-size: 0.8em
 
-.text-thin
+.text-thin, .texto-thin
   font-weight: $base-thin-font-weight
-.text-regular
+.text-regular, .texto-regular
   font-weight: $base-medium-font-weight
-.text-bold
+.text-bold, .texto-bold
   font-weight: $base-bold-font-weight
-.text-black
+.text-black, .texto-black
   font-weight: $base-black-font-weight
 
-.text-center
+.text-center, .texto-centro
   text-align: center
+
+.text-white, .texto-blanco
+  color: $white
+  *
+    color: $white
+  &--hover
+    &:active, &:focus, &:hover
+      color: $white
+      *
+        color: $white
 
 .titulo-principal
   border-bottom: solid 3px $color-sistema-f

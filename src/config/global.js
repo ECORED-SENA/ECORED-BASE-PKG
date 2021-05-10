@@ -71,12 +71,6 @@ export default {
           },
           {
             icono: 'far fa-file-alt',
-            numero: '1.8',
-            titulo: 'Componentes',
-            hash: 't_1_8',
-          },
-          {
-            icono: 'far fa-file-alt',
             numero: '1.9',
             titulo: 'Slyders',
             hash: 't_1_9',

@@ -1,6 +1,7 @@
 <template lang="pug">
 div
-  #t_1_1.h4 Estilos tipográficos
+  #t_1_1.titulo-segundo
+    .h4 Estilos tipográficos
 
   .titulo-principal
     .titulo-principal__numero
@@ -22,7 +23,8 @@ div
 
   p.mb-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis. Maecenas cursus ante a diam porttitor mollis. Etiam vehicula dictum diam, eu pulvinar odio ultrices non. Vivamus viverra fermentum tortor, sit amet interdum nisl fermentum sed.
 
-  #t_1_2.h4 Párrafos
+  #t_1_2.titulo-segundo
+    .h4 Párrafos
 
   p.mb-5 Los párrafos mantienen un tamaño regular de 16 pt con interlineado base de 24 pt, sin embargo, existe excepciones para resaltar contenido donde se puede hacer uso de pesos 
     span.text-thin THIN, 
@@ -61,7 +63,8 @@ div
 
   hr
 
-  #t_1_3.h4 Bloques de texto destacado
+  #t_1_3.titulo-segundo
+    .h4 Bloques de texto destacado
 
   p.mb-3 Su función principal es destacar bloques de información importantes a través de recursos gráficos (imágenes y/o texto). 
 
@@ -146,7 +149,7 @@ div
             img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
   //- .bloque-texto-f debe ir acompañado de una de una de estas clases => 
-  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   .bloque-texto-f.color-secundario.pt-4.px-5.mb-5
     .bloque-texto-f__comillas
       i.fas.fa-quote-left
@@ -160,7 +163,8 @@ div
 
 
   hr
-  #t_1_4.h4 Listas
+  #t_1_4.titulo-segundo
+    .h4 Listas
 
   p.mb-3 Se debe tener en cuenta que las personas realizan un escaneo del mismo para encontrar elementos de su interés. Las listas deben estar compuestas por elementos relacionados entre sí, con un orden específico o un conteo importante. 
   
@@ -452,7 +456,8 @@ div
 
   hr
 
-  #t_1_5.h4 Tablas
+  #t_1_5.titulo-segundo
+    .h4 Tablas
   .h5 Requerimientos de información
 
   ul.lista-ul.mb-5
@@ -493,7 +498,7 @@ div
           td Celda 5
 
   //- .tabla-a debe ir acompañado de una de una de estas clases => 
-  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   .tabla-b.color-acento-contenido.mb-5
     .tabla-b__header
       .h6.mb-0 Niveles del lenguaje
@@ -575,7 +580,9 @@ div
           .h6 FDSD33
 
   hr
-  #t_1_6.h4 Imagen
+  #t_1_6.titulo-segundo
+    .h4 Imagen
+
   figure.mb-5
     img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
     figcaption Leyenda de la imagen
@@ -583,7 +590,7 @@ div
   .row.justify-content-between
     .col-md-6.col-lg-4
       //- .imagen-titulo--der debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       .imagen-titulo--der.color-secundario
         figure.mb-5
           img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
@@ -593,7 +600,7 @@ div
     
     .col-md-6.col-lg-4
       //- .imagen-titulo--izq debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       .imagen-titulo--izq.color-acento-botones
         figure.mb-5
           img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
@@ -601,16 +608,16 @@ div
         .imagen-titulo__titulo
           .h4.m-0 Titulo de imagen
   hr
-  #t_1_7.h4 Video
+  #t_1_7.titulo-segundo
+    .h4 Video
   figure
     .video
       iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     figcaption Video: Leyenda del video
   hr
 
-  h1#t_1_8 Componentes
-
-  #t_1_9.h4 Sliders
+  #t_1_9.titulo-segundo
+    .h4 Sliders
 
   p.mb-3 Es una sección dinámica que permite mostrar varios contenidos repartidos en diapositivas, su función principal es mostrar el contenido más importante de manera concisa y con la menor cantidad de texto posible, haciendo uso extensivo de imágenes o íconos de acompañamiento.
 
@@ -688,7 +695,8 @@ div
       span.carousel-control-next-icon(aria-hidden='true')
       span.visually-hidden Next
 
-  #t_1_10.h4 Acordion
+  #t_1_10.titulo-segundo
+    .h4 Acordion
 
   p.mb-3 Es un componente web que permite ahorrar espacio vertical a través del uso de botones  representados por títulos que permiten desplegar u ocultar información pertinente. 
 
@@ -748,7 +756,8 @@ div
         figcaption Leyenda de la imagen
 
 
-  #t_1_11.h4 Pestañas o Tabs
+  #t_1_11.titulo-segundo
+    .h4 Pestañas o Tabs
 
   p.mb-3 Es un elemento web que permite cambiar rápidamente el contenido que el usuario está consumiendo sin cambiar de ventana o desplazarse verticalmente por el sitio web. 
 
@@ -781,7 +790,7 @@ div
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   TabsA.color-acento-botones.mb-5
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 1: The splendor asd asd asd as dasd")
       h4 PASO 1: The splendor
@@ -791,7 +800,7 @@ div
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 2: The splendor")
       h4 PASO 2: The splendor
@@ -808,7 +817,7 @@ div
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 3: The splendor")
       h4 PASO 3: The splendor
@@ -818,7 +827,7 @@ div
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 4: The splendor")
       h4 PASO 4: The splendor
@@ -828,7 +837,7 @@ div
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 5: The splendor")
       h4 PASO 5: The splendor
@@ -838,7 +847,7 @@ div
       p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .tarjeta.color-acento-botones--borde.p-4(titulo="PASO 6: The splendor")
       h4 PASO 6: The splendor
@@ -979,11 +988,8 @@ div
           .h4 Celebrate your failures 6
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
 
-    
-
-
-
-  #t_1_12.h4 Líneas de tiempo
+  #t_1_12.titulo-segundo
+    .h4 Líneas de tiempo
 
   p.mb-3 Es una representación gráfica para sintetizar información, que permite ordenar y explicar acontecimientos que han ocurrido a lo largo de un periodo.
 
@@ -1079,7 +1085,8 @@ div
           img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
           figcaption Leyenda de la imagen
 
-  #t_1_13.h4 Pasos
+  #t_1_13.titulo-segundo
+    .h4 Pasos
 
   //- PasosA debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
@@ -1153,7 +1160,8 @@ div
           figcaption Leyenda de la imagen
 
 
-  #t_1_14.h4 Llamados a la acción
+  #t_1_14.titulo-segundo
+    .h4 Llamados a la acción
 
   p.mb-2 Es un bloque de texto que destaca por su composición y diseño. Su principal función es incentivar al usuario a realizar una acción a través de un botón o hipervínculo, en este caso, con el fin de poder acceder a recursos como infografías, videos, documentos y sitios web externos e independientes del componente formativo.
 
@@ -1190,7 +1198,7 @@ div
   .h5 Ejemplo: Llamado a la acción 1 Acción de infografías
 
   //- .tarjeta debe ir acompañado de una de una de estas clases => 
-  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   //- estas clases tambien tienen un modificador --borde
   .tarjeta.color-acento-botones.p-4.p-md-5.mb-5
     .row.justify-content-around.align-items-center
@@ -1207,9 +1215,9 @@ div
 
   .h5 Ejemplo: Llamado a la acción 2 Recursos externos
   //- .tarjeta debe ir acompañado de una de una de estas clases => 
-  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   //- estas clases tambien tienen un modificador --borde
-  .tarjeta.color-primario.p-3.mb-5
+  .tarjeta.color-primario.text-white.p-3.mb-5
     .row.justify-content-around.align-items-center
       .col-3.col-sm-2.col-lg-1
         img(src="@/assets/componentes/ej-02.svg")
@@ -1224,7 +1232,7 @@ div
               i.fas.fa-file-download
 
   //- .tarjeta debe ir acompañado de una de una de estas clases => 
-  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   //- estas clases tambien tienen un modificador --borde
   .tarjeta.color-acento-botones.p-3.mb-5
     .row.justify-content-around.align-items-center
@@ -1288,7 +1296,8 @@ div
 
 
 
-  #t_1_15.h4 Tarjetas
+  #t_1_15.titulo-segundo
+    .h4 Tarjetas
   
   p.mb-3 Es la agrupación de contenidos (texto e imágenes) en forma de tarjeta, que tiene como propósito, uno, ser más amigable el consumo de la información y dos, destacar información o conceptos relevantes.
 
@@ -1308,9 +1317,9 @@ div
   .row.mb-5
     .col-sm-6.col-lg-3.mb-4.mb-lg-0
       //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
-      .tarjeta--boton.color-primario.p-4
+      .tarjeta--boton.color-primario.text-white--hover.p-4
         .row.justify-content-center.mb-3
           .col-7
             figure
@@ -1321,7 +1330,7 @@ div
 
     .col-sm-6.col-lg-3.mb-4.mb-lg-0
       //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta--boton.color-secundario.p-4
         .row.justify-content-center.mb-3
@@ -1334,7 +1343,7 @@ div
 
     .col-sm-6.col-lg-3.mb-4.mb-sm-0
       //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta--boton.color-acento-contenido.p-4
         .row.justify-content-center.mb-3
@@ -1347,7 +1356,7 @@ div
 
     .col-sm-6.col-lg-3
       //- .tarjeta--boton debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta--boton.color-acento-botones.p-4
         .row.justify-content-center.mb-3
@@ -1361,9 +1370,9 @@ div
 
   .tarjeta--container.row.mb-5
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
-    .col-md.tarjeta.color-primario.p-5
+    .col-md.tarjeta.color-primario.text-white.p-5
       .row.justify-content-center.mb-4
         .col-6
           figure
@@ -1373,7 +1382,7 @@ div
       p To surpass others is fucking tough, if you only do as you are told you don’t have it in you to succeed. Think about all the possibilities. You’ve been placed in the crucial moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .col-md.tarjeta.color-acento-botones.p-5
       .row.justify-content-center.mb-4
@@ -1385,7 +1394,7 @@ div
       p Remember it’s called the creative process, it’s not the creative moment. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the possibility of failure.
 
     //- .tarjeta debe ir acompañado de una de una de estas clases => 
-    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     //- estas clases tambien tienen un modificador --borde
     .col-md.tarjeta.color-acento-contenido.p-5
       .row.justify-content-center.mb-4
@@ -1399,7 +1408,7 @@ div
   .row
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
-        img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+        img(src='@/assets/componentes/arrow.svg' alt='AvatarTop')
         .tarjeta.tarjeta--azul.p-4
           .h4 John Doe
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
@@ -1408,7 +1417,7 @@ div
       .tarjeta-Avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
-        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
         .tarjeta.color-acento-botones.p-4
           .h4 John Doe
@@ -1418,7 +1427,7 @@ div
       .tarjeta-Avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
-        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
         .tarjeta.color-acento-contenido.p-4
           .h4 Greatness isn’t the height
@@ -1428,9 +1437,9 @@ div
       .tarjeta-Avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
-        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-primario.p-4
+        .tarjeta.color-primario.text-white.p-4
           .h4 Greatness isn’t the height
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
@@ -1439,9 +1448,9 @@ div
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
-        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-primario.p-4
+        .tarjeta.color-primario.text-white.p-4
           .h4.text-center John Doe
           p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
@@ -1449,7 +1458,7 @@ div
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
-        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
         .tarjeta.color-acento-botones.p-4
           .h4.text-center John Doe
@@ -1459,7 +1468,7 @@ div
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
-        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+        //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
         .tarjeta.color-acento-contenido.p-4
           .h4.text-center Greatness isn’t the height
@@ -1494,12 +1503,13 @@ div
       .h4.text-center John Doe
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
   
-  #t_1_16.h4 Tarjetas con numero
+  #t_1_16.titulo-segundo
+    .h4 Tarjetas con numero
 
   .row.mb-5
     .col-md-6.col-xl.mb-4.mb-xl-0
       //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-primario.p-5
         .tarjeta-numerada__numero
@@ -1510,7 +1520,7 @@ div
 
     .col-md-6.col-xl.mb-4.mb-xl-0
       //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-secundario.p-5
         .tarjeta-numerada__numero
@@ -1521,7 +1531,7 @@ div
 
     .col-md-6.col-xl.mb-4.mb-xl-0
       //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-acento-contenido.p-5
         .tarjeta-numerada__numero
@@ -1532,7 +1542,7 @@ div
 
     .col-md-6.col-xl.mb-4.mb-xl-0
       //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botone
+      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-acento-botones.p-5
         .tarjeta-numerada__numero
@@ -1541,7 +1551,8 @@ div
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
 
-  #t_1_1.h4 Modal
+  #t_1_1.titulo-segundo
+    .h4 Modal
 
   .row
     .col-auto
