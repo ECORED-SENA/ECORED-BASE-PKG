@@ -1,26 +1,38 @@
 <template lang="pug">
 .creditos
   .mb-3
-    p.text-bold ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES
-  .mb-4
-    p
-      span.text-bold {{creditosData.liderEquipo.nombre}}
-      br
-      | {{creditosData.liderEquipo.cargo}}
+    .text-bold ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES
 
-  .row
-    .col-lg-8
-      p.creditos__titulo.mb-3 CONTENIDO INSTRUCCIONAL
-      .row
-        .col-lg-6(v-for="(column, idx) of contenidoInstruccional" :key="'inst-'+idx")
-          CreditosItem(v-for="(item, colIdx) of column" :key="'inst-col-'+idx+colIdx" :item="item")
+  template(v-if="creditosData.liderEquipo")
+    .mb-4
+      CreditosItem(:item="creditosData.liderEquipo")
 
-    .col-lg-4
-      p.creditos__titulo.mb-3 DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES 
-      CreditosItem(v-for="(item, idx) of creditosData.desarrolloProducto" :key="'desa-'+idx" :item="item" )
-      
-      p.creditos__titulo.mb-3 GESTORES DE REPOSITORIO
-      CreditosItem(v-for="(item, idx) of creditosData.gestoresRepositorio" :key="'repo-'+idx" :item="item")
+  template(v-if="creditosData.contenidoInstruccional.length")
+    .creditos__titulo.mb-4 CONTENIDO INSTRUCCIONAL
+    .row.mb-4
+      .col-md-6.col-lg-4(
+        v-for="(item, idx) of creditosData.contenidoInstruccional" 
+        :key="'contenido-'+idx"
+      )
+        CreditosItem(:item="item")
+
+  template(v-if="creditosData.desarrolloProducto.length")
+    .creditos__titulo.mb-4 DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES
+    .row.mb-4
+      .col-md-6.col-lg-4(
+        v-for="(item, idx) of creditosData.desarrolloProducto"
+        :key="'desarrollo-'+idx"
+      )
+        CreditosItem(:item="item")
+
+  template(v-if="creditosData.gestoresRepositorio.length")
+    .creditos__titulo.mb-4 GESTORES DE REPOSITORIO
+    .row
+      .col-md-6.col-lg-4(
+        v-for="(item, idx) of creditosData.gestoresRepositorio"
+        :key="'gestores-'+idx"
+      )
+        CreditosItem(:item="item")
 </template>
 
 <script>
@@ -33,13 +45,6 @@ export default {
   computed: {
     creditosData() {
       return this.$config.creditos
-    },
-    contenidoInstruccional() {
-      const contenido = this.creditosData.contenidoInstruccional
-      const half = Math.round(contenido.length / 2)
-      const firstHalf = [...contenido].splice(0, half)
-      const secondHalf = [...contenido].splice(half, contenido.length)
-      return [firstHalf, secondHalf]
     },
   },
 }
