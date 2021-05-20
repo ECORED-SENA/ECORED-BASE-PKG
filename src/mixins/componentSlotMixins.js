@@ -5,6 +5,7 @@ export default {
     elements: [],
     stateStr: '',
     rendered: false,
+    firstSelection: true,
   }),
   watch: {
     menuState() {
@@ -41,8 +42,12 @@ export default {
           elemento.data && elemento.data.attrs && elemento.data.attrs.titulo,
         icono:
           elemento.data && elemento.data.attrs && elemento.data.attrs.icono,
+        x: elemento.data && elemento.data.attrs && elemento.data.attrs.x,
+        y: elemento.data && elemento.data.attrs && elemento.data.attrs.y,
       }))
-      this.selected = this.selected > 0 ? this.selected : this.elements[0].id
+      if (this.firstSelection) {
+        this.selected = this.selected > 0 ? this.selected : this.elements[0].id
+      }
       this.stateStr = this.getStateStr()
     },
     getActiveHeight(id) {

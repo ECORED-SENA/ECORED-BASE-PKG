@@ -579,7 +579,7 @@ div
         td
           .h6 FDSD33
 
-  hr
+
   #t_1_6.titulo-segundo
     .h4 Imagen
 
@@ -607,7 +607,29 @@ div
 
         .imagen-titulo__titulo
           .h4.m-0 Titulo de imagen
-  hr
+
+  #t_1_6.titulo-segundo
+    .h4 Imagen Infográfica
+
+  ImagenInfografica.color-secundario.mb-5
+
+    template(v-slot:imagen)
+      figure
+        img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+        figcaption Leyenda de la imagen
+
+    .tarjeta.color-acento-botones.p-3(x="50%" y="50%")
+      .h5.mb-2 titulo
+      p Lorem ipsum dolor ddasdasd asdasd asdasd a asd sd asdasd sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
+
+    .tarjeta.color-acento-botones.p-3(x="20%" y="20%")
+      .h5.mb-2 titulo
+      p Lorem ipsum dolor Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
+
+    .tarjeta.color-acento-botones.p-3(x="70%" y="70%")
+      .h5.mb-2 titulo
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
+
   #t_1_7.titulo-segundo
     .h4 Video
   figure
