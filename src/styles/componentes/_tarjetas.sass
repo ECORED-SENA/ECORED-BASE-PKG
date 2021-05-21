@@ -71,12 +71,13 @@
 .tarjeta-Avatar-b
   display: flex
   img
-    min-width: 20%
-    max-width: 20%
+    min-width: $tarjeta-Avatar-b-ancho-img
+    max-width: $tarjeta-Avatar-b-ancho-img
     position: relative
-  .tarjeta
-    margin-left: -7%
-    padding-left: 10% !important
+  & > div
+    width: 100%
+    margin-left: - $tarjeta-Avatar-b-ancho-img / 2
+    padding-left: $tarjeta-Avatar-b-ancho-img / 2
 
 .tarjeta-numerada
   border: solid 2px

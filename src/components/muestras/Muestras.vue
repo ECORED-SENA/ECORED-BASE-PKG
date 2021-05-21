@@ -618,13 +618,13 @@ div
         img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
         figcaption Leyenda de la imagen
 
-    .tarjeta.color-acento-botones.p-3(x="50%" y="50%")
-      .h5.mb-2 titulo
-      p Lorem ipsum dolor ddasdasd asdasd asdasd a asd sd asdasd sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
-
     .tarjeta.color-acento-botones.p-3(x="20%" y="20%")
       .h5.mb-2 titulo
       p Lorem ipsum dolor Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
+
+    .tarjeta.color-acento-botones.p-3(x="50%" y="50%")
+      .h5.mb-2 titulo
+      p Lorem ipsum dolor ddasdasd asdasd asdasd a asd sd asdasd sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
 
     .tarjeta.color-acento-botones.p-3(x="70%" y="70%")
       .h5.mb-2 titulo
@@ -1430,10 +1430,11 @@ div
   .row
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
-        img(src='@/assets/componentes/arrow.svg' alt='AvatarTop')
-        .tarjeta.tarjeta--azul.p-4
-          .h4 John Doe
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+        .tarjeta.tarjeta--azul
+          .p-4
+            .h4 John Doe
+            p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
@@ -1441,9 +1442,10 @@ div
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-acento-botones.p-4
-          .h4 John Doe
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        .tarjeta.color-acento-botones
+          .p-4
+            .h4 John Doe
+            p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
@@ -1451,9 +1453,10 @@ div
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-acento-contenido.p-4
-          .h4 Greatness isn’t the height
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        .tarjeta.color-acento-contenido
+          .p-4
+            .h4 Greatness isn’t the height
+            p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
       .tarjeta-Avatar-b.mb-5
@@ -1461,9 +1464,10 @@ div
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-primario.text-white.p-4
-          .h4 Greatness isn’t the height
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        .tarjeta.color-primario.text-white
+          .p-4
+            .h4 Greatness isn’t the height
+            p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
   .row
     .col-md-6.col-lg.mb-5
