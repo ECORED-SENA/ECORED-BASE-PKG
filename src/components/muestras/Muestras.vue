@@ -1609,7 +1609,7 @@ div
             .h4 Greatness isn’t the height
             p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
-  .row
+  .row.mb-5
     .col-md-6.col-lg.mb-5
       .tarjeta-Avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')

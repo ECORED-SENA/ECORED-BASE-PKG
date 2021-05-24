@@ -18,12 +18,12 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ### Arreglado
 
 - Arreglo de escroleo del menú
-- Escroleo de barra de avance para firefox.
 - Mejora de especificidad en .text-white, .texto-blanco
 
 ### Borrado
 
 - Variables: $color-btn-b-fondo, $color-btn-b-texto (quedan de manera provisional para compatibilidad con anteriores versiones)
+- Clase .boton--b, los botones se van a manejar con el nuevo esquema de colorización
 
 #
 
