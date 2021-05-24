@@ -45,7 +45,7 @@
 import componentSlotMixins from '../mixins/componentSlotMixins'
 import ScrollHorizontal from './plantilla/ScrollHorizontal'
 export default {
-  name: 'PasosC',
+  name: 'PasosB',
   components: { ScrollHorizontal },
   mixins: [componentSlotMixins],
   data: () => ({

@@ -11,7 +11,6 @@
         @mouseleave="selected = 0"
       )
       .img-infografica__item__dot
-      .indicador--hover(v-if="index === 0 && showIndicator")
     .img-infografica__card(
       v-for="item in elements"
       :key="'img-infografica-card-'+item.id"
@@ -22,6 +21,11 @@
       @mouseleave="selected = 0"
       v-html="item.html"
     )
+    .img-infografica__indicador(
+      v-if="firstElement && showIndicator"
+      :style="[{top: firstElement.y},{left: firstElement.x}]"
+    )
+      .indicador--hover
 
   .hidden-slot
     slot
@@ -36,6 +40,11 @@ export default {
     firstSelection: false,
     showIndicator: true,
   }),
+  computed: {
+    firstElement() {
+      return this.elements.length && this.elements[0]
+    },
+  },
   watch: {
     selected() {
       if (this.showIndicator) {
@@ -46,7 +55,9 @@ export default {
   methods: {
     getCardCords(cardId) {
       const ref = 'card-ref-' + cardId
-      if (!(ref in this.$refs)) return [{ top: 0 }, { left: 0 }]
+      if (!(ref in this.$refs)) {
+        return [{ top: 0 }, { left: 0 }]
+      }
 
       const currentCard = this.elements.find(card => card.id === cardId)
       const imgElement = this.$refs['img-ref-' + this.mainId]
@@ -64,20 +75,22 @@ export default {
 
       const cardPosY = (cardObj.y / 100) * imgObj.h
       const cardPosX = (cardObj.x / 100) * imgObj.w
-      return [
-        {
-          top:
-            cardPosY + cardObj.h > imgObj.h
-              ? imgObj.h - cardObj.h + 'px'
-              : currentCard.y,
-        },
-        {
-          left:
-            cardPosX + cardObj.w > imgObj.w
-              ? imgObj.w - cardObj.w + 'px'
-              : currentCard.x,
-        },
-      ]
+
+      const finalObj = []
+
+      if (cardPosY + cardObj.h > imgObj.h) {
+        finalObj.push({ bottom: 0 })
+      } else {
+        finalObj.push({ top: currentCard.y })
+      }
+
+      if (cardPosX + cardObj.w > imgObj.w) {
+        finalObj.push({ right: 0 })
+      } else {
+        finalObj.push({ left: currentCard.x })
+      }
+
+      return finalObj
     },
   },
 }

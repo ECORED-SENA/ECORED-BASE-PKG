@@ -68,7 +68,7 @@
               .h5.mb-0 Fundamentos del Servicio de Interpretación
               p Formato PDF
             .col-sm-auto
-              a.boton.boton--b(:href="obtenerLink('/downloads/fundamentos_del_servicio_de_Interpretacion.pdf')" target="_blank")
+              a.boton.color-acento-contenido.texto-blanco(:href="obtenerLink('/downloads/fundamentos_del_servicio_de_Interpretacion.pdf')" target="_blank")
                 span Descargar
                 i.fas.fa-file-download
     
@@ -84,7 +84,7 @@
               .h5.mb-0 Plan de Negocios
               p Formato PDF
             .col-sm-auto
-              a.boton.boton--b(:href="obtenerLink('/downloads/plan_de_negocios.pdf')" target="_blank")
+              a.boton.color-acento-contenido.texto-blanco(:href="obtenerLink('/downloads/plan_de_negocios.pdf')" target="_blank")
                 span Descargar
                 i.fas.fa-file-download
     
@@ -100,7 +100,7 @@
               .h5.mb-0 Cobertura poblacional
               p Formato PDF
             .col-sm-auto
-              a.boton.boton--b(:href="obtenerLink('/downloads/cobertura_poblacional.pdf')" target="_blank")
+              a.boton.color-acento-contenido.texto-blanco(:href="obtenerLink('/downloads/cobertura_poblacional.pdf')" target="_blank")
                 span Descargar
                 i.fas.fa-file-download
     
@@ -116,7 +116,7 @@
               .h5.mb-0 Historia de las microfinanzas: Mohammad Yunus
               p Formato PDF
             .col-sm-auto
-              a.boton.boton--b(:href="obtenerLink('/downloads/historia_de_las_microfinanzas_mohammad_yunus.pdf')" target="_blank")
+              a.boton.color-acento-contenido.texto-blanco(:href="obtenerLink('/downloads/historia_de_las_microfinanzas_mohammad_yunus.pdf')" target="_blank")
                 span Descargar
                 i.fas.fa-file-download
     
@@ -132,7 +132,7 @@
               .h5.mb-0 Psicología de la moda: sexualidad, ropa mágica, ropa malévola y ropa neurótica
               p Formato PDF
             .col-sm-auto
-              a.boton.boton--b(:href="obtenerLink('/downloads/psicologia_de_la_moda.pdf')" target="_blank")
+              a.boton.color-acento-contenido.texto-blanco(:href="obtenerLink('/downloads/psicologia_de_la_moda.pdf')" target="_blank")
                 span Descargar
                 i.fas.fa-file-download
 

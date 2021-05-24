@@ -29,15 +29,23 @@
     &.color-primario
       &:active, &:focus, &:hover
         background-color: $color-primario
+        *
+          color: textColor($color-primario)
     &.color-secundario
       &:active, &:focus, &:hover
         background-color: $color-secundario
+        *
+          color: textColor($color-secundario)
     &.color-acento-contenido
       &:active, &:focus, &:hover
         background-color: $color-acento-contenido
+        *
+          color: textColor($color-acento-contenido)
     &.color-acento-botones
       &:active, &:focus, &:hover
         background-color: $color-acento-botones
+        *
+          color: textColor($color-acento-botones)
 
   &--tabla
     background-color: $color-sistema-e
@@ -46,18 +54,40 @@
 
   &.color-primario
     background-color: $color-primario
+    *
+      color: textColor($color-primario)
+    &--borde
+      background-color: lighten($color-primario, 50%)
+      color: textColor(lighten($color-primario, 50%))
+      border: solid 4px $color-primario
   &.color-secundario
     background-color: $color-secundario
+    *
+      color: textColor($color-secundario)
+    &--borde
+      background-color: lighten($color-secundario, 50%)
+      color: textColor(lighten($color-secundario, 50%))
+      border: solid 4px $color-secundario
   &.color-acento-contenido
     background-color: $color-acento-contenido
+    *
+      color: textColor($color-acento-contenido)
+    &--borde
+      background-color: lighten($color-acento-contenido, 50%)
+      color: textColor(lighten($color-acento-contenido, 50%))
+      border: solid 4px $color-acento-contenido
   &.color-acento-botones
     background-color: $color-acento-botones
+    *
+      color: textColor($color-acento-botones)
     &--borde
       background-color: lighten($color-acento-botones, 50%)
+      color: textColor(lighten($color-acento-botones, 50%))
       border: solid 4px $color-acento-botones
 
 // TARJETAS CON AVATAR
 .tarjeta-Avatar
+  height: 100%
   img
     display: block
     width: 40%
@@ -94,7 +124,6 @@
     top: 25px
     transform: translateX(-50%)
     div
-      color: $white
       position: absolute
       left: 50%
       top: 50%
@@ -104,15 +133,23 @@
     border-color: $color-primario
     .tarjeta-numerada__numero
       background-color: $color-primario
+      div
+        color: textColor($color-primario)
   &.color-secundario
     border-color: $color-secundario
     .tarjeta-numerada__numero
       background-color: $color-secundario
+      div
+        color: textColor($color-secundario)
   &.color-acento-contenido
     border-color: $color-acento-contenido
     .tarjeta-numerada__numero
       background-color: $color-acento-contenido
+      div
+        color: textColor($color-acento-contenido)
   &.color-acento-botones
     border-color: $color-acento-botones
     .tarjeta-numerada__numero
       background-color: $color-acento-botones
+      div
+        color: textColor($color-acento-botones)

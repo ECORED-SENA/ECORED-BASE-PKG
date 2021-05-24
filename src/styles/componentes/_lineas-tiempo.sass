@@ -113,7 +113,6 @@
         position: relative
         text-align: center
         font-weight: 900
-        color: $white
 
     img
       width: 60px
@@ -184,6 +183,7 @@
         background-color: $color-primario
     .linea-tiempo-a__icon__container
       background-color: $color-primario
+      color: textColor($color-primario)
       &::before
         background-color: $color-primario
   &.color-secundario
@@ -192,6 +192,7 @@
         background-color: $color-secundario
     .linea-tiempo-a__icon__container
       background-color: $color-secundario
+      color: textColor($color-secundario)
       &::before
         background-color: $color-secundario
   &.color-acento-contenido
@@ -200,6 +201,7 @@
         background-color: $color-acento-contenido
     .linea-tiempo-a__icon__container
       background-color: $color-acento-contenido
+      color: textColor($color-acento-contenido)
       &::before
         background-color: $color-acento-contenido
   &.color-acento-botones
@@ -208,6 +210,7 @@
         background-color: $color-acento-botones
     .linea-tiempo-a__icon__container
       background-color: $color-acento-botones
+      color: textColor($color-acento-botones)
       &::before
         background-color: $color-acento-botones
 
@@ -474,3 +477,72 @@
             background-color: $color-acento-botones
         &__dot
           border-color: $color-acento-botones
+
+
+.linea-tiempo-d
+  &__item
+    &--selected
+      .linea-tiempo-d
+        &__item
+          &__content
+            &__title
+              font-weight: $base-bold-font-weight
+          &__number
+            font-weight: $base-bold-font-weight
+    &__col-number
+      display: flex
+      flex-direction: column
+
+    &__dots
+      flex: 1
+      display: flex
+      justify-content: center
+      padding: 5px 0
+      &:after
+        content: ''
+        display: block
+        width: 0
+        height: 100%
+        border-left: 5px dotted $color-sistema-e
+    &__number
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 40px
+      height: 40px
+      cursor: pointer
+      transition: background-color .3s ease-in-out, color .3s ease-in-out
+    &__content
+      &__title
+        display: flex
+        align-items: center
+        height: 40px
+        cursor: pointer
+        &:hover
+          font-weight: $base-bold-font-weight
+      &__slot
+        overflow: hidden
+        transition: height .5s ease-in-out
+  .tarjeta
+    border-radius: 5px
+
+  &.color-primario
+    .linea-tiempo-d__item--selected
+      .linea-tiempo-d__item__number
+        background-color: $color-primario
+        color: textColor($color-primario)
+  &.color-secundario
+    .linea-tiempo-d__item--selected
+      .linea-tiempo-d__item__number
+        background-color: $color-secundario
+        color: textColor($color-secundario)
+  &.color-acento-contenido
+    .linea-tiempo-d__item--selected
+      .linea-tiempo-d__item__number
+        background-color: $color-acento-contenido
+        color: textColor($color-acento-contenido)
+  &.color-acento-botones
+    .linea-tiempo-d__item--selected
+      .linea-tiempo-d__item__number
+        background-color: $color-acento-botones
+        color: textColor($color-acento-botones)

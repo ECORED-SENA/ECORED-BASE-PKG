@@ -49,9 +49,6 @@ export default {
         return 'tarjeta tarjeta--blanca mb-3'
       }
     },
-    menuState() {
-      return this.$store.getters.isMenuOpen
-    },
   },
   mounted() {
     this.$nextTick(() => {

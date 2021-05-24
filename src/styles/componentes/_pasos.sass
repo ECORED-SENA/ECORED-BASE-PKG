@@ -69,7 +69,6 @@
     z-index: 2
     position: relative
     div
-      color: #fff
       position: absolute
       top: 50%
       left: 50%
@@ -89,6 +88,8 @@
             border-color: $color-primario
       &__circle
         background-color: $color-primario
+        div
+          color: textColor($color-primario)
   &.color-secundario
     .pasos-a
       &__numero
@@ -103,6 +104,8 @@
             border-color: $color-secundario
       &__circle
         background-color: $color-secundario
+        div
+          color: textColor($color-secundario)
   &.color-acento-contenido
     .pasos-a
       &__numero
@@ -117,6 +120,8 @@
             border-color: $color-acento-contenido
       &__circle
         background-color: $color-acento-contenido
+        div
+          color: textColor($color-acento-contenido)
   &.color-acento-botones
     .pasos-a
       &__numero
@@ -131,6 +136,8 @@
             border-color: $color-acento-botones
       &__circle
         background-color: $color-acento-botones
+        div
+          color: textColor($color-acento-botones)
 
 
 .pasos-b
@@ -183,8 +190,6 @@
           color: $white
           display: none
 
-
-
       &--active
         .pasos-b__header__item
           &__tittle
@@ -219,7 +224,6 @@
         .pasos-b__header__item__line-container
           &:after
             background-color: transparent
-
 
     &__btn
       min-width: 50px
@@ -274,18 +278,26 @@
       .pasos-b__header__item__dot
         border-color: $color-primario
         background-color: $color-primario
+        span
+          color: textColor($color-primario)
   &.color-secundario
     .pasos-b__header__item--active
       .pasos-b__header__item__dot
         border-color: $color-secundario
         background-color: $color-secundario
+        span
+          color: textColor($color-secundario)
   &.color-acento-contenido
     .pasos-b__header__item--active
       .pasos-b__header__item__dot
         border-color: $color-acento-contenido
         background-color: $color-acento-contenido
+        span
+          color: textColor($color-acento-contenido)
   &.color-acento-botones
     .pasos-b__header__item--active
       .pasos-b__header__item__dot
         border-color: $color-acento-botones
         background-color: $color-acento-botones
+        span
+          color: textColor($color-acento-botones)

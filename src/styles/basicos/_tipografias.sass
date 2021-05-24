@@ -34,14 +34,14 @@
   text-align: center
 
 .text-white, .texto-blanco
-  color: $white
-  *
-    color: $white
+  color: $white !important
+  *, span, i
+    color: $white !important
   &--hover
     &:active, &:focus, &:hover
-      color: $white
+      color: $white !important
       *
-        color: $white
+        color: $white !important
 
 .titulo-principal
   border-bottom: solid 3px $color-sistema-f

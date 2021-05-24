@@ -70,15 +70,23 @@ table
   &.color-primario
     .tabla-b__header
       background-color: $color-primario
+      *
+        color: textColor($color-primario)
   &.color-secundario
     .tabla-b__header
       background-color: $color-secundario
+      *
+        color: textColor($color-secundario)
   &.color-acento-contenido
     .tabla-b__header
       background-color: $color-acento-contenido
+      *
+        color: textColor($color-acento-contenido)
   &.color-acento-botones
     .tabla-b__header
       background-color: $color-acento-botones
+      *
+        color: textColor($color-acento-botones)
 
 .tabla-c
   @extend .tabla-b

@@ -90,6 +90,8 @@ export default {
   top: 70px
   flex: 0 0 0
   width: 0
+  min-height: calc(100vh - 70px)
+  max-height: calc(100vh - 70px)
   background-color: $color-sistema-g
   transition: flex 0.5s ease-in-out, width 0.5s ease-in-out
   overflow-x: hidden
@@ -114,7 +116,6 @@ export default {
       min-height: 800px
       max-height: 800px
       overflow-y: auto
-
 
   &__header
     padding: 10px

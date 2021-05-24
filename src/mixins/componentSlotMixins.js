@@ -20,6 +20,11 @@ export default {
       this.crearElementos()
     })
   },
+  computed: {
+    menuState() {
+      return this.$store.getters.isMenuOpen
+    },
+  },
   beforeDestroy() {
     window.removeEventListener('resize', this.domUpdated)
   },
@@ -35,16 +40,15 @@ export default {
       if (!this.$slots.default) return []
       else if (!this.$slots.default.length) return []
       this.domUpdated()
-      this.elements = this.$slots.default.map((elemento, index) => ({
-        id: this.mainId + index + 1,
-        html: elemento.elm.outerHTML,
-        titulo:
-          elemento.data && elemento.data.attrs && elemento.data.attrs.titulo,
-        icono:
-          elemento.data && elemento.data.attrs && elemento.data.attrs.icono,
-        x: elemento.data && elemento.data.attrs && elemento.data.attrs.x,
-        y: elemento.data && elemento.data.attrs && elemento.data.attrs.y,
-      }))
+      this.elements = this.$slots.default.map((elemento, index) => {
+        const attributes =
+          elemento.data && elemento.data.attrs ? elemento.data.attrs : []
+        return {
+          id: this.mainId + index + 1,
+          html: elemento.elm.outerHTML,
+          ...attributes,
+        }
+      })
       if (this.firstSelection) {
         this.selected = this.selected > 0 ? this.selected : this.elements[0].id
       }
