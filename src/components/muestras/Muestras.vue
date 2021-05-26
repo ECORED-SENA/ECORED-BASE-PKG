@@ -157,7 +157,7 @@ div
       .bloque-texto-b.color-secundario.p-4
         .bloque-texto-b__texto
           i.fas.fa-quote-left
-          span.h2.mb-0 Can we all just agree as the greater design community to stop talking about Comic Sans altogether?
+          span.h4.mb-0 Can we all just agree as the greater design community to stop talking about Comic Sans altogether?
           i.fas.fa-quote-right
 
     .col-lg-6
@@ -165,7 +165,7 @@ div
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       .bloque-texto-c.color-secundario.p-4
         i.fas.fa-quote-right
-        .h2.mb-2 Then you’ll prove to yourself that you can survive anything.
+        .h4.mb-2 Then you’ll prove to yourself that you can survive anything.
         span - The graphic designer
 
   .row.mb-5
@@ -1170,7 +1170,7 @@ div
 
 
   .row.mb-5
-    .col-6
+    .col-md-6.mb-5.mb-md-0
       //- LineaTiempoD debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       LineaTiempoD.color-secundario
@@ -1183,7 +1183,7 @@ div
         p.text-small(numero="4" titulo="Praesent luctus") quam cursus in. Donec feugiat volutpat metus at pulvinar.
         
 
-    .col-6
+    .col-md-6
       //- LineaTiempoD debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       LineaTiempoD.color-primario
@@ -1569,7 +1569,7 @@ div
 
   .row
     .col-lg-6
-      .tarjeta-Avatar-b.mb-5
+      .tarjeta-avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         .tarjeta.tarjeta--azul
           .p-4
@@ -1577,7 +1577,7 @@ div
             p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
-      .tarjeta-Avatar-b.mb-5
+      .tarjeta-avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
@@ -1588,7 +1588,7 @@ div
             p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
-      .tarjeta-Avatar-b.mb-5
+      .tarjeta-avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
@@ -1599,7 +1599,7 @@ div
             p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .col-lg-6
-      .tarjeta-Avatar-b.mb-5
+      .tarjeta-avatar-b.mb-5
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
@@ -1610,35 +1610,38 @@ div
             p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
   .row.mb-5
-    .col-md-6.col-lg.mb-5
-      .tarjeta-Avatar
+    .col-md-6.col-lg.mb-5.mb-lg-0
+      .tarjeta-avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-primario.text-white.p-4
-          .h4.text-center John Doe
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        .tarjeta.color-primario
+          .text-white.p-4
+            .h4.text-center John Doe
+            p moment. K askdnaskjda sjkdn akjsndasd ajshd akjshd kajshd ask djhak sjdha ksjdha kjsdha kjsdha kjsdh akjshda kjshd aksjdh kajsd djkhakjshdka jsak Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
-    .col-md-6.col-lg.mb-5
-      .tarjeta-Avatar
+    .col-md-6.col-lg.mb-5.mb-lg-0
+      .tarjeta-avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-acento-botones.p-4
-          .h4.text-center John Doe
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        .tarjeta.color-acento-botones
+          .p-4
+            .h4.text-center John Doe
+            p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
-    .col-md-6.col-lg.mb-5
-      .tarjeta-Avatar
+    .col-md-6.col-lg.mb-5.mb-lg-0
+      .tarjeta-avatar
         img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
         //- .tarjeta debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         //- estas clases tambien tienen un modificador --borde
-        .tarjeta.color-acento-contenido.p-4
-          .h4.text-center Greatness isn’t the height
-          p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+        .tarjeta.color-acento-contenido
+          .p-4
+            .h4.text-center Greatness isn’t the height
+            p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
   .row.mb-5
     .col-md-6.col-lg.tarjeta--tabla.p-4

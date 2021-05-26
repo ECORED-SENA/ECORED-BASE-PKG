@@ -86,28 +86,34 @@
       border: solid 4px $color-acento-botones
 
 // TARJETAS CON AVATAR
-.tarjeta-Avatar
+.tarjeta-avatar
   height: 100%
+  position: relative
+  padding-top: $tarjeta-avatar-ancho-img / 2
   img
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translateX(-50%)
     display: block
-    width: 40%
+    width: $tarjeta-avatar-ancho-img
     margin: 0 auto
 
   .tarjeta
+    display: inline-block
     padding-top: 60px !important
-    margin-top: -50px
-    height: calc(100% - 50px)
+    height: 100%
 
-.tarjeta-Avatar-b
+.tarjeta-avatar-b
   display: flex
   img
-    min-width: $tarjeta-Avatar-b-ancho-img
-    max-width: $tarjeta-Avatar-b-ancho-img
+    min-width: $tarjeta-avatar-b-ancho-img
+    max-width: $tarjeta-avatar-b-ancho-img
     position: relative
   & > div
     width: 100%
-    margin-left: - $tarjeta-Avatar-b-ancho-img / 2
-    padding-left: $tarjeta-Avatar-b-ancho-img / 2
+    margin-left: - $tarjeta-avatar-b-ancho-img / 2
+    padding-left: $tarjeta-avatar-b-ancho-img / 2
 
 .tarjeta-numerada
   border: solid 2px
