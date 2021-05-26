@@ -1250,11 +1250,64 @@ div
 
   //- PasosA debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-  PasosA.color-primario.mb-5(tipo="n" :datos="datosPasosA")
+  PasosA.color-primario.mb-5(tipo="n")
+    .row
+      .col-md-6.mb-4.mb-md-0
+        .h5 Lorem ipsum dolor sit amet.
+        p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      .col-md-6
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+    .row
+      .col-md-6.mb-4.mb-md-0
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la Imagen
+      .col-md-6
+        .h5 Nullam vulputate mauris eros, ut.
+        p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+        
+
+    .row
+      .col-md-6.mb-4.mb-md-0
+        .h5 Duis laoreet est non ligula.
+        p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+    
+      .col-md-6
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+    .row
+      .col-md-6.mb-4.mb-md-0
+        .h5 Duis laoreet est non ligula.
+        p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+    
+      .col-md-6
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
 
   //- PasosA debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-  PasosA.color-acento-contenido.mb-5(tipo="l" :datos="datosPasosA")
+  PasosA.color-acento-botones.mb-5(tipo="l")
+    div
+      .h5 Lorem ipsum dolor sit amet.
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id risus eu tortor vulputate luctus. Fusce ligula tortor, euismod vel scelerisque nec, dapibus sit amet enim. Mauris aliquet tempor neque non faucibus. Etiam ex urna, viverra ut velit maximus, malesuada tincidunt lectus. Aliquam tincidunt ipsum turpis, at lacinia purus ultricies eget. Curabitur at fringilla elit. Mauris id rhoncus sapien. Integer mollis ante enim, at congue enim suscipit et. Aliquam erat volutpat. Maecenas dolor ex, laoreet sed egestas pellentesque, molestie vitae mauris. Quisque cursus eros eget odio consequat egestas.
+
+    div
+      .h5 Nullam vulputate mauris eros, ut.
+      p Duis non elit arcu. In luctus placerat dapibus. Praesent auctor nunc vitae iaculis iaculis. Aenean efficitur lectus in elit ullamcorper porttitor. Phasellus sit amet scelerisque magna, eget rhoncus urna. Integer mollis faucibus hendrerit. Nullam blandit vel tortor vel elementum.
+
+    div
+      .h5 Duis laoreet est non ligula.
+      p Nulla lobortis orci quis posuere fringilla. Mauris sit amet ligula et tortor euismod mollis laoreet sit amet nisl. Sed ac suscipit sapien. Aliquam commodo magna quis nisl porttitor pulvinar. Donec efficitur sapien pulvinar, dictum tortor ac, pellentesque felis. Sed in nunc quis enim mattis sodales. Suspendisse sodales sem mauris, nec vehicula felis rhoncus in.
+
+    div
+      .h5 Lorem ipsum dolor sit amet.
+      p Aliquam ornare sem in mauris lobortis accumsan. Suspendisse sollicitudin tellus eget bibendum cursus. Praesent tincidunt cursus mattis. Fusce nec convallis mauris, eu tincidunt neque. Proin justo orci, fermentum vel est vel, ornare sodales dui. Etiam consequat commodo tincidunt. Maecenas imperdiet ante eu mauris imperdiet, Phasellus pretium tortor quis varius sagittis. Suspendisse eu posuere enim, sed lacinia justo. Praesent eget tempor erat, a pretium ante. Nulla facilisi.
 
   .tarjeta.tarjeta--gris.p-4.mb-5
     //- PasosB debe ir acompañado de una de una de estas clases => 
@@ -1796,28 +1849,6 @@ export default {
         texto:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus augue, pulvinar ac auctor at, pellentesque id diam. Praesent maximus, felis sollicitudin pharetra vestibulum, turpis tortor tincidunt augue, in efficitur urna diam eleifend magna.',
         icono: require('@/assets/componentes/ej-05.svg'),
-      },
-    ],
-    datosPasosA: [
-      {
-        titulo: 'Dressed for Error',
-        texto:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.',
-      },
-      {
-        titulo: 'Before the Fury',
-        texto:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.',
-      },
-      {
-        titulo: 'Khans Tribute',
-        texto:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.',
-      },
-      {
-        titulo: 'Secret of the Quiet Stranger',
-        texto:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.',
       },
     ],
     datosSlyder: [
