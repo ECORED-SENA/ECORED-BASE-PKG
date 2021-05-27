@@ -16,7 +16,10 @@
             :id="'ltc-header-' +elm.id"
             :class="itemClasses(elm.id)"
             @click="selected = elm.id"
+            @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
           )
+            .indicador__container(v-if="mostrarIndicador && index === 1")
+              .indicador--click.indicador--sm
             span.linea-tiempo-c__header__item__year {{elm.titulo}}
             .linea-tiempo-c__header__item__line-container
               .linea-tiempo-c__header__item__dot
@@ -49,6 +52,7 @@ export default {
   mixins: [componentSlotMixins],
   data: () => ({
     headerSelected: 0,
+    mostrarIndicador: true,
   }),
   computed: {
     leftBtnId() {

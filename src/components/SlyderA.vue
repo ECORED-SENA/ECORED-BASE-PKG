@@ -1,6 +1,12 @@
 <template lang="pug">
 .slyder-a
-  .slyder-a__btn--sigt(v-if="navObj.next" @click="selected = navObj.next")
+  .slyder-a__btn--sigt(
+    v-if="navObj.next"
+    @click="selected = navObj.next" 
+    @mouseover="mostrarIndicador = false"
+  )
+    .indicador__container.indicador--left(v-if="mostrarIndicador")
+      .indicador--click
   .slyder-a__btn--atrs(v-if="navObj.back" @click="selected = navObj.back")
   .slyder-a__bullets
     .slyder-a__bullets__item(
@@ -27,6 +33,9 @@ export default {
   name: 'SlyderA',
   components: { ScrollHorizontal },
   mixins: [componentSlotMixins],
+  data: () => ({
+    mostrarIndicador: true,
+  }),
   computed: {
     navObj() {
       if (!this.elements.length) return {}

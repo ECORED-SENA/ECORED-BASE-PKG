@@ -10,7 +10,6 @@
         .pasos-a__circle
           .h4(v-if="tipo === 'n'") {{index + 1}}
           .h4(v-else-if="tipo === 'l'") {{abecedario[index]}}
-
       .col.py-3(v-html="item.html" :class="!isEven(index) && 'text-end'")
       .col-1
     

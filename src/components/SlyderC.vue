@@ -20,8 +20,15 @@
                 .slyder__pagination {{index+1}}/{{datos.length}}
                 a.slyder__btn(v-if="index -1 >= 0" @click="selected = getId(index -1)")
                   i.fas.fa-angle-left
-                a.slyder__btn(v-if="index != datos.length -1" @click="selected = getId(index +1)")
+                a.slyder__btn(
+                  v-if="index != datos.length -1"
+                  @click="selected = getId(index +1)"
+                  @mouseover="mostrarIndicador = false"
+                )
                   i.fas.fa-angle-right
+                  .indicador__container.indicador--left(v-if="mostrarIndicador && index === 0")
+                    .indicador--click.indicador--sm
+                  
         .slyder-c__content__body
           p.mb-3(v-html="item.texto")
 
@@ -34,6 +41,9 @@ export default {
   name: 'SlyderC',
   components: { ScrollHorizontal },
   mixins: [slyderMixins],
+  data: () => ({
+    mostrarIndicador: true,
+  }),
   mounted() {
     this.selected = this.getId(0)
   },

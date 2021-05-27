@@ -10,8 +10,11 @@
           button.tabs-a__tab(
             :class="{'tabs-a__tab__selected': selected === elm.id}"
             @click="selected = elm.id"
+            @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
           ) 
             .tabs-a__tab__text {{elm.titulo}}
+            .indicador__container(v-if="mostrarIndicador && index === 1")
+              .indicador--click
     
     .col-lg-8.col-xl-9
       .tabs-a__content-item(
@@ -32,6 +35,9 @@ import componentSlotMixins from '../mixins/componentSlotMixins'
 export default {
   name: 'TabsA',
   mixins: [componentSlotMixins],
+  data: () => ({
+    mostrarIndicador: true,
+  }),
 }
 </script>
 

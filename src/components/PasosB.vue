@@ -22,8 +22,10 @@
                 i.fas.fa-check
             .pasos-b__header__item__tittle.px-2.text-small {{elm.titulo}}
     .col-2.col-sm-auto.px-0.ms-sm-3.d-flex.justify-content-end
-      .pasos-b__header__btn--right(@click="selected = rightBtnId")
+      .pasos-b__header__btn--right(@click="selected = rightBtnId" @mouseover="mostrarIndicador = false")
         i.fas.fa-angle-right
+        .indicador__container.indicador--left(v-if="mostrarIndicador")
+          .indicador--click
 
   .linea-tiempo-c__content
     ScrollHorizontal(
@@ -50,6 +52,7 @@ export default {
   mixins: [componentSlotMixins],
   data: () => ({
     headerSelected: 0,
+    mostrarIndicador: true,
   }),
   computed: {
     leftBtnId() {

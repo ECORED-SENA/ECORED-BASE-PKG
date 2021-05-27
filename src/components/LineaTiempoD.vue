@@ -9,7 +9,10 @@
       .linea-tiempo-d__item__number.tarjeta.tarjeta--gris(
         :class="[,{'px-3' : item.numero.length > 1}]"
          @click="selected = item.id"
+         @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
       )
+        .indicador__container(v-if="mostrarIndicador && index === 1")
+          .indicador--click
         span {{item.numero}}
       .linea-tiempo-d__item__dots(
         v-if="index < elements.length -1"
@@ -19,6 +22,7 @@
       .linea-tiempo-d__item__content.tarjeta.tarjeta--gris
         .linea-tiempo-d__item__content__title.px-3(
           @click="selected = item.id"
+          @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
         )
           span {{item.titulo}}
         .linea-tiempo-d__item__content__slot(
@@ -35,7 +39,9 @@ import componentSlotMixins from '../mixins/componentSlotMixins'
 export default {
   name: 'LineaTiempoD',
   mixins: [componentSlotMixins],
-  data: () => ({}),
+  data: () => ({
+    mostrarIndicador: true,
+  }),
   computed: {},
   watch: {},
   methods: {},

@@ -26,9 +26,13 @@
     &--sigt
       transform: translateY(-50%) rotate(-90deg)
       right: 15px
+      .indicador__container
+        transform: translateY(15px) rotate(90deg)
+
     &--atrs
       transform: translateY(-50%) rotate(90deg)
       left: 15px
+
 
   &__bullets
     display: flex
@@ -73,6 +77,9 @@
       align-items: center
       justify-content: space-between
 
+  .indicador__container
+    transform: translateX(-15px)
+
 .slyder-d
   &__imagen
     position: relative
@@ -84,6 +91,9 @@
 
     @media (max-width: $bp-max-sm)
       position: relative
+
+  .indicador__container
+    transform: translateY(5px)
   
   
 .slyder

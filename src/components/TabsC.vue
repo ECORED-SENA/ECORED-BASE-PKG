@@ -8,7 +8,10 @@
         :class="{'tabs-c__tab--active' : selected === elm.id}"
         @click="selected = elm.id"
         role="button"
+        @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
       )
+        .indicador__container(v-if="mostrarIndicador && index === 1")
+          .indicador--click
         span {{elm.titulo}}
   .tabs-c__content-item(
     v-for="elm of elements"
@@ -27,6 +30,9 @@ import componentSlotMixins from '../mixins/componentSlotMixins'
 export default {
   name: 'TabsC',
   mixins: [componentSlotMixins],
+  data: () => ({
+    mostrarIndicador: true,
+  }),
 }
 </script>
 

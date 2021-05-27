@@ -46,9 +46,15 @@ div
     .mb-3
       //- .boton debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-      a.boton.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      a.boton.me-3.indicador__container(
+        :href="obtenerLink('/downloads/prueba.pdf')"
+        target="_blank"
+        type="application/pdf"
+        @mouseover="mostrarIndicador = false"
+      )
         span Descargar
         i.fas.fa-file-download
+        .indicador--click(v-if="mostrarIndicador")
 
     .mb-3
       a.boton.color-primario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
@@ -1781,8 +1787,9 @@ div
 
   .row
     .col-auto
-      a.boton.color-acento-contenido.mb-5(@click="modal1 = true")
+      a.boton.color-acento-contenido.mb-5.indicador__container(@click="modal1 = true")
         span Abrir modal
+        .indicador--click(v-if="mostrarIndicador")
     .col
       p moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t 
         a.lnk(@click="modal1 = true") Abrir modal 
@@ -1805,6 +1812,7 @@ div
 export default {
   name: 'Muestras',
   data: () => ({
+    mostrarIndicador: true,
     modal1: false,
     modal2: false,
     datosLineaTiempoA: [
