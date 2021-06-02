@@ -23,7 +23,6 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Cambio de nombre de clase .tarjeta-Avatar-b por .tarjeta-avatar-b
 - Mejora de alineacion de las comillas en los componentes de texto destacado
 
-
 #
 
 ## 2.1.0 - 24-05-2021
