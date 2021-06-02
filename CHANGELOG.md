@@ -2,6 +2,26 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 2.2.0 - 02-06-2021
+
+### Agregado
+
+- Nuevas clases para titulos .titulo-tercero, .titulo-cuarto y .titulo-quinto
+- nuevo .espaciador
+- PasosA ahora soporta contenido dinámico
+- Indicadores de interacción en todos los componentes interactivos
+
+### Arreglado
+
+- Mejora de responsive en ImagenInfografica
+- Cambio de textos en botones de la vista inicial
+- Cambio de espaciado en .titulo-principal y .titulo-segundo
+- Cambio de todos los tamaños de los headers (h1, h2, h3, h4, h5, h6)
+- Cambio de espaciado de p, ul y ol
+- Mejora de padding en componente AcordionA
+
+#
+
 ## 2.1.0 - 24-05-2021
 
 ### Agregado
