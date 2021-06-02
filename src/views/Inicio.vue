@@ -20,8 +20,9 @@ section
             i.desarrollo-contenidos__item__icono(v-else :class="item.icono")
             span {{item.titulo}}
 
-          a.boton--sm.d-none.d-md-block
-            span Ver más
+          a.boton--sm
+            span.d-none.d-md-block Ver contenido
+            span.d-md-none Ver
 
   //- Créditos
   #creditos.pb-5

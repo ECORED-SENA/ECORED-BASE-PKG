@@ -21,7 +21,7 @@ header.header.container-fluid
 
     .col-auto(v-if="isInicio")
       router-link.boton(:to="{name: iniciarLnk.nombreRuta }")
-        span.me-1 Iniciar
+        span.me-1 Ver contenido
         i(class="fas fa-angle-right")
 
 </template>

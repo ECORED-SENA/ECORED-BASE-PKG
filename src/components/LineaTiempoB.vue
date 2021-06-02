@@ -16,7 +16,7 @@
         img(:src="item.icono")
     .col-9.col-md-5
       .linea-tiempo-b__content
-        .h4.mb-2 {{item.titulo}}
+        .h3.mb-2 {{item.titulo}}
         span(v-html="item.texto")
 
 </template>

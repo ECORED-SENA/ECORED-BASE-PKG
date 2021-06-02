@@ -6,13 +6,13 @@
   )
     .linea-tiempo-a__content
       .linea-tiempo-a__text
-        span.h4.mb-2 {{item.titulo}}
+        span.h3.mb-2 {{item.titulo}}
         span(v-html="item.texto")
 
     .linea-tiempo-a__content
       .linea-tiempo-a__icon
         .linea-tiempo-a__icon__container
-          span.h5 {{item.ano}}
+          span.h4 {{item.ano}}
 </template>
 
 <script>

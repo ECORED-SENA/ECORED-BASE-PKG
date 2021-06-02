@@ -14,7 +14,7 @@
           .row
             .col-md-8.col-lg-6
               .slyder-d__content__card.p-4
-                .h4 {{item.titulo}}
+                .h3 {{item.titulo}}
                 p.mb-3(v-html="item.texto")
                 .slyder__action
                   .slyder__pagination {{index+1}}/{{datos.length}}

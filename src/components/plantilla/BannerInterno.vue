@@ -5,7 +5,7 @@
     .banner-interno__titulo.py-5
       .banner-interno__titulo__icono.me-3(v-if="icono.length")
         i(:class="icono")
-      h1.h3.mb-0 {{titulo}}
+      h1.h2.mb-0 {{titulo}}
 </template>
 
 <script>

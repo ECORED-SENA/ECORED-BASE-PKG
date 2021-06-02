@@ -45,31 +45,29 @@
 
 .titulo-principal
   border-bottom: solid 3px $color-sistema-f
-  margin-bottom: 30px
+  margin-bottom: 48px
   padding-bottom: 20px
   display: flex
   align-items: center
-  h3, .h3
-    margin-bottom: 0
   &__numero
     min-width: 45px
     height: 45px
     background-color: $color-acento-contenido
     margin-right: 15px
     position: relative
-
-    .h3
+    span
+      @extend .h1
+      margin-bottom: 0
       color: $white
       position: absolute
       top: 50%
       left: 50%
       transform: translate(-50%,-50%)
+  h1
+    margin-bottom: 0
 
 .titulo-segundo
-  margin-bottom: 20px
-  .h4
-    margin-bottom: 10px
-
+  margin-bottom: 48px
   &:after
     content: ''
     display: block
@@ -78,6 +76,55 @@
     border-left: solid 50px $color-acento-contenido
     background-color: $color-sistema-f
 
+.titulo-tercero
+  margin-bottom: 36px
+
+.titulo-cuarto
+  margin-bottom: 24px
+
+.titulo-quinto
+  text-align: center
+  margin-bottom: 24px
+  &> *
+    display: inline-block
+    border-bottom: 4px solid $color-primario
+    padding: 0 15px 5px
+    position: relative
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%,-50%)
+      width: 0
+      height: 0
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      border-top: 10px solid
+      left: 50%
+      top: calc(100% + 6px)
+      border-top-color: $color-primario
+
+  &.color-primario
+    &> *
+      border-bottom-color: $color-primario !important
+      &:before
+        border-top-color: $color-primario
+  &.color-secundario
+    &> *
+      border-bottom-color: $color-secundario !important
+      &:before
+        border-top-color: $color-secundario
+  &.color-acento-contenido
+    &> *
+      border-bottom-color: $color-acento-contenido !important
+      &:before
+        border-top-color: $color-acento-contenido
+  &.color-acento-botones
+    &> *
+      border-bottom-color: $color-acento-botones !important
+      &:before
+        border-top-color: $color-acento-botones
 
 .etiqueta
   padding: 2px 6px 5px

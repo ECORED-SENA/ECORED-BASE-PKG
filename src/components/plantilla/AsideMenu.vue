@@ -2,7 +2,7 @@
 aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
   nav.aside-menu__content
     .aside-menu__header
-      .h5 Desarrollo de contenidos
+      .h4 Desarrollo de contenidos
     ul.aside-menu__menu
       template(v-for="(item,index) of menuData")
         li.aside-menu__menu__item(
