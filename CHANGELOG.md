@@ -10,6 +10,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - nuevo .espaciador
 - PasosA ahora soporta contenido dinámico
 - Indicadores de interacción en todos los componentes interactivos
+- imagen en .tarjeta-avatar ahora tiene tamaños dinámico a travez de $tarjeta-avatar-ancho-img
 
 ### Arreglado
 
@@ -19,6 +20,9 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Cambio de todos los tamaños de los headers (h1, h2, h3, h4, h5, h6)
 - Cambio de espaciado de p, ul y ol
 - Mejora de padding en componente AcordionA
+- Cambio de nombre de clase .tarjeta-Avatar-b por .tarjeta-avatar-b
+- Mejora de alineacion de las comillas en los componentes de texto destacado
+
 
 #
 
