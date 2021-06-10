@@ -13,7 +13,7 @@
             figcaption(v-if="item.leyendaImagen") {{item.leyendaImagen}}
 
         .col-lg-4.order-lg-1
-          .h3 {{item.titulo}}
+          h3 {{item.titulo}}
           p.mb-3(v-html="item.texto")
           .slyder__action
             .slyder__pagination {{index+1}}/{{datos.length}}

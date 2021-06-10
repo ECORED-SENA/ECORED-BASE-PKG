@@ -15,7 +15,7 @@
               .indicador--click.indicador--sm
 
         .acordion__titulo
-          .h3.mb-0 {{elm.titulo}}
+          h3.mb-0 {{elm.titulo}}
 
       .acordion__accion(v-if="tipo === 'b'")
         .acordion__accion__btn--b.h3.mb-0
