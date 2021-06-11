@@ -446,7 +446,7 @@ div
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
   .tabla-b.color-acento-contenido.mb-5
     .tabla-b__header
-      .h6.mb-0 Niveles del lenguaje
+      h5.mb-0 Niveles del lenguaje
     table
       caption Leyenda de la tabla
       tr
