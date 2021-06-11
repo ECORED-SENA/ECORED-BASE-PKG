@@ -21,7 +21,7 @@ Vue.prototype.$package = packageJson
 Vue.config.productionTip = false
 
 Vue.directive('child', {
-  bind(el, binding, vnode) {
+  bind(el, binding) {
     el.appendChild(binding.value)
   },
 })
