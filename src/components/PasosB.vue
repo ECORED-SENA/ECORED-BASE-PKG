@@ -37,7 +37,7 @@
         v-for="item in elements"
         :key="'pb-content-key-'+item.id"
         :id="'pb-content-'+item.id"
-        v-html="item.html"
+        v-child="item.elm"
       )
     .hidden-slot
       slot

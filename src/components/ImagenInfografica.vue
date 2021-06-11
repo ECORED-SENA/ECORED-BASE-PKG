@@ -19,7 +19,7 @@
       :class="{'img-infografica__card--selected' : selected === item.id}"
       @mouseover="selected = item.id"
       @mouseleave="selected = 0"
-      v-html="item.html"
+      v-child="item.elm"
     )
     .img-infografica__indicador(
       v-if="firstElement && showIndicator"

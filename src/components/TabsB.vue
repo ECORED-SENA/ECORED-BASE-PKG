@@ -19,7 +19,7 @@
     v-for="elm of elements"
     :key="'tabs-content-'+elm.id"
     v-show="selected === elm.id"
-    v-html="elm.html"
+    v-child="elm.elm"
   )
 
   .hidden-slot

@@ -20,7 +20,7 @@
       v-for="item in elements"
       :key="'sl-key-'+item.id"
       :id="'sl-'+item.id"
-      v-html="item.html"
+      v-child="item.elm"
     )
   .hidden-slot
     slot

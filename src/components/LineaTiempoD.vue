@@ -28,7 +28,7 @@
         .linea-tiempo-d__item__content__slot(
           :style="{ height: rendered && selected === item.id ? getActiveHeight(item.id) : 0 } "
         )
-          .p-3.pt-0(:ref="item.id" v-html="item.html" )
+          .p-3.pt-0(:ref="item.id" v-child="item.elm" )
 
   .hidden-slot
     slot

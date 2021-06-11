@@ -27,7 +27,7 @@
     .acordion__contenido(
       :style="{ height: rendered && selected === elm.id ? getActiveHeight(elm.id) : 0 } "
     )
-      .acordion__contenido__item.pb-3.pb-md-4(:ref="elm.id" v-html="elm.html")
+      .acordion__contenido__item.pb-3.pb-md-4(:ref="elm.id" v-child="elm.elm")
 
   .hidden-slot
     slot

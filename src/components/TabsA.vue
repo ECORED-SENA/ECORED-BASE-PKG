@@ -22,7 +22,7 @@
         :key="'tabs-a-content-'+elm.id"
         v-show="selected === elm.id"
         :class="{'tabs-a__content-item--active' : selected === elm.id}"
-        v-html="elm.html"
+        v-child="elm.elm"
       )
 
   .hidden-slot

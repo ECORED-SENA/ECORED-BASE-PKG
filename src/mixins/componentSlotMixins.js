@@ -45,7 +45,7 @@ export default {
           elemento.data && elemento.data.attrs ? elemento.data.attrs : []
         return {
           id: this.mainId + index + 1,
-          html: elemento.elm.outerHTML,
+          elm: elemento.elm,
           ...attributes,
         }
       })
