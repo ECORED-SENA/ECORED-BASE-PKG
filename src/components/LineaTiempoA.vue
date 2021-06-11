@@ -12,7 +12,7 @@
     .linea-tiempo-a__content
       .linea-tiempo-a__icon
         .linea-tiempo-a__icon__container
-          h4 {{item.ano}}
+          span.h4 {{item.ano}}
 </template>
 
 <script>

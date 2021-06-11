@@ -30,7 +30,7 @@ div
 
   p.mb-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis. Maecenas cursus ante a diam porttitor mollis. Etiam vehicula dictum diam, eu pulvinar odio ultrices non. Vivamus viverra fermentum tortor, sit amet interdum nisl fermentum sed.
 
-  .separador
+  Separador
 
   #parrafos.titulo-segundo
     h2 Párrafos
@@ -44,7 +44,7 @@ div
     span.etiqueta etiquetas
     | de color (según paleta del programa). Así mismo, el ancho de los cajones textos permite variación en las doce (12) columnas.
 
-  .separador
+  Separador
 
   #botones.titulo-segundo
     h2 Botones
@@ -96,7 +96,7 @@ div
         span Descargar
         i.fas.fa-file-download
 
-  .separador
+  Separador
 
 
   #listas.titulo-segundo
@@ -390,7 +390,7 @@ div
           i.fas.fa-kiwi-bird
           | Item lista no ordenada
 
-  .separador
+  Separador
 
   #tablas.titulo-segundo
     h2 Tablas
@@ -516,7 +516,7 @@ div
         td
           .h6 FDSD33
 
-  .separador
+  Separador
 
   #imagen.titulo-segundo
     h2 Imagen
@@ -545,7 +545,7 @@ div
 
         .imagen-titulo__titulo
           h4.m-0 Titulo de imagen
-  .separador
+  Separador
 
   #imagen_infografica.titulo-segundo
     h2 Imagen Infográfica
@@ -569,7 +569,7 @@ div
       .h5.mb-2 titulo
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
 
-  .separador
+  Separador
 
   #video.titulo-segundo
     h2 Video
@@ -579,7 +579,7 @@ div
       iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     figcaption Video: Leyenda del video
 
-  .separador
+  Separador
 
   #texto_destacado.titulo-segundo
     h2 Bloques de texto destacado
@@ -706,7 +706,7 @@ div
       .bloque-texto-f__avatar__img
         img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
-  .separador
+  Separador
 
   #sliders.titulo-segundo
     h2 Sliders
@@ -787,7 +787,7 @@ div
       span.carousel-control-next-icon(aria-hidden='true')
       span.visually-hidden Next
 
-  .separador
+  Separador
 
   #acordiones.titulo-segundo
     h2 Acordiones
@@ -849,7 +849,7 @@ div
         img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
         figcaption Leyenda de la imagen
 
-  .separador
+  Separador
 
   #tabs.titulo-segundo
     h2 Pestañas o Tabs
@@ -1083,7 +1083,7 @@ div
           h4 Celebrate your failures 6
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
 
-  .separador
+  Separador
 
   #lineas_tiempo.titulo-segundo
     h2 Líneas de tiempo
@@ -1257,7 +1257,7 @@ div
           img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
           figcaption Leyenda de la imagen
 
-  .separador
+  Separador
 
   #pasos.titulo-segundo
     h2 Pasos
@@ -1386,7 +1386,7 @@ div
           img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
           figcaption Leyenda de la imagen
 
-  .separador
+  Separador
 
   #llamados_accion.titulo-segundo
     h2 Llamados a la acción
@@ -1522,7 +1522,7 @@ div
         .anexo__texto
           p Anexo. Consideraciones generales de tratamiento clínico del paciente con COVID-19 en el servicio de urgencias
 
-  .separador
+  Separador
 
   #tarjetas.titulo-segundo
     h2 Tarjetas
@@ -1738,7 +1738,7 @@ div
       h2.text-center John Doe
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
-  .separador
+  Separador
 
   #tarjeta_numero.titulo-segundo
     h2 Tarjetas con número
@@ -1750,7 +1750,7 @@ div
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-primario.p-5
         .tarjeta-numerada__numero
-          h2 1
+          .h2 1
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
@@ -1761,7 +1761,7 @@ div
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-secundario.p-5
         .tarjeta-numerada__numero
-          h2 2
+          .h2 2
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
@@ -1772,7 +1772,7 @@ div
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-acento-contenido.p-5
         .tarjeta-numerada__numero
-          h2 3
+          .h2 3
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
@@ -1783,12 +1783,12 @@ div
       //- estas clases tambien tienen un modificador --borde
       .tarjeta-numerada.color-acento-botones.p-5
         .tarjeta-numerada__numero
-          h2 4
+          .h2 4
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
 
-  .separador
+  Separador
 
   #modal.titulo-segundo
     h2 Modal
