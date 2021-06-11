@@ -43,6 +43,10 @@ export default {
 table
   width: calc(100% - 1px)
   min-width: 800px
+  thead
+    background-color: $color-sistema-e
+    th
+      border-color: $color-sistema-e
   th, td
     padding: 25px 20px
     text-align: center
