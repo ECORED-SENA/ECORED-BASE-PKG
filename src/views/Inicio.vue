@@ -30,21 +30,17 @@ section
     .titulo__template--a.mb-4
       h3 Créditos
 
-    CreditosComp
-
   Footer
   
 
 </template>
 <script>
 import BannerPrincipal from '../components/plantilla/BannerPrincipal'
-import CreditosComp from '../components/plantilla/CreditosComp'
 import Footer from '../components/plantilla/Footer'
 export default {
   name: 'Inicio',
   components: {
     BannerPrincipal,
-    CreditosComp,
     Footer,
   },
   computed: {
