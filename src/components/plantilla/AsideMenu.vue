@@ -121,7 +121,7 @@ export default {
     padding: 10px
     text-align: center
     background-color: $color-sistema-e
-    div
+    h4
       margin: 0
 
   &__menu
@@ -129,6 +129,7 @@ export default {
     flex-grow: 1
     list-style: none
     padding-left: 0
+    margin-bottom: 0
 
     &__item
       &--active
@@ -174,6 +175,7 @@ export default {
     background-color: $color-sistema-e
     padding: 10px 0
     flex-shrink: 0
+    margin-bottom: 0
 
     &__item
       @extend .aside-menu__menu__item

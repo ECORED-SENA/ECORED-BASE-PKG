@@ -5,8 +5,8 @@
     AsideMenu
     section.seccion-principal(:class="{'seccion-principal--barra-avance-open' : !menuState}")
       router-view
-      footer
   BarraAvance
+  Accesibilidad
 
 </template>
 

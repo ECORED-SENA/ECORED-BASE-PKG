@@ -3,6 +3,7 @@ Vue.component('AsideMenu', () => import('./plantilla/AsideMenu.vue'))
 Vue.component('Header', () => import('./plantilla/Header.vue'))
 Vue.component('BarraAvance', () => import('./plantilla/BarraAvance.vue'))
 Vue.component('BannerInterno', () => import('./plantilla/BannerInterno.vue'))
+Vue.component('Accesibilidad', () => import('./plantilla/Accesibilidad.vue'))
 
 Vue.component('AcordionA', () => import('./AcordionA.vue'))
 Vue.component('TabsA', () => import('./TabsA.vue'))
