@@ -14,7 +14,6 @@ header.header.container-fluid
 
       .d-none.d-md-flex.align-items-center(v-if="isInicio")
         a(href="#contenidos").me-5 Contenidos
-        a(href="#creditos") Créditos
 
       .header__componente-formativo(v-else)
         span {{globalData.componenteFormativo}}

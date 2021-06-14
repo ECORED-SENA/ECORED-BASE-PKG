@@ -31,11 +31,11 @@ export default {
 <style lang="sass">
 .footer
   background-color: $color-sistema-d
-  border-bottom-right-radius: 0
-  border-bottom-left-radius:  0
+  border-bottom-right-radius: 0 !important
+  border-bottom-left-radius:  0 !important
   &__all-round
-    border-bottom-right-radius: 20px
-    border-bottom-left-radius:  20px
+    border-bottom-right-radius: 20px !important
+    border-bottom-left-radius:  20px !important
   p
     color: $color-sistema-b
     line-height: 1.2em

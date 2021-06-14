@@ -13,7 +13,7 @@ export default {
 .separador-container
   padding: 45px 0
 .separador
-  height: 15px
+  height: 20px
   overflow: hidden
   position: relative
   &:after
