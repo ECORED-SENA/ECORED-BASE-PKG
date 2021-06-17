@@ -206,4 +206,8 @@ export default {
     &__content
       // min-height: 100vh
       // max-height: 100vh
+
+  @media (max-width: $bp-max-xs)
+    &__sec-menu
+      padding-bottom: 110px
 </style>
