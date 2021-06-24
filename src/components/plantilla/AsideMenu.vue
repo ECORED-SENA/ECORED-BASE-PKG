@@ -71,7 +71,7 @@ export default {
   },
   watch: {
     $route(to) {
-      if (to.name === 'inicio') {
+      if (to.name === 'inicio' || window.innerWidth <= 991) {
         this.toggleMenu(false)
       }
     },
@@ -111,6 +111,7 @@ export default {
     justify-content: space-between
     min-height: calc(100vh - 70px)
     max-height: calc(100vh - 70px)
+    border-right: 1px solid $color-sistema-e
 
     @media (max-height: 800px)
       min-height: 800px
@@ -198,7 +199,7 @@ export default {
 
 
 
-  @media (max-width: $bp-max-sm)
+  @media (max-width: $bp-max-md)
     position: fixed
     top: 70px
     // width: 300px

@@ -214,3 +214,42 @@
   &.color-acento-botones
     &:before
       background-color: $color-acento-botones
+
+.bloque-texto-g
+  position: relative
+  display: flex
+  justify-content: flex-end
+  &__img
+    width: 50%
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    background-position: center
+    background-size: cover
+  &__texto
+    position: relative
+    width: 60%
+    background-color: rgba( $white, .95 )
+
+  @media (max-width: $bp-max-md)
+    padding-top: 40% !important
+    &__img
+      width: 100%
+      height: 50%
+    &__texto
+      width: 100%
+
+  @media (max-width: $bp-max-xs)
+    padding-top: 200px !important
+    &__img
+      height: 250px
+
+  &.color-primario
+    background-color: $color-primario
+  &.color-secundario
+    background-color: $color-secundario
+  &.color-acento-contenido
+    background-color: $color-acento-contenido
+  &.color-acento-botones
+    background-color: $color-acento-botones
