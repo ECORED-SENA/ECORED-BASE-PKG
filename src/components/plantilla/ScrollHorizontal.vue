@@ -47,7 +47,7 @@ export default {
     scroll() {
       const selectedElementId = this.ids.find(
         item => item.id === this.selectedId,
-      ).id
+      )?.id
       const selectedElement = document.getElementById(selectedElementId)
       if (
         !Object.keys(this.$slots.default).length ||

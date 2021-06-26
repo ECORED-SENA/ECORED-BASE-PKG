@@ -26,6 +26,11 @@ export default {
       return this.$store.getters.isMenuOpen
     },
   },
+  mounted() {
+    this.$aos.init({
+      offset: 100,
+    })
+  },
 }
 </script>
 

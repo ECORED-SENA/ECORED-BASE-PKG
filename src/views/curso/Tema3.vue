@@ -30,6 +30,11 @@ export default {
   components: {
     BannerInterno,
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$aosRefresh()
+    })
+  },
 }
 </script>
 
