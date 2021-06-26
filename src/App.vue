@@ -11,16 +11,8 @@
 </template>
 
 <script>
-import AsideMenu from './components/plantilla/AsideMenu'
-import Header from './components/plantilla/Header'
-import BarraAvance from './components/plantilla/BarraAvance'
 export default {
   name: 'App',
-  components: {
-    AsideMenu,
-    Header,
-    BarraAvance,
-  },
   computed: {
     menuState() {
       return this.$store.getters.isMenuOpen
@@ -34,17 +26,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.app
-
-.contenedor-principal
-  display: flex
-  align-items: flex-start
-
-.seccion-principal
-  width: 100%
-
-  &--barra-avance-open
-    .curso-main-container
-      padding-bottom: 80px !important
-</style>
+<style lang="sass" scoped></style>
