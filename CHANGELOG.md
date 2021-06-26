@@ -2,6 +2,28 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 3.0.0 - 26-06-2021
+
+### Agregado
+
+- componente bloque-texto-g
+- en pantallas pequenas el menu se cierra cuando se da click
+- Objeto Vue arreglado para la base
+- Implementcion de AOS
+
+### Arreglado
+
+- Bug en componente ScrollHorizontal
+- arreglo de overflow-x en el contenedor de tema
+
+
+## 2.3.1 - 17-06-2021
+
+### Arreglado
+
+- Barra de avance en modo de alto contraste
+- Espaciado de menu en mobil
+
 ## 2.3.0 - 14-06-2021
 
 ### Agregado
