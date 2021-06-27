@@ -2,6 +2,18 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 3.0.2 - 26-06-2021
+
+### Arreglado
+
+- bootstrap 5.0.2 tiene un bug muy grande con la grilla
+
+## 3.0.1 - 26-06-2021
+
+### Arreglado
+
+- rutas de GlobalComponents y globalMixins ahora son relativas
+
 ## 3.0.0 - 26-06-2021
 
 ### Agregado
