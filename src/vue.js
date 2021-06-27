@@ -16,8 +16,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import '@/components/GlobalComponents'
-import '@/mixins/globalMixins'
+import './components/GlobalComponents'
+import './mixins/globalMixins'
 
 Vue.config.productionTip = false
 
