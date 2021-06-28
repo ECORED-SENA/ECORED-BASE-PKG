@@ -336,7 +336,12 @@ export default {
         'hábito repetitivo que identifica a una persona, una especie de presión social, que debe consumir, utilizar o hacer.',
     },
     {
-      termino: 'Diseño',
+      termino: 'Diseña',
+      significado:
+        'actividad creativa orientada a soluciones idóneas a ciertas problemáticas.',
+    },
+    {
+      termino: 'DIseño',
       significado:
         'actividad creativa orientada a soluciones idóneas a ciertas problemáticas.',
     },

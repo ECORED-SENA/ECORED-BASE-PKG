@@ -52,8 +52,8 @@ export default {
           const soloTerminos = letraObj.terminos
             .map(termObj => termObj.termino)
             .sort((a, b) => {
-              const an = this.quitarAcentos(a)
-              const bn = this.quitarAcentos(b)
+              const an = this.quitarAcentos(a).toLowerCase()
+              const bn = this.quitarAcentos(b).toLowerCase()
               if (an < bn) return -1
               if (bn < an) return 1
               return 0
