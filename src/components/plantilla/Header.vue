@@ -16,7 +16,7 @@ header.header.container-fluid
         a(href="#contenidos").me-5 Contenidos
 
       .header__componente-formativo(v-else)
-        span {{globalData.componenteFormativo}}
+        span(v-html="globalData.componenteFormativo")
 
     .col-auto(v-if="isInicio")
       router-link.boton(:to="{name: iniciarLnk.nombreRuta }")

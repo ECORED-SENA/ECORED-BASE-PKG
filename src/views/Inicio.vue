@@ -17,7 +17,7 @@ section.inicio
           .desarrollo-contenidos__item__texto
             span.desarrollo-contenidos__item__icono(v-if="item.hasOwnProperty('numero')" ) {{item.numero}}
             i.desarrollo-contenidos__item__icono(v-else :class="item.icono")
-            span {{item.titulo}}
+            span(v-html="item.titulo")
 
           a.boton--sm
             span.d-none.d-md-block Ver contenido
@@ -29,7 +29,7 @@ section.inicio
       .creditos-inicio__item(v-for="(row, index) in creditosInicio")
         .row
           .creditos-inicio__titulo.col-md-3.col-lg-2.mb-3.mb-md-0
-            h5.mb-0 {{row.titulo}}
+            h5.mb-0(v-html="row.titulo")
 
           .creditos-inicio__imagenes.col
             img(v-for="imagen in row.contenido" :src="imagen")

@@ -2,6 +2,32 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 3.1.0 - 26-07-2021
+
+### Agregado
+
+- Componente SlyderE
+- Componente cajon-b
+- En el componente 'linea-tiempo-c' la opcion de hacer los titulos mas pequenos
+
+### Arreglado
+
+- En el componente 'linea-tiempo-c' el problema generado por la cantidad de texto en el titulo
+- En el componente 'bloque-texto-e' el nombre de la clase 'bloque-texto-e__text' cambio a 'bloque-texto-e__texto' para mejor consistencia
+- En el componente 'tarjeta-avatar-b' ahora la imagen va a estar dentro de '.tarjeta-avatar-b__img" para arreglar el responsive del componente
+- Los textos dentro de estos componentes ahora se pueden utilizar como html
+  - menu principal
+  - banner interno
+  - banner principal
+  - header
+  - material complementario
+  - inicio
+  - referencias bibliograficas
+- En el componente 'pasos' el problema con los circulos en responsive
+- En los componentes de texto destacado, los problemas de alineacion de las comillas
+
+#
+
 ## 3.0.2 - 26-06-2021
 
 ### Arreglado
@@ -13,6 +39,8 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ### Arreglado
 
 - rutas de GlobalComponents y globalMixins ahora son relativas
+
+#
 
 ## 3.0.0 - 26-06-2021
 
@@ -28,6 +56,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Bug en componente ScrollHorizontal
 - arreglo de overflow-x en el contenedor de tema
 
+#
 
 ## 2.3.1 - 17-06-2021
 
@@ -35,6 +64,8 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 
 - Barra de avance en modo de alto contraste
 - Espaciado de menu en mobil
+
+#
 
 ## 2.3.0 - 14-06-2021
 
@@ -57,6 +88,8 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Unificacion de pie de imagen y pie de tabla
 - Mejor contraste en el encabezado de la tabla de material complementario
 - Tamano de titulo de .tabla-b
+
+#
 
 ### 2.2.0 - 02-06-2021
 

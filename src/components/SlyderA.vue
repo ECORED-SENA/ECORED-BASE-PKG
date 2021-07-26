@@ -35,26 +35,8 @@ export default {
   mixins: [componentSlotMixins],
   data: () => ({
     mostrarIndicador: true,
+    secuencial: true,
   }),
-  computed: {
-    navObj() {
-      if (!this.elements.length) return {}
-      const idsArr = this.elements.map(elm => elm.id)
-      const idxOfSelected = idsArr.indexOf(this.selected)
-      if (idxOfSelected < 0) return {}
-
-      const navObj = {}
-      if (idxOfSelected === 0) {
-        navObj.next = idsArr[idxOfSelected + 1]
-      } else if (idxOfSelected + 1 === idsArr.length) {
-        navObj.back = idsArr[idxOfSelected - 1]
-      } else {
-        navObj.next = idsArr[idxOfSelected + 1]
-        navObj.back = idsArr[idxOfSelected - 1]
-      }
-      return navObj
-    },
-  },
 }
 </script>
 

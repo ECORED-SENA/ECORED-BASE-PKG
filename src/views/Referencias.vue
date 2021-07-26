@@ -2,9 +2,10 @@
 .curso-main-container.referencias
   BannerInterno(icono="fas fa-book" titulo="Referencias bibliográficas")
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
-    .referencias__item(v-for="ref in orderedData" :key="ref.link") 
-      | {{ref.referencia}} 
-      a(v-if="ref.link" :href="ref.link" target="_blank") {{ref.link}} 
+    .referencias__item(v-for="ref in orderedData" :key="ref.link")
+      span(v-html="ref.referencia")
+      a(v-if="ref.link" :href="ref.link" target="_blank")
+        span(v-html="ref.link") 
         i.fas.fa-external-link-alt
       hr.my-3
 </template>

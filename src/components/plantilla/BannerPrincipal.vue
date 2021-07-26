@@ -6,7 +6,7 @@
     .row.banner-principal__row
       .col-lg-7.col-xxl-5.ps-4.ps-sm-5.py-4.py-sm-5.banner-principal__info
         .banner-principal__componente
-          h1.mb-0 {{globalData.componenteFormativo}}
+          h1.mb-0(v-html="globalData.componenteFormativo")
         .banner-principal__descripcion
           p.mb-0(v-html="globalData.descripcionCurso")
         .banner-principal__accion

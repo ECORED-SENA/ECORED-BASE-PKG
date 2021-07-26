@@ -106,11 +106,15 @@
 
 .tarjeta-avatar-b
   display: flex
-  & > img
+
+  &__img
     min-width: $tarjeta-avatar-b-ancho-img
     max-width: $tarjeta-avatar-b-ancho-img
     position: relative
-  & > div
+    display: flex
+    align-items: center
+
+  .tarjeta
     width: 100%
     margin-left: - $tarjeta-avatar-b-ancho-img / 2
     padding-left: $tarjeta-avatar-b-ancho-img / 2

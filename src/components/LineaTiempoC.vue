@@ -20,7 +20,7 @@
           )
             .indicador__container(v-if="mostrarIndicador && index === 1")
               .indicador--click.indicador--sm
-            span.linea-tiempo-c__header__item__year {{elm.titulo}}
+            span.linea-tiempo-c__header__item__year(:class="{'text-small' : textSmall }") {{elm.titulo}}
             .linea-tiempo-c__header__item__line-container
               .linea-tiempo-c__header__item__dot
     .col-2.col-sm-auto.px-0.ms-sm-3.d-flex.justify-content-end
@@ -50,6 +50,11 @@ export default {
   name: 'LineaTiempoC',
   components: { ScrollHorizontal },
   mixins: [componentSlotMixins],
+  props: {
+    textSmall: {
+      type: Boolean,
+    },
+  },
   data: () => ({
     headerSelected: 0,
     mostrarIndicador: true,

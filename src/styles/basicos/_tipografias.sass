@@ -178,6 +178,55 @@
     &:before
       background-color: $color-acento-botones
 
+.cajon-b
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    opacity: .35
+    top: 0
+    left: 0
+    right: 60%
+    bottom: 50%
+  & > *
+    position: relative
+
+  &.arriba-derecha
+    &:before
+      top: 0
+      left: 60%
+      right: 0
+      bottom: 50%
+
+  &.abajo-derecha
+    &:before
+      top: 50%
+      left: 60%
+      right: 0
+      bottom: 0
+
+  &.abajo-izquierda
+    &:before
+      top: 50%
+      left: 0
+      right: 60%
+      bottom: 0
+
+  &.color-primario
+    &:before
+      background-color: $color-primario
+  &.color-secundario
+    &:before
+      background-color: $color-secundario
+  &.color-acento-contenido
+    &:before
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    &:before
+      background-color: $color-acento-botones
+
+
 .lista-ol
   li
     display: flex

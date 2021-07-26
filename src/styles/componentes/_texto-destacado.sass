@@ -45,6 +45,8 @@
     right: 0
   &__texto
     position: relative
+    *
+      display: inline
   i
     font-size: 2.5em
     color: $color-acento-contenido
@@ -52,7 +54,7 @@
       margin-right: 15px
     &:last-of-type
       margin-left: 15px
-      vertical-align: top
+      vertical-align: text-top
 
   &.color-primario
     &:before
@@ -101,6 +103,8 @@
     right: 0
   &__texto
     position: relative
+    *
+      display: inline
   i
     font-size: 2.5em
     color: $color-acento-contenido
@@ -108,7 +112,7 @@
       margin-right: 15px
     &:last-of-type
       margin-left: 15px
-      vertical-align: top
+      vertical-align: text-top
   &__autor
     text-align: right
     position: relative
@@ -127,6 +131,8 @@
 
 .bloque-texto-e
   &__texto
+    *
+      display: inline
   i
     font-size: 2.5em
     color: $color-acento-contenido
@@ -134,7 +140,7 @@
       margin-right: 15px
     &:last-of-type
       margin-left: 15px
-      vertical-align: top
+      vertical-align: text-top
   &__autor
     @extend .bloque-texto-d__autor
   &.color-primario
@@ -174,7 +180,7 @@
         transform: translate(-50%,-50%)
       &:last-of-type
         margin-left: 15px
-        vertical-align: top
+        vertical-align: text-top
         top: calc(100% - 50px)
         right: 10px
         margin: 0
@@ -182,7 +188,9 @@
   
   &__texto
     position: relative
-  
+    *
+      display: inline
+
   &__autor
     text-align: center
     position: relative
@@ -231,6 +239,8 @@
     position: relative
     width: 60%
     background-color: rgba( $white, .95 )
+    *
+      display: inline
 
   @media (max-width: $bp-max-md)
     padding-top: 40% !important

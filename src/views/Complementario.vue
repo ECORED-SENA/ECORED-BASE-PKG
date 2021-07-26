@@ -11,8 +11,8 @@
             th(colspan='2' scope="col") Enlace
         tbody
           tr(v-for="(item, index) in complementarioData" :key="'complementario-'+index")
-            td(colspan='8' scope="row") {{item.texto}}
-            td(colspan='2') {{item.tipo}}
+            td(colspan='8' scope="row" v-html="item.texto")
+            td(colspan='2' v-html="item.tipo")
             td(colspan='2')
               .complementario__btn
                 a(:href="item.descarga ? obtenerLink(item.descarga) : item.link" target="_blank")

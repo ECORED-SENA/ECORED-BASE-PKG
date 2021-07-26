@@ -12,10 +12,8 @@ aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
           router-link.aside-menu__menu__item__lnk(
             :to="{name: item.nombreRuta}"
           )
-            span(v-if="item.hasOwnProperty('numero')")
-              strong {{item.numero}}
-            span 
-              strong {{item.titulo}}
+            span(v-if="item.hasOwnProperty('numero')" v-html="item.numero")
+            span(v-html="item.titulo")
 
         template(
           v-if="item.hasOwnProperty('subMenu') && item.subMenu.length"
@@ -29,8 +27,8 @@ aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
               :to="{ name: item.nombreRuta , hash: `#${subItem.hash}` }"
             )
               i(:class="subItem.icono")
-              span {{subItem.numero}}
-              span {{subItem.titulo}}
+              span(v-html="subItem.numero")
+              span(v-html="subItem.titulo")
 
     ul.aside-menu__sec-menu
       li.aside-menu__sec-menu__item(
@@ -44,14 +42,14 @@ aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
           target="_blank"
         )
           i(:class="secMenuItem.icono")
-          span {{secMenuItem.titulo}}
+          span(v-html="secMenuItem.titulo")
 
         router-link.aside-menu__sec-menu__item__lnk(
           v-else
           :to="{name: secMenuItem.nombreRuta}"
         )
           i(:class="secMenuItem.icono")
-          span {{secMenuItem.titulo}}
+          span(v-html="secMenuItem.titulo")
         
 </template>
 
