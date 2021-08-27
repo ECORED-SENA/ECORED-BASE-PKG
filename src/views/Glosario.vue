@@ -8,7 +8,10 @@
           span {{letra.letra}}
       .glosario__letra-item__texto
         p.mb-3(v-for="termino in letra.terminos")
-          strong • {{termino.termino}}: 
+          strong
+            i.lista-ul__vineta
+          strong(v-html="termino.terminoHtml || termino.termino") 
+          strong : 
           span(v-html="termino.significado")
 </template>
 

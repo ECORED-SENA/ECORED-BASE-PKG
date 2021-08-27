@@ -2,20 +2,32 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 3.1.1 - 26-08-2021
+
+### Agregado
+
+- Glosario ahora recibe HTML a través de la llave terminoHtml (debe tener ambas llaves termino y terminoHtml para que funcione)
+
+### Arreglado
+
+- Doble slash (//) en enlaces dentro de la plantilla
+
+#
+
 ## 3.1.0 - 26-07-2021
 
 ### Agregado
 
 - Componente SlyderE
 - Componente cajon-b
-- En el componente 'linea-tiempo-c' la opcion de hacer los titulos mas pequenos
+- En el componente 'linea-tiempo-c' la opción de hacer los títulos mas pequeños
 
 ### Arreglado
 
 - En el componente 'linea-tiempo-c' el problema generado por la cantidad de texto en el titulo
 - En el componente 'bloque-texto-e' el nombre de la clase 'bloque-texto-e__text' cambio a 'bloque-texto-e__texto' para mejor consistencia
 - En el componente 'tarjeta-avatar-b' ahora la imagen va a estar dentro de '.tarjeta-avatar-b__img" para arreglar el responsive del componente
-- Los textos dentro de estos componentes ahora se pueden utilizar como html
+- Los textos dentro de estos componentes ahora se pueden utilizar como HTML
   - menu principal
   - banner interno
   - banner principal
@@ -23,8 +35,8 @@ Estos son los cambios hechos en la ECORED-BASE-2021
   - material complementario
   - inicio
   - referencias bibliograficas
-- En el componente 'pasos' el problema con los circulos en responsive
-- En los componentes de texto destacado, los problemas de alineacion de las comillas
+- En el componente 'pasos' el problema con los círculos en responsive
+- En los componentes de texto destacado, los problemas de alineación de las comillas
 
 #
 
@@ -47,9 +59,9 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ### Agregado
 
 - componente bloque-texto-g
-- en pantallas pequenas el menu se cierra cuando se da click
+- en pantallas pequeñas el menú se cierra cuando se da clic
 - Objeto Vue arreglado para la base
-- Implementcion de AOS
+- Implementación de AOS
 
 ### Arreglado
 
@@ -63,7 +75,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ### Arreglado
 
 - Barra de avance en modo de alto contraste
-- Espaciado de menu en mobil
+- Espaciado de menú en móvil
 
 #
 
@@ -71,23 +83,23 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 
 ### Agregado
 
-- Ultima version de Bootstrap 5.0.1
+- Ultima versión de Bootstrap 5.0.1
 - Separador en forma de componente de Vue 'Separador'
-- Directiva que permite que los componentes dinamicos interactuen con Vue
+- Directiva que permite que los componentes dinámicos interactúen con Vue
 - Titulo '.titulo-sexto'
-- Creditos
-- Creditos en inicio
+- Créditos
+- Créditos en inicio
 - Botones de accesibilidad
 
 ### Arreglado
 
-- Jerarquias de titulos de la plantilla
+- Jerarquías de títulos de la plantilla
 - Banner principal si no hay imagen de fondo va a quedar con el color en variables
-- Imagenes dentro de tarjetas con avatar
-- Los titulos ahora son elementos h
-- Unificacion de pie de imagen y pie de tabla
+- Imágenes dentro de tarjetas con avatar
+- Los títulos ahora son elementos h
+- Unificación de pie de imagen y pie de tabla
 - Mejor contraste en el encabezado de la tabla de material complementario
-- Tamano de titulo de .tabla-b
+- Tamaño de titulo de .tabla-b
 
 #
 
@@ -95,11 +107,11 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 
 ### Agregado
 
-- Nuevas clases para titulos .titulo-tercero, .titulo-cuarto y .titulo-quinto
+- Nuevas clases para títulos .titulo-tercero, .titulo-cuarto y .titulo-quinto
 - nuevo .espaciador
 - PasosA ahora soporta contenido dinámico
 - Indicadores de interacción en todos los componentes interactivos
-- imagen en .tarjeta-avatar ahora tiene tamaños dinámico a travez de $tarjeta-avatar-ancho-img
+- imagen en .tarjeta-avatar ahora tiene tamaños dinámico a través de $tarjeta-avatar-ancho-img
 
 ### Arreglado
 
@@ -110,7 +122,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Cambio de espaciado de p, ul y ol
 - Mejora de padding en componente AcordionA
 - Cambio de nombre de clase .tarjeta-Avatar-b por .tarjeta-avatar-b
-- Mejora de alineacion de las comillas en los componentes de texto destacado
+- Mejora de alineación de las comillas en los componentes de texto destacado
 
 #
 
@@ -123,7 +135,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Componente .tarjeta-avatar-b tiene una variable que controla el ancho de su avatar
 - Los botones ahora tienen el nuevo esquema de colorización (.color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones)
 - esquema de colorización tiene color de texto basado en luminancia del color de fondo
-- Nueva distribucion de creditos
+- Nueva distribución de créditos
 - Nuevo componente de indicador de interacción
 - Nueva distribución en Muestras
 
@@ -142,7 +154,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ## 2.0.0 - 11-05-2021
 
 ### Cambios
-- ## Muchos componentes a partir de esta versión cambian su marcado (html) y sus estilos (css), por esto, se recomienda empezar de nuevo teniendo como guia las nuevas muestras.vue.
+- ## Muchos componentes a partir de esta versión cambian su marcado (HTML) y sus estilos (css), por esto, se recomienda empezar de nuevo teniendo como guía las nuevas muestras.vue.
 - /package.json => "ecored-base-pkg": "2.0.0"
 - /src/views/Actividad.vue
 - /src/styles/variables.sass
@@ -194,7 +206,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 
 ### Agregado
 
-- Visualización de la version de la base y del paquete de la base en footer.
+- Visualización de la versión de la base y del paquete de la base en footer.
 - Nueva variable $color-banner-fondo.
 
 ### Arreglos

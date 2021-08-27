@@ -5,7 +5,8 @@ Vue.mixin({
       const route = window.location.href
       const separator = route.includes('/index.html#') ? 'index.html#' : '#/'
       const baseRoute = route.split(separator)[0]
-      return baseRoute + ruta
+      const routeEnd = ruta.startsWith('/') ? ruta.substring(1) : ruta
+      return baseRoute + routeEnd
     },
   },
 })
