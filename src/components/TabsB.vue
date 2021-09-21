@@ -13,7 +13,7 @@
       .tabs-b__tab__icon(v-if="elm.icono")
         img(:src="elm.icono")
       .tabs-b__tab__title
-        span {{elm.titulo}}
+        span(v-html="elm.titulo")
 
   .tabs-b__content-item(
     v-for="elm of elements"

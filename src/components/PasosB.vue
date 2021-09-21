@@ -20,7 +20,7 @@
               .pasos-b__header__item__dot 
                 span.text-bold {{index +1}}
                 i.fas.fa-check
-            .pasos-b__header__item__tittle.px-2.text-small {{elm.titulo}}
+            .pasos-b__header__item__tittle.px-2.text-small(v-html="elm.titulo")
     .col-2.col-sm-auto.px-0.ms-sm-3.d-flex.justify-content-end
       .pasos-b__header__btn--right(@click="selected = rightBtnId" @mouseover="mostrarIndicador = false")
         i.fas.fa-angle-right

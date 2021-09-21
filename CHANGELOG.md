@@ -2,6 +2,31 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 3.2.0 - 26-08-2021
+
+### Agregado
+
+- Componente ImagenInfograficaB
+- Componente tarjeta-flip
+
+### Arreglado
+
+- Los titulos y todos los props que van dentro de las vistas soportan html
+  - AcordionA
+  - LineaTiempoA
+  - LineaTiempoB
+  - LineaTiempoC
+  - LineaTiempoD
+  - PasosB
+  - SlyderB
+  - SlyderC
+  - SlyderD
+  - TabsA
+  - TabsB
+  - TabsC
+
+#
+
 ## 3.1.1 - 26-08-2021
 
 ### Agregado

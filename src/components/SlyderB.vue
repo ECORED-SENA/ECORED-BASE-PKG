@@ -10,10 +10,10 @@
         .col-lg-8.order-lg-2.mb-4.mb-lg-0
           figure.slyder-b__img
             img(:src='item.imagen', :alt='item.leyendaImagen')
-            figcaption(v-if="item.leyendaImagen") {{item.leyendaImagen}}
+            figcaption(v-if="item.leyendaImagen" v-html="item.leyendaImagen")
 
         .col-lg-4.order-lg-1
-          h3 {{item.titulo}}
+          h3(v-html="item.titulo")
           p.mb-3(v-html="item.texto")
           .slyder__action
             .slyder__pagination {{index+1}}/{{datos.length}}

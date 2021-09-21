@@ -163,3 +163,61 @@
       background-color: $color-acento-botones
       div
         color: textColor($color-acento-botones)
+
+.tarjeta-flip
+  background-color: transparent !important
+  perspective: 1000px
+  height: 100%
+
+  &.tarjeta
+    .tarjeta-flip__img, .tarjeta-flip__contenido
+      border-radius: 20px
+      overflow: hidden
+
+  &__contenedor
+    position: relative
+    width: 100%
+    height: 100%
+    transition: transform 0.5s ease-in-out
+    transform-style: preserve-3d
+
+  &:hover 
+    .tarjeta-flip__contenedor
+      transform: rotateY(180deg)
+
+  &__img, &__contenido
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+  &__img
+    position: absolute
+    inset: 0
+    background-size: cover
+    background-position: center
+  &__contenido
+    transform: rotateY(180deg)
+    height: 100%
+
+  &.color-primario
+    .tarjeta-flip__img
+      background-color: $color-primario
+    .tarjeta-flip__contenido
+      background-color: $color-primario
+      color: textColor($color-primario)
+  &.color-secundario
+    .tarjeta-flip__img
+      background-color: $color-secundario
+    .tarjeta-flip__contenido
+      background-color: $color-secundario
+      color: textColor($color-secundario)
+  &.color-acento-contenido
+    .tarjeta-flip__img
+      background-color: $color-acento-contenido
+    .tarjeta-flip__contenido
+      background-color: $color-acento-contenido
+      color: textColor($color-acento-contenido)
+  &.color-acento-botones
+    .tarjeta-flip__img
+      background-color: $color-acento-botones
+    .tarjeta-flip__contenido
+      background-color: $color-acento-botones
+      color: textColor($color-acento-botones)

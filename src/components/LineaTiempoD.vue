@@ -13,7 +13,7 @@
       )
         .indicador__container(v-if="mostrarIndicador && index === 1")
           .indicador--click
-        span {{item.numero}}
+        span(v-html="item.numero")
       .linea-tiempo-d__item__dots(
         v-if="index < elements.length -1"
       )
@@ -24,7 +24,7 @@
           @click="selected = item.id"
           @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
         )
-          span {{item.titulo}}
+          span(v-html="item.titulo")
         .linea-tiempo-d__item__content__slot(
           :style="{ height: rendered && selected === item.id ? getActiveHeight(item.id) : 0 } "
         )

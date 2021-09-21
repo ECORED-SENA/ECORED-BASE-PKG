@@ -12,7 +12,7 @@
       )
         .indicador__container(v-if="mostrarIndicador && index === 1")
           .indicador--click
-        span {{elm.titulo}}
+        span(v-html="elm.titulo")
   .tabs-c__content-item(
     v-for="elm of elements"
     :key="'tabs-content-'+elm.id"

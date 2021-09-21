@@ -14,7 +14,7 @@
         .slyder-c__content__header.mb-4
           .row
             .col
-              h3.mb-2.mb-md-0 {{item.titulo}}
+              h3.mb-2.mb-md-0(v-html="item.titulo")
             .col-auto
               .slyder__action
                 .slyder__pagination {{index+1}}/{{datos.length}}

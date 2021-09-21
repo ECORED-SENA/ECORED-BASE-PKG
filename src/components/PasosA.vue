@@ -39,7 +39,7 @@ export default {
     },
   },
   data: () => ({
-    abecedario: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    abecedario: 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ',
   }),
   methods: {
     getClass(idx) {

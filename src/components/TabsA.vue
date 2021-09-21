@@ -12,7 +12,7 @@
             @click="selected = elm.id"
             @mouseover="mostrarIndicador = mostrarIndicador && index >= 1 ? false : mostrarIndicador"
           ) 
-            .tabs-a__tab__text {{elm.titulo}}
+            .tabs-a__tab__text(v-html="elm.titulo")
             .indicador__container(v-if="mostrarIndicador && index === 1")
               .indicador--click
     

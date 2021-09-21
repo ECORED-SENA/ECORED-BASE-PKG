@@ -20,7 +20,7 @@
           )
             .indicador__container(v-if="mostrarIndicador && index === 1")
               .indicador--click.indicador--sm
-            span.linea-tiempo-c__header__item__year(:class="{'text-small' : textSmall }") {{elm.titulo}}
+            span.linea-tiempo-c__header__item__year(v-html="elm.titulo" :class="{'text-small' : textSmall }")
             .linea-tiempo-c__header__item__line-container
               .linea-tiempo-c__header__item__dot
     .col-2.col-sm-auto.px-0.ms-sm-3.d-flex.justify-content-end
