@@ -31,26 +31,28 @@ aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
               span(v-html="subItem.titulo")
 
     ul.aside-menu__sec-menu
-      li.aside-menu__sec-menu__item(
+      template(
         v-for="(secMenuItem, secMenuIndex) of subMenuData",
-        :key="`SecMenu-item-${secMenuIndex}`"
       )
-      
-        a.aside-menu__sec-menu__item__lnk(
-          v-if="secMenuItem.hasOwnProperty('download')"
-          :href="obtenerLink(secMenuItem.download)"
-          target="_blank"
+        li.aside-menu__sec-menu__item(
+          :key="`secMenu-item-${secMenuIndex}`"
+          :class="{'d-none':secMenuItem.titulo.includes('material') && isLocal()}"
         )
-          i(:class="secMenuItem.icono")
-          span(v-html="secMenuItem.titulo")
+          a.aside-menu__sec-menu__item__lnk(
+            v-if="secMenuItem.hasOwnProperty('download')"
+            :href="obtenerLink(secMenuItem.download)"
+            target="_blank"
+          )
+            i(:class="secMenuItem.icono")
+            span(v-html="secMenuItem.titulo")
 
-        router-link.aside-menu__sec-menu__item__lnk(
-          v-else
-          :to="{name: secMenuItem.nombreRuta}"
-        )
-          i(:class="secMenuItem.icono")
-          span(v-html="secMenuItem.titulo")
-        
+          router-link.aside-menu__sec-menu__item__lnk(
+            v-else
+            :to="{name: secMenuItem.nombreRuta}"
+          )
+            i(:class="secMenuItem.icono")
+            span(v-html="secMenuItem.titulo")
+
 </template>
 
 <script>
@@ -77,6 +79,9 @@ export default {
   methods: {
     toggleMenu(newVal) {
       this.$store.dispatch('toggleMenu', newVal)
+    },
+    isLocal() {
+      return window.location.protocol === 'file:'
     },
   },
 }
@@ -194,8 +199,6 @@ export default {
           border-radius: 50%
         &:hover
           background-color: $white
-
-
 
   @media (max-width: $bp-max-md)
     position: fixed

@@ -48,6 +48,13 @@
       &:after
         animation: pulse 2s infinite
         pointer-events: none
+    &__numero
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      font-weight: $base-bold-font-weight
+      line-height: 1em
   &__card
     position: absolute
     width: 300px
@@ -70,24 +77,32 @@
         color: textColor($color-primario)
       &:before, &:after
         background-color: $color-primario
+    .img-infografica__item__numero
+      color: textColor($color-primario)
   &.color-secundario
     .img-infografica__item__dot, .img-infografica-b__item__dot
       i
         color: textColor($color-secundario)
       &:before, &:after
         background-color: $color-secundario
+    .img-infografica__item__numero
+      color: textColor($color-secundario)
   &.color-acento-contenido
     .img-infografica__item__dot, .img-infografica-b__item__dot
       i
         color: textColor($color-acento-contenido)
       &:before, &:after
         background-color: $color-acento-contenido
+    .img-infografica__item__numero
+      color: textColor($color-acento-contenido)
   &.color-acento-botones
     .img-infografica__item__dot, .img-infografica-b__item__dot
       i
         color: textColor($color-acento-botones)
       &:before, &:after
         background-color: $color-acento-botones
+    .img-infografica__item__numero
+      color: textColor($color-acento-botones)
 
   @media (max-width: $bp-max-sm)
     &__item
@@ -121,8 +136,29 @@
         i
           font-size: 1rem
 
+  &.color-primario
+    .img-infografica-b__item__numero
+      color: textColor($color-primario)
+      i
+        color: textColor($color-primario)
 
+  &.color-secundario
+    .img-infografica-b__item__numero
+      color: textColor($color-secundario)
+      i
+        color: textColor($color-secundario)
 
+  &.color-acento-contenido
+    .img-infografica-b__item__numero
+      color: textColor($color-acento-contenido)
+      i
+        color: textColor($color-acento-contenido)
+
+  &.color-acento-botones
+    .img-infografica-b__item__numero
+      color: textColor($color-acento-botones)
+      i
+        color: textColor($color-acento-botones)
 
 @keyframes pulse
   0%

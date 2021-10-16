@@ -1,6 +1,6 @@
 <template lang="pug">
 .acordion
-  .p-3.pb-0.p-md-4.pb-md-0(v-for="(elm, index) of elements" :key="elm.id" :class="[cardClass,'mb-3']")
+  .p-3.pb-0.p-md-4.pb-md-0.mb-3(v-for="(elm, index) of elements" :key="elm.id" :class="cardClass(elm.id)")
     
     .acordion__header.mb-3.mb-md-4(
       @click="selected = selected != elm.id ? elm.id : 0"
@@ -51,21 +51,26 @@ export default {
   data: () => ({
     mostrarIndicador: true,
   }),
-  computed: {
-    cardClass() {
-      if (this.claseTarjeta.length) {
-        return this.claseTarjeta
-      } else {
-        return 'tarjeta tarjeta--blanca mb-3'
-      }
-    },
-  },
   mounted() {
     this.$nextTick(() => {
       setTimeout(() => {
         this.domUpdated()
       }, 5000)
     })
+  },
+  methods: {
+    cardClass(id) {
+      const clasesFinales = []
+      if (this.claseTarjeta.length) {
+        clasesFinales.push(this.claseTarjeta)
+      } else {
+        clasesFinales.push('tarjeta tarjeta--blanca')
+      }
+      if (this.selected === id) {
+        clasesFinales.push('acordion__activo')
+      }
+      return clasesFinales
+    },
   },
 }
 </script>

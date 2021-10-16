@@ -11,7 +11,6 @@
       background-size: 16px 24px
       background-position: center
       border: 1px solid $color-sistema-e
-      position: absolute
       top: 50%
       z-index: 10000
       opacity: 0.7
@@ -23,24 +22,9 @@
         box-shadow: 0 0 5px 0px rgba(0,0,0,0.3)
         border-color: $white
 
-    &--sigt
-      transform: translateY(-50%) rotate(-90deg)
-      right: 15px
-      .indicador__container
-        transform: translateY(15px) rotate(90deg)
-
-    &--atrs
-      transform: translateY(-50%) rotate(90deg)
-      left: 15px
-
-
   &__bullets
     display: flex
-    position: absolute
-    bottom: 50px
-    left: 50%
     z-index: 10000
-    transform: translateX(-50%)
     &__item
       width: 15px
       height: 15px
@@ -62,6 +46,54 @@
         opacity: 1
         box-shadow: 0 0 5px 0px rgba(0,0,0,0.3)
         border-color: $color-sistema-b
+
+  &__tipo-a
+    position: absolute
+    inset: 0
+    .slyder-a
+      &__btn
+        &--sigt, &--atrs
+          position: absolute
+        &--sigt
+          transform: translateY(-50%) rotate(-90deg)
+          right: 15px
+          .indicador__container
+            transform: translateY(15px) rotate(90deg)
+
+        &--atrs
+          transform: translateY(-50%) rotate(90deg)
+          left: 15px
+
+      &__bullets
+        position: absolute
+        bottom: 50px
+        left: 50%
+        transform: translateX(-50%)
+
+  &__tipo-b
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .slyder-a
+      &__btn
+        &--sigt
+          transform: rotate(-90deg)
+          right: 15px
+          .indicador__container
+            transform: rotate(90deg)
+
+        &--atrs
+          transform: rotate(90deg)
+          left: 15px
+
+      &__bullets
+        position: relative
+
+    .hide
+      opacity: 0
+      pointer-events: none    
+
 
 .slyder-b
   &__img

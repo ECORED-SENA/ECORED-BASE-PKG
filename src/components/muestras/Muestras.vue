@@ -1,16 +1,20 @@
 <template lang="pug">
 div.mb-5
-  #encabezados.titulo-segundo
+  #encabezados.titulo-segundo.color-acento-botones
     h2 Encabezados
 
-  .titulo-principal(data-aos="flip-up")
+  //- .titulo-principal debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  .titulo-principal.color-acento-contenido
     .titulo-principal__numero
       span 1
     h1 Título principal, 30pt
 
   p.mb-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis. Maecenas cursus ante a diam porttitor mollis. Etiam vehicula dictum diam, eu pulvinar odio ultrices non. Vivamus viverra fermentum tortor, sit amet interdum nisl fermentum sed.
 
-  .titulo-segundo
+  //- .titulo-segundo debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  .titulo-segundo.color-secundario
     h2 1.1  Título de segundo nivel, 24pt
 
   p.mb-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis. Maecenas cursus ante a diam porttitor mollis. Etiam vehicula dictum diam, eu pulvinar odio ultrices non. Vivamus viverra fermentum tortor, sit amet interdum nisl fermentum sed.
@@ -36,14 +40,14 @@ div.mb-5
     h5 Título de sexto nivel, 16pt
     span subtitulo
 
-  p.mb-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis. Maecenas cursus ante a diam porttitor mollis. Etiam vehicula dictum diam, eu pulvinar odio ultrices non. Vivamus viverra fermentum tortor, sit amet interdum nisl fermentum sed.
+  p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis. Maecenas cursus ante a diam porttitor mollis. Etiam vehicula dictum diam, eu pulvinar odio ultrices non. Vivamus viverra fermentum tortor, sit amet interdum nisl fermentum sed.
 
   Separador
 
-  #parrafos.titulo-segundo(data-aos="flip-up")
+  #parrafos.titulo-segundo.color-acento-botones(data-aos="flip-up")
     h2 Párrafos
 
-  p.mb-5 Los párrafos mantienen un tamaño regular de 16 pt con interlineado base de 24 pt, sin embargo, existe excepciones para resaltar contenido donde se puede hacer uso de pesos 
+  p.mb-0 Los párrafos mantienen un tamaño regular de 16 pt con interlineado base de 24 pt, sin embargo, existe excepciones para resaltar contenido donde se puede hacer uso de pesos 
     span.text-thin THIN, 
     span.text-bold BOLD, 
     | y 
@@ -54,60 +58,59 @@ div.mb-5
 
   Separador
 
-  #botones.titulo-segundo
+  #botones.titulo-segundo.color-acento-botones
     h2 Botones
 
-  .mb-5
-    .mb-3
-      //- .boton debe ir acompañado de una de una de estas clases => 
-      //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-      a.boton.me-3.indicador__container(
-        :href="obtenerLink('/downloads/prueba.pdf')"
-        target="_blank"
-        type="application/pdf"
-        @mouseover="mostrarIndicador = false"
-      )
-        span Descargar
-        i.fas.fa-file-download
-        .indicador--click(v-if="mostrarIndicador")
+  .mb-3
+    //- .boton debe ir acompañado de una de una de estas clases => 
+    //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+    a.boton.me-3.indicador__container(
+      :href="obtenerLink('/downloads/prueba.pdf')"
+      target="_blank"
+      type="application/pdf"
+      @mouseover="mostrarIndicador = false"
+    )
+      span Descargar
+      i.fas.fa-file-download
+      .indicador--click(v-if="mostrarIndicador")
 
-    .mb-3
-      a.boton.color-primario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+  .mb-3
+    a.boton.color-primario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
-      a.boton.color-secundario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+    a.boton.color-secundario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
-      a.boton.color-acento-contenido.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+    a.boton.color-acento-contenido.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
-      a.boton.color-acento-botones.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
-    .mb-5
-      a.boton--sm.color-primario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+    a.boton.color-acento-botones.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
-      a.boton--sm.color-secundario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+  div
+    a.boton--sm.color-primario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
-      a.boton--sm.color-acento-contenido.texto-blanco.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+    a.boton--sm.color-secundario.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
-      a.boton--sm.color-acento-botones.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
-        span Descargar
-        i.fas.fa-file-download
+    a.boton--sm.color-acento-contenido.texto-blanco.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
+
+    a.boton--sm.color-acento-botones.me-3(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank" type="application/pdf")
+      span Descargar
+      i.fas.fa-file-download
 
   Separador
 
-
-  #listas.titulo-segundo
+  #listas.titulo-segundo.color-acento-botones
     h2 Listas
 
   p.mb-3 Se debe tener en cuenta que las personas realizan un escaneo del mismo para encontrar elementos de su interés. Las listas deben estar compuestas por elementos relacionados entre sí, con un orden específico o un conteo importante. 
@@ -334,7 +337,7 @@ div.mb-5
           | Item lista no ordenada
 
 
-  .row.mb-5
+  .row
     .col-sm.mb-5.mb-sm-0
       h4 Listado no ordenado color
       ul.lista-ul--color
@@ -400,7 +403,7 @@ div.mb-5
 
   Separador
 
-  #tablas.titulo-segundo
+  #tablas.titulo-segundo.color-acento-botones
     h2 Tablas
 
   .h5 Requerimientos de información
@@ -468,7 +471,7 @@ div.mb-5
         td Design as if your life depended on it. Keep going. It isn’t what you are, but what you’re going to become. Don’t censor yourself. 
 
   h3.titulo-tercero Tabla C
-  .tabla-c.mb-5
+  .tabla-c
     table
       caption Leyenda de la tabla
       tr
@@ -529,7 +532,7 @@ div.mb-5
 
   Separador
 
-  #imagen.titulo-segundo
+  #imagen.titulo-segundo.color-acento-botones
     h2 Imagen
 
   figure.mb-5
@@ -541,7 +544,7 @@ div.mb-5
       //- .imagen-titulo--der debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       .imagen-titulo--der.color-secundario
-        figure.mb-5
+        figure
           img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
         .imagen-titulo__titulo
@@ -551,14 +554,15 @@ div.mb-5
       //- .imagen-titulo--izq debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
       .imagen-titulo--izq.color-acento-botones
-        figure.mb-5
+        figure
           img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
         .imagen-titulo__titulo
           h4.m-0 Titulo de imagen
+
   Separador
 
-  #imagen_infografica.titulo-segundo
+  #imagen_infografica.titulo-segundo.color-acento-botones
     h2 Imagen Infográfica
 
   h3 Imagen Infográfica A
@@ -569,27 +573,29 @@ div.mb-5
         img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
         figcaption Leyenda de la imagen
 
-    .tarjeta.color-acento-botones.p-3(x="20%" y="20%")
+    .tarjeta.color-acento-botones.p-3(x="20%" y="20%" numero="1")
       .h5.mb-2 titulo
       p Lorem ipsum dolor Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
 
-    .tarjeta.color-acento-botones.p-3(x="50%" y="50%")
+    .tarjeta.color-acento-botones.p-3(x="50%" y="50%" numero="A")
       .h5.mb-2 titulo
       p Lorem ipsum dolor ddasdasd asdasd asdasd a asd sd asdasd sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
 
-    .tarjeta.color-acento-botones.p-3(x="70%" y="70%")
+    .tarjeta.color-acento-botones.p-3(x="70%" y="70%" numero="B")
       .h5.mb-2 titulo
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
 
+
+
   h3 Imagen Infográfica B
 
-  ImagenInfograficaB.color-primario.mb-5
+  ImagenInfograficaB.color-primario
     template(v-slot:imagen)
       figure
         img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
         figcaption Leyenda de la imagen
 
-    div(x="20%" y="20%" tooltip="tooltip de max 35 caracteres")
+    div(x="20%" y="20%" tooltip="tooltip de max 35 caracteres" numero="1")
       h5 titulo
       p Lorem ipsum dolor Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
       p Lorem ipsum dolor Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
@@ -605,17 +611,17 @@ div.mb-5
 
   Separador
 
-  #video.titulo-segundo
+  #video.titulo-segundo.color-acento-botones
     h2 Video
 
-  figure.mb-5
+  figure
     .video
       iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     figcaption Video: Leyenda del video
 
   Separador
 
-  #texto_destacado.titulo-segundo
+  #texto_destacado.titulo-segundo.color-acento-botones
     h2 Bloques de texto destacado
 
   p.mb-3 Su función principal es destacar bloques de información importantes a través de recursos gráficos (imágenes y/o texto). 
@@ -757,7 +763,7 @@ div.mb-5
         img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
   h3.titulo-tercero Cajón texto color G
-  .bloque-texto-g.color-secundario.p-3.p-sm-4.p-md-5.mb-5
+  .bloque-texto-g.color-secundario.p-3.p-sm-4.p-md-5
     .bloque-texto-g__img(
       :style="{'background-image': `url(${require('@/assets/curso/img.jpg')})`}"
     )
@@ -769,7 +775,7 @@ div.mb-5
 
   Separador
 
-  #sliders.titulo-segundo
+  #sliders.titulo-segundo.color-acento-botones
     h2 Sliders
 
   p.mb-3 Es una sección dinámica que permite mostrar varios contenidos repartidos en diapositivas, su función principal es mostrar el contenido más importante de manera concisa y con la menor cantidad de texto posible, haciendo uso extensivo de imágenes o íconos de acompañamiento.
@@ -788,7 +794,9 @@ div.mb-5
       | Textos puntuales y claros.
 
   h3.titulo-tercero Slider A
+
   .tarjeta.tarjeta--azul.p-4.mb-5
+    h4.titulo-cuarto Tipo A
     SlyderA
       .row
         .col-md-6.mb-4.mb-md-0
@@ -798,12 +806,10 @@ div.mb-5
           figure
             img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
             figcaption Leyenda de la imagen
-
       div
         figure
           img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
-          figcaption Leyenda de la imagen
-
+          figcaption Leyenda de la imagen`
       .row
         .col-md-6.mb-4.mb-md-0
           p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
@@ -812,7 +818,33 @@ div.mb-5
           figure
             img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
             figcaption Leyenda de la imagen
+      div
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
 
+  .tarjeta.tarjeta--azul.p-4.mb-5
+    h4.titulo-cuarto Tipo B
+    SlyderA(tipo="b")
+      .row
+        .col-md-6.mb-4.mb-md-0
+          p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      
+        .col-md-6
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
+      div
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+      .row
+        .col-md-6.mb-4.mb-md-0
+          p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+        .col-md-6
+          figure
+            img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+            figcaption Leyenda de la imagen
       div
         figure
           img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
@@ -861,7 +893,7 @@ div.mb-5
         figcaption Leyenda de la imagen
 
   h3 Slider Bootstrap
-  #carouselExampleIndicators.carousel.slide.mb-5(data-bs-ride='carousel')
+  #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
     .carousel-indicators
       button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
       button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
@@ -888,7 +920,7 @@ div.mb-5
 
   Separador
 
-  #acordiones.titulo-segundo
+  #acordiones.titulo-segundo.color-acento-botones
     h2 Acordiones
 
   p.mb-3 Es un componente web que permite ahorrar espacio vertical a través del uso de botones  representados por títulos que permiten desplegar u ocultar información pertinente. 
@@ -935,7 +967,7 @@ div.mb-5
         figcaption Leyenda de la imagen
 
   h3 Acordion A tipo B
-  AcordionA.mb-5(tipo="b" clase-tarjeta="tarjeta tarjeta--azul")
+  AcordionA(tipo="b" clase-tarjeta="tarjeta tarjeta--azul")
     .row(titulo="Titulo item 1")
       .col-md-6.mb-4.mb-md-0
         p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
@@ -952,7 +984,7 @@ div.mb-5
 
   Separador
 
-  #tabs.titulo-segundo
+  #tabs.titulo-segundo.color-acento-botones
     h2 Pestañas o Tabs
 
   p.mb-3 Es un elemento web que permite cambiar rápidamente el contenido que el usuario está consumiendo sin cambiar de ventana o desplazarse verticalmente por el sitio web. 
@@ -1123,7 +1155,7 @@ div.mb-5
   h3 Pestañas C
   //- TabsC debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-  TabsC.color-primario.mb-5
+  TabsC.color-primario
     .py-3.py-md-4(titulo="The splendor of the mystery")
       .row
         .col-md-6.mb-4.mb-md-0
@@ -1189,7 +1221,7 @@ div.mb-5
 
   Separador
 
-  #lineas_tiempo.titulo-segundo
+  #lineas_tiempo.titulo-segundo.color-acento-botones
     h2 Líneas de tiempo
 
   p.mb-3 Es una representación gráfica para sintetizar información, que permite ordenar y explicar acontecimientos que han ocurrido a lo largo de un periodo.
@@ -1337,7 +1369,7 @@ div.mb-5
 
   //- LineaTiempoD debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-  LineaTiempoD.color-acento-contenido.mb-5
+  LineaTiempoD.color-acento-contenido
     .row(numero="1" titulo="Praesent luctus")
       .col-md-6.mb-4.mb-md-0
         p.text-small This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
@@ -1367,7 +1399,7 @@ div.mb-5
 
   Separador
 
-  #pasos.titulo-segundo
+  #pasos.titulo-segundo.color-acento-botones
     h2 Pasos
 
   h3 Pasos A tipo n
@@ -1434,7 +1466,7 @@ div.mb-5
       p Aliquam ornare sem in mauris lobortis accumsan. Suspendisse sollicitudin tellus eget bibendum cursus. Praesent tincidunt cursus mattis. Fusce nec convallis mauris, eu tincidunt neque. Proin justo orci, fermentum vel est vel, ornare sodales dui. Etiam consequat commodo tincidunt. Maecenas imperdiet ante eu mauris imperdiet, Phasellus pretium tortor quis varius sagittis. Suspendisse eu posuere enim, sed lacinia justo. Praesent eget tempor erat, a pretium ante. Nulla facilisi.
 
   h3 Pasos B
-  .tarjeta.tarjeta--gris.p-4.mb-5
+  .tarjeta.tarjeta--gris.p-4
     //- PasosB debe ir acompañado de una de una de estas clases => 
     //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
     PasosB.color-acento-contenido
@@ -1499,7 +1531,7 @@ div.mb-5
 
   Separador
 
-  #llamados_accion.titulo-segundo
+  #llamados_accion.titulo-segundo.color-acento-botones
     h2 Llamados a la acción
 
   p.mb-2 Es un bloque de texto que destaca por su composición y diseño. Su principal función es incentivar al usuario a realizar una acción a través de un botón o hipervínculo, en este caso, con el fin de poder acceder a recursos como infografías, videos, documentos y sitios web externos e independientes del componente formativo.
@@ -1588,7 +1620,7 @@ div.mb-5
               i.fas.fa-file-download
 
   .h5 Ejemplo: Llamado a la acción 3 Recursos externos versión simplificada
-  .row.mb-5
+  .row
     .col-lg-6
       a.anexo.mb-4(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank")
         .anexo__icono
@@ -1635,7 +1667,7 @@ div.mb-5
 
   Separador
 
-  #tarjetas.titulo-segundo
+  #tarjetas.titulo-segundo.color-acento-botones
     h2 Tarjetas
   
   p.mb-3 Es la agrupación de contenidos (texto e imágenes) en forma de tarjeta, que tiene como propósito, uno, ser más amigable el consumo de la información y dos, destacar información o conceptos relevantes.
@@ -1897,7 +1929,7 @@ div.mb-5
 
   h3 Tarjetas con número
 
-  .row.mb-5
+  .row
     .col-md-6.col-xl.mb-4.mb-xl-0
       //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
@@ -1944,12 +1976,12 @@ div.mb-5
 
   Separador
 
-  #modal.titulo-segundo
+  #modal.titulo-segundo.color-acento-botones
     h2 Modal
 
   .row
     .col-auto
-      a.boton.color-acento-contenido.mb-5.indicador__container(@click="modal1 = true")
+      a.boton.color-acento-contenido.indicador__container(@click="modal1 = true")
         span Abrir modal
         .indicador--click(v-if="mostrarIndicador")
     .col
@@ -1970,7 +2002,7 @@ div.mb-5
 
   Separador
 
-  #modal.titulo-segundo
+  #modal.titulo-segundo.color-acento-botones
     h2 Animaciones
 
   h3.titulo-tercero Fade

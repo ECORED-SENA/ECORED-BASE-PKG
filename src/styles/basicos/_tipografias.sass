@@ -52,19 +52,38 @@
   &__numero
     min-width: 45px
     height: 45px
-    background-color: $color-acento-contenido
     margin-right: 15px
     position: relative
     span
       @extend .h1
       margin-bottom: 0
-      color: $white
       position: absolute
       top: 50%
       left: 50%
       transform: translate(-50%,-50%)
   h1
     margin-bottom: 0
+
+  &.color-primario
+    .titulo-principal__numero
+      background-color: $color-primario
+      span
+        color: textColor($color-primario)
+  &.color-secundario
+    .titulo-principal__numero
+      background-color: $color-secundario
+      span
+        color: textColor($color-secundario)
+  &.color-acento-contenido
+    .titulo-principal__numero
+      background-color: $color-acento-contenido
+      span
+        color: textColor($color-acento-contenido)
+  &.color-acento-botones
+    .titulo-principal__numero
+      background-color: $color-acento-botones
+      span
+        color: textColor($color-acento-botones)
 
 .titulo-segundo
   margin-bottom: 48px
@@ -73,8 +92,21 @@
     display: block
     height: 3px
     width: 140px
-    border-left: solid 50px $color-acento-contenido
+    border-left: solid 50px
+    border-left-color: $color-sistema-f
     background-color: $color-sistema-f
+  &.color-primario
+    &:after
+      border-left-color: $color-primario
+  &.color-secundario
+    &:after
+      border-left-color: $color-secundario
+  &.color-acento-contenido
+    &:after
+      border-left-color: $color-acento-contenido
+  &.color-acento-botones
+    &:after
+      border-left-color: $color-acento-botones
 
 .titulo-tercero
   margin-bottom: 36px

@@ -14,7 +14,7 @@
           .row
             .col-md-8.col-lg-6
               .slyder-d__content__card.p-4
-                h3(v-html="item.titulo")
+                h3(v-if="item.hasOwnProperty('titulo')" v-html="item.titulo")
                 p.mb-3(v-html="item.texto")
                 .slyder__action
                   .slyder__pagination {{index+1}}/{{datos.length}}

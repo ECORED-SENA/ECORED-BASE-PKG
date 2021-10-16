@@ -11,6 +11,7 @@
         @mouseleave="selected = 0"
       )
       .img-infografica__item__dot
+      .img-infografica__item__numero(v-if="item.numero") {{item.numero}}
     .img-infografica__card(
       v-for="item in elements"
       :key="'img-infografica-card-'+item.id"
