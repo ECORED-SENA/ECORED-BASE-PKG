@@ -4,9 +4,9 @@
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
     .referencias__item(v-for="ref in orderedData" :key="ref.link")
       span(v-html="ref.referencia")
-      a(v-if="ref.link" :href="ref.link" target="_blank")
-        span(v-html="ref.link") 
-        i.fas.fa-external-link-alt
+      a.ms-1(v-if="ref.link" :href="ref.link" target="_blank")
+        span(v-html="ref.link")
+        i.ms-1.fas.fa-external-link-alt
       hr.my-3
 </template>
 <script>

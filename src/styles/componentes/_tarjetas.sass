@@ -222,6 +222,64 @@
       background-color: $color-acento-botones
       color: textColor($color-acento-botones)
 
+
+.tarjeta-slide
+  height: 100%
+  position: relative
+  overflow: hidden
+  &__img
+    position: absolute
+    inset: 0
+    background-size: cover
+    background-position: center
+    transform: translate(0,0)
+    transition: transform 0.3s ease-in-out
+  
+
+  &.arriba
+    &:hover
+      .tarjeta-slide
+        &__img
+          transform: translate(0,-100%)
+
+  &.abajo
+    &:hover
+      .tarjeta-slide
+        &__img
+          transform: translate(0,100%)
+
+  &.izquierda
+    &:hover
+      .tarjeta-slide
+        &__img
+          transform: translate(-100%,0)
+
+  &.derecha
+    &:hover
+      .tarjeta-slide
+        &__img
+          transform: translate(100%,0)
+
+  &.color-primario
+    .tarjeta-slide
+      &__img
+        background-color: $color-primario
+
+  &.color-secundario
+    .tarjeta-slide
+      &__img
+        background-color: $color-secundario
+
+  &.color-acento-contenido
+    .tarjeta-slide
+      &__img
+        background-color: $color-acento-contenido
+
+  &.color-acento-botones
+    .tarjeta-slide
+      &__img
+        background-color: $color-acento-botones
+
 // Tarjeta Avatar Slide
 .tarjeta-avatar-slide
   overflow-x: hidden

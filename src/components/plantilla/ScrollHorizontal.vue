@@ -1,7 +1,7 @@
 <template lang="pug">
-.horizontal-scroll__wrapper.px-0(ref="hContainer")
+.horizontal-scroll__wrapper(ref="hContainer")
   .horizontal-scroll(
-    :class="[{'horizontal-scroll--item-fw':itemFullWidth}]"
+    :class="[{'horizontal-scroll--item-fw':itemFullWidth},{'row':row}]"
     :style="[{transform: `translate(${scrollVal}px,0px)`}]"
   )
     slot
@@ -16,6 +16,10 @@ export default {
       default: '',
     },
     itemFullWidth: {
+      type: Boolean,
+      default: false,
+    },
+    row: {
       type: Boolean,
       default: false,
     },
@@ -35,6 +39,7 @@ export default {
   },
   mounted() {
     this.getCords()
+    this.scroll()
     window.addEventListener('resize', this.scroll)
   },
   updated() {
@@ -92,9 +97,11 @@ export default {
   overflow: hidden
 .horizontal-scroll
   display: flex
-  width: 100%
   transition: transform 0.5s ease-in-out
   align-items: center
+  flex-wrap: nowrap
+  &:not(.row)
+    width: 100%
   &--item-fw
     & ::v-deep > div
       flex-grow: 0

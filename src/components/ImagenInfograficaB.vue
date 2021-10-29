@@ -15,6 +15,8 @@
       .img-infografica-b__item__tooltip
         span.text-small(v-html="item.tooltip")
       .img-infografica-b__item__dot
+      .img-infografica-b__item__numero(v-if="item.hasOwnProperty('numero')") {{item.numero}}
+      .img-infografica-b__item__numero(v-else)
         i.fas.fa-plus
 
   .img-infografica-b__modal.p-3.p-md-4.p-xl-5(v-if="selectedItem" :style="getImageHeight()")
@@ -52,10 +54,8 @@ export default {
   },
   methods: {
     getImageHeight() {
-      console.log(this.$refs)
       const imgElement = this.$refs['img-ref-' + this.mainId]
       if (imgElement) {
-        console.log(imgElement.clientHeight)
         return {
           'min-height': imgElement.clientHeight + 'px',
         }

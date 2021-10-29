@@ -11,6 +11,7 @@ export default {
   },
   methods: {
     quitarAcentos(str) {
+      const strNoHtml = str.replace(/<\/?[^>]+(>|$)/g, '')
       const acentos = {
         á: 'a',
         é: 'e',
@@ -23,7 +24,7 @@ export default {
         Ó: 'O',
         Ú: 'U',
       }
-      return str
+      return strNoHtml
         .split('')
         .map(letra => acentos[letra] || letra)
         .join('')

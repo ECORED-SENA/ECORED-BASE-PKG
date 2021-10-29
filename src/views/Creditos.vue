@@ -3,7 +3,7 @@
   BannerInterno(icono="far fa-registered" titulo="Créditos")
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5
     .creditos.mb-4.mb-md-5
-      div(
+      .creditos__item(
         v-for="(creditoKey, index) of Object.keys(creditosData)"
         :class="index != Object.keys(creditosData).length -1 ? 'mb-4' : ''" 
       )
@@ -87,6 +87,10 @@ export default {
 
 .creditos
   color: $color-sistema-b
+  overflow-x: auto
+
+  &__item
+    min-width: 490px
 
   p
     line-height: 1.3em
@@ -101,7 +105,6 @@ export default {
     border-top-left-radius: $base-border-radius
     border-top-right-radius: $base-border-radius
   table
-    // min-width: 450px
     td, th
       border-color: $color-sistema-d
 </style>
