@@ -16,7 +16,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - Agregar numero a la imagen infografiaca e infografiaca-B
 - los botones del slyderA y slyderA quedan abajo (tipo="b")
 - titulo-principal y titulo-segundo de colores
-- acordiones agregar clase para estado activo (acordion\_\_activo)
+- acordiones agregar clase para estado activo (acordion__activo)
 - espacio para el icono del link de las referencias bibliograficas
 - deshabilitar descargable en local
 - SlyderB, SlyderC, SlyderD quitar titulo cuando no se ponga la llave
@@ -74,8 +74,8 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ### Arreglado
 
 - En el componente 'linea-tiempo-c' el problema generado por la cantidad de texto en el titulo
-- En el componente 'bloque-texto-e' el nombre de la clase 'bloque-texto-e**text' cambio a 'bloque-texto-e**texto' para mejor consistencia
-- En el componente 'tarjeta-avatar-b' ahora la imagen va a estar dentro de '.tarjeta-avatar-b\_\_img" para arreglar el responsive del componente
+- En el componente 'bloque-texto-e' el nombre de la clase 'bloque-texto-e__text' cambio a 'bloque-texto-e__texto' para mejor consistencia
+- En el componente 'tarjeta-avatar-b' ahora la imagen va a estar dentro de '.tarjeta-avatar-b__img" para arreglar el responsive del componente
 - Los textos dentro de estos componentes ahora se pueden utilizar como HTML
   - menu principal
   - banner interno
@@ -160,7 +160,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - nuevo .espaciador
 - PasosA ahora soporta contenido dinámico
 - Indicadores de interacción en todos los componentes interactivos
-- imagen en .tarjeta-avatar ahora tiene tamaños dinámico a través de \$tarjeta-avatar-ancho-img
+- imagen en .tarjeta-avatar ahora tiene tamaños dinámico a través de $tarjeta-avatar-ancho-img
 
 ### Arreglado
 
@@ -203,7 +203,6 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 ## 2.0.0 - 11-05-2021
 
 ### Cambios
-
 - ## Muchos componentes a partir de esta versión cambian su marcado (HTML) y sus estilos (css), por esto, se recomienda empezar de nuevo teniendo como guía las nuevas muestras.vue.
 - /package.json => "ecored-base-pkg": "2.0.0"
 - /src/views/Actividad.vue
@@ -252,12 +251,12 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 - /package.json => "ecored-base-pkg": "1.3.1"
 - /src/main.js
 - /src/router/index.js
-- /src/styles/\_variables.sass
+- /src/styles/_variables.sass
 
 ### Agregado
 
 - Visualización de la versión de la base y del paquete de la base en footer.
-- Nueva variable \$color-banner-fondo.
+- Nueva variable $color-banner-fondo.
 
 ### Arreglos
 
