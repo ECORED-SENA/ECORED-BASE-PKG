@@ -2086,7 +2086,7 @@ div.mb-5
 
   h3 Tarjetas con número
 
-  .row
+  .row.mb-5
     .col-md-6.col-xl.mb-4.mb-xl-0
       //- .tarjeta-numerada debe ir acompañado de una de una de estas clases => 
       //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
@@ -2130,6 +2130,7 @@ div.mb-5
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
+  
   h3 Tarjeta Avatar Slide
   .row.mb-5
     .col-lg-4.mb-4
