@@ -2253,7 +2253,7 @@ div.mb-5
 
 
   h3.titulo-tercero Zoom
-  .row.mb-5
+  .row
     .col-sm-6.col-md-4.col-lg-3.col-xxl-2.mb-3
       .tarjeta.color-primario.text-center.p-3(data-aos="zoom-in")
         h3.mb-0 zoom-in
