@@ -37,7 +37,7 @@ export default {
       })
 
       const sortedData = [...newGlosarioData].reduce((r, e) => {
-        const letra = this.quitarAcentos(e.termino[0].toLowerCase())
+        const letra = this.quitarAcentos(e.termino.toLowerCase())[0]
         if (!r[letra]) r[letra] = { letra, terminos: [e] }
         else r[letra].terminos.push(e)
         return r

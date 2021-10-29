@@ -556,3 +556,77 @@
       .linea-tiempo-d__item__number
         background-color: $color-acento-botones
         color: textColor($color-acento-botones)
+
+.linea-tiempo-e
+  width: 100%
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 25%
+    width: 5px
+    background: #ddd
+    transform: translateX(-50%)
+
+  &__item
+    display: flex
+    position: relative
+    padding: 25px 0
+    &__header
+      margin-bottom: .5em
+      width: 25%
+      padding-right: 30px
+      text-align: right
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        border: 5px solid 
+        background-color: $white
+        top: 20px
+        right: -20px
+        z-index: 99
+        transform: translateX(-50%)
+
+    &__body
+      width: 75%
+      padding-left: 30px
+
+  @media (max-width: $bp-max-xs)
+    &:before
+      display: none
+    .linea-tiempo-e
+      &__item
+        flex-direction: column
+        &__header
+          width: 100%
+          text-align: left
+          padding: 0
+          margin-bottom: 15px
+          &:before
+            display: none
+        &__body
+          width: 100%
+          padding: 0
+
+  &.color-primario
+    .linea-tiempo-e__item__header
+      &:before
+        border-color: $color-primario
+  &.color-secundario
+    .linea-tiempo-e__item__header
+      &:before
+        border-color: $color-secundario
+  &.color-acento-contenido
+    .linea-tiempo-e__item__header
+      &:before
+        border-color: $color-acento-contenido
+  &.color-acento-botones
+    .linea-tiempo-e__item__header
+      &:before
+        border-color: $color-acento-botones

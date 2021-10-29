@@ -54,10 +54,8 @@ export default {
   },
   methods: {
     getImageHeight() {
-      console.log(this.$refs)
       const imgElement = this.$refs['img-ref-' + this.mainId]
       if (imgElement) {
-        console.log(imgElement.clientHeight)
         return {
           'min-height': imgElement.clientHeight + 'px',
         }

@@ -589,7 +589,7 @@ div.mb-5
 
   h3 Imagen Infográfica B
 
-  ImagenInfograficaB.color-primario
+  ImagenInfograficaB.color-primario.mb-5
     template(v-slot:imagen)
       figure
         img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
@@ -609,6 +609,15 @@ div.mb-5
       .h5.mb-2 titulo
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus
 
+  h3 Imagen zoom
+
+  .position-relative(@mouseover="indicadorImagenZoom = false")
+    Zoom(
+      lente="200" 
+      :baja-resolucion="require('@/assets/curso/baja.jpeg')" 
+      :alta-resolucion="require('@/assets/curso/alta.jpeg')"
+    )
+    .indicador--hover(v-if="indicadorImagenZoom")
   Separador
 
   #video.titulo-segundo.color-acento-botones
@@ -891,6 +900,89 @@ div.mb-5
       figure
         img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
         figcaption Leyenda de la imagen
+
+  h3 Slyder F
+
+  SlyderF.mb-5(columnas="col-lg-6 col-xl-4")
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center FIRST
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center John Doe
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center John Doe
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center John Doe
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center John Doe
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center John Doe
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center John Doe
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+    .tarjeta.color-acento-botones.p-4
+      .row.justify-content-center.mb-3
+        .col-8
+          img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+      h2.text-center LAST
+      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+  .row.justify-content-center.mb-5
+    .col-md-6
+      SlyderF(columnas="col-12")
+        .tarjeta.color-acento-botones.p-4
+          .row.justify-content-center.mb-3
+            .col-8
+              img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+          h2.text-center John Doe
+          p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+        .tarjeta.color-acento-botones.p-4
+          .row.justify-content-center.mb-3
+            .col-8
+              img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+          h2.text-center John Doe
+          p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+
+        .tarjeta.color-acento-botones.p-4
+          .row.justify-content-center.mb-3
+            .col-8
+              img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
+          h2.text-center John Doe
+          p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
   h3 Slider Bootstrap
   #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
@@ -1369,7 +1461,7 @@ div.mb-5
 
   //- LineaTiempoD debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
-  LineaTiempoD.color-acento-contenido
+  LineaTiempoD.color-acento-contenido.mb-5
     .row(numero="1" titulo="Praesent luctus")
       .col-md-6.mb-4.mb-md-0
         p.text-small This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
@@ -1393,6 +1485,32 @@ div.mb-5
         p.text-small This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
     
       .col-md-6
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+  h3 Linea Tiempo E
+
+  //- LineaTiempoE debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  LineaTiempoE.color-acento-contenido
+    .row(titulo="2014 - Present" subtitulo="Title, Company")
+      .col-lg-6.mb-4.mb-lg-0
+        p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      .col-lg-6
+        figure
+          img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+          figcaption Leyenda de la imagen
+
+    div(titulo="2014 - asodasdk als alskd asdlkj sdfkj" subtitulo="Title, Company")
+      figure
+        img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
+        figcaption Leyenda de la imagen
+
+    .row(titulo="2014 - Present" subtitulo="Title, Company")
+      .col-lg-6.mb-4.mb-lg-0
+        p This is another paragraph. I think it needs to be added that the set of elements tested is not exhaustive in any sense. I have selected those elements for which it can make sense to write user style sheet rules, in my opionion.
+      .col-lg-6
         figure
           img(src='@/assets/template/img-placeholder.svg', alt='Texto que describa la imagen')
           figcaption Leyenda de la imagen
@@ -1897,6 +2015,45 @@ div.mb-5
             h1 John Doe
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis.
 
+  h3 Tarjetas slide
+
+  //- .tarjeta-slide debe ir acompañado de una de una de estas clases => 
+  //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
+  //- .arriba, .abajo, .derecha, .izquierda para controlar la animacion
+  .row.mb-5
+    .col-sm-6.col-xl-3.mb-4.mb-xl-0
+      .tarjeta.tarjeta-slide.arriba.color-primario(@mouseover="indicadorTarjetaSlide = false")
+        .indicador--hover(v-if="indicadorTarjetaSlide")
+        .tarjeta-slide__contenedor
+          .tarjeta-slide__contenido.p-4.p-xl-5
+            h1 John Doe
+            p Lorem ipsum dolor sit amet, 
+          .tarjeta-slide__img(:style="{'background-image': `url(${require('@/assets/curso/avatar.svg')})`}")
+
+    .col-sm-6.col-xl-3.mb-4.mb-xl-0
+      .tarjeta.tarjeta-slide.abajo.color-secundario(@mouseover="indicadorTarjetaSlide = false")
+        .tarjeta-slide__contenedor
+          .tarjeta-slide__img(:style="{'background-image': `url(${require('@/assets/curso/avatar.svg')})`}")
+          .tarjeta-slide__contenido.p-4.p-xl-5
+            h1 John Doe
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis.
+
+    .col-sm-6.col-xl-3.mb-4.mb-sm-0
+      .tarjeta.tarjeta-slide.derecha.color-acento-contenido(@mouseover="indicadorTarjetaSlide = false")
+        .tarjeta-slide__contenedor
+          .tarjeta-slide__img(:style="{'background-image': `url(${require('@/assets/curso/avatar.svg')})`}")
+          .tarjeta-slide__contenido.p-4.p-xl-5
+            h1 John Doe
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis.
+
+    .col-sm-6.col-xl-3
+      .tarjeta.tarjeta-slide.izquierda.color-acento-botones(@mouseover="indicadorTarjetaSlide = false")
+        .tarjeta-slide__contenedor
+          .tarjeta-slide__img(:style="{'background-image': `url(${require('@/assets/curso/avatar.svg')})`}")
+          .tarjeta-slide__contenido.p-4.p-xl-5
+            h1 John Doe
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum tortor at blandit congue. Pellentesque vel felis posuere, molestie metus id, vulputate turpis.
+
   h3 Tarjetas Tabla
   .row.mb-5
     .col-md-6.col-lg.tarjeta--tabla.p-4
@@ -2108,7 +2265,9 @@ export default {
   name: 'Muestras',
   data: () => ({
     mostrarIndicador: true,
+    indicadorImagenZoom: true,
     indicadorTarjetaFlip: true,
+    indicadorTarjetaSlide: true,
     modal1: false,
     modal2: false,
     datosLineaTiempoA: [
@@ -2193,4 +2352,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass"></style>

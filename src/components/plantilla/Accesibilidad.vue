@@ -34,7 +34,6 @@ export default {
     contraste() {
       const htmlElement = document.querySelector('html')
       const clase = 'html-constraste-activo'
-      console.log(htmlElement)
       if (htmlElement.classList.contains(clase)) {
         htmlElement.classList.remove(clase)
       } else {
