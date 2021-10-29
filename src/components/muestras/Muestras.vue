@@ -2130,6 +2130,32 @@ div.mb-5
         p.text-center 
           b Ruta integral de atención en salud para la promoción y mantenimiento de la salud 
         p.text-center Acciones realizadas en los entornos donde transcurre la vida y se desarrollan las personas
+  h3 Tarjeta Avatar Slide
+  .row.mb-5
+    .col-lg-4.mb-4
+      .tarjeta.tarjeta-avatar-slide.color-acento-contenido.p-4.h-100
+        .tarjeta-avatar-slide__img.mb-4
+          .tarjeta-avatar-slide__img__item: img(src='@/assets/curso/avatar-b.svg', alt='Texto que describa la imagen' )
+          .tarjeta-avatar-slide__img__item: img(src='@/assets/curso/avatar.svg', alt='Texto que describa la imagen' )
+        p 
+          b Dirigir a los miembros del equipo 
+          | para que las actividades se cumplan según lo establecido en el plan.
+    .col-lg-4.mb-4
+      .tarjeta.tarjeta-avatar-slide.color-acento-botones.p-4.h-100
+        .tarjeta-avatar-slide__img.mb-4
+          .tarjeta-avatar-slide__img__item: img(src='@/assets/curso/avatar-b.svg', alt='Texto que describa la imagen' )
+          .tarjeta-avatar-slide__img__item: img(src='@/assets/curso/avatar.svg', alt='Texto que describa la imagen' )
+        p 
+          b Dirigir a los miembros del equipo 
+          | para que las actividades se cumplan según lo establecido en el plan.
+    .col-lg-4.mb-4
+      .tarjeta.tarjeta-avatar-slide.color-primario.p-4.h-100
+        .tarjeta-avatar-slide__img.mb-4
+          .tarjeta-avatar-slide__img__item: img(src='@/assets/curso/avatar-b.svg', alt='Texto que describa la imagen' )
+          .tarjeta-avatar-slide__img__item: img(src='@/assets/curso/avatar.svg', alt='Texto que describa la imagen' )
+        p 
+          b Dirigir a los miembros del equipo 
+          | para que las actividades se cumplan según lo establecido en el plan.
 
   Separador
 

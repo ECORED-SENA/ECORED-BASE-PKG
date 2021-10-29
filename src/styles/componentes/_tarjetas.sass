@@ -223,8 +223,6 @@
       color: textColor($color-acento-botones)
 
 
-
-
 .tarjeta-slide
   height: 100%
   position: relative
@@ -281,3 +279,19 @@
     .tarjeta-slide
       &__img
         background-color: $color-acento-botones
+
+// Tarjeta Avatar Slide
+.tarjeta-avatar-slide
+  overflow-x: hidden
+  &:hover
+    .tarjeta-avatar-slide__img
+      transform: translateX(-50%)
+  &__img
+    display: flex
+    width: 200%
+    position: relative
+    transition: transform 0.3s ease-in-out
+    &__item
+      flex: 1
+      display: flex
+      justify-content: center
