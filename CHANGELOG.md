@@ -13,7 +13,7 @@ Estos son los cambios hechos en la ECORED-BASE-2021
 
 ### Arreglado
 
-- Agregar numero a la imagen infografiaca e infografiaca-B
+- Agregar numero a la imagen infografiaca e infografiaca-B (numero="1")
 - los botones del slyderA y slyderA quedan abajo (tipo="b")
 - titulo-principal y titulo-segundo de colores
 - acordiones agregar clase para estado activo (acordion__activo)
