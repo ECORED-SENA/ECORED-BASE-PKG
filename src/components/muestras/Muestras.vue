@@ -915,42 +915,42 @@ div.mb-5
       .row.justify-content-center.mb-3
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-      h2.text-center John Doe
+      h2.text-center 2
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4
       .row.justify-content-center.mb-3
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-      h2.text-center John Doe
+      h2.text-center 3
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4
       .row.justify-content-center.mb-3
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-      h2.text-center John Doe
+      h2.text-center 4
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4
       .row.justify-content-center.mb-3
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-      h2.text-center John Doe
+      h2.text-center 5
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4
       .row.justify-content-center.mb-3
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-      h2.text-center John Doe
+      h2.text-center 6
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4
       .row.justify-content-center.mb-3
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
-      h2.text-center John Doe
+      h2.text-center 7
       p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4

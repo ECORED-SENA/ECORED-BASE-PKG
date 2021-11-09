@@ -6,7 +6,7 @@ export default {
     },
   },
   data: () => ({
-    mainId: Math.floor(Math.random() * 10000000),
+    mainId: Math.floor(Math.random() * 10 ** 10),
     selected: '0',
   }),
   methods: {

@@ -1,13 +1,15 @@
 <template lang="pug">
 .zoom
   .zoom__img(
-    ref="img" 
-    @mouseover="enter = true" 
-    @mouseleave="enter = false" 
+    :id="`zoom-${mainId}`"
+    ref="img"
+    @mouseover="enter = true"
+    @mouseleave="enter = false"
     @mousemove.prevent="move"
-    @touchstart="enter = true" 
-    @touchend="enter = false" 
+    @touchstart="enter = true"
+    @touchend="enter = false"
     @touchmove.prevent="move"
+    @click="onClick"
   )
     img(:src="bajaResolucion")
   .zoom__lens(ref="zoom" :style="[lensObj,extraLensObj]" :class="{show:enter}")
@@ -18,8 +20,10 @@
 </template>
 
 <script>
+import slyderMixins from '../mixins/slyderMixins'
 export default {
   name: 'Zoom',
+  mixins: [slyderMixins],
   props: {
     lente: {
       type: String,
@@ -38,6 +42,7 @@ export default {
     return {
       zoomLevel: 1,
       enter: false,
+      isClicked: false,
       lensObj: {
         top: 0,
         left: 0,
@@ -64,15 +69,22 @@ export default {
       }
     },
   },
-  mounted() {
-    this.$refs.img.addEventListener('wheel', e => {
-      e.preventDefault()
-      e.deltaY > 0 ? this.zoomLevel++ : this.zoomLevel--
-      if (this.zoomLevel < 1) this.zoomLevel = 1
-      if (this.zoomLevel > 5) this.zoomLevel = 5
-    })
-  },
   methods: {
+    onClick() {
+      if (!this.isClicked) {
+        this.isClicked = true
+        document.addEventListener('click', this.clicks)
+      }
+    },
+    clicks(e) {
+      if (e.path.find(x => x.id == `zoom-${this.mainId}`)) {
+        this.$refs.img.addEventListener('wheel', this.zoom)
+      } else if (this.isClicked) {
+        document.removeEventListener('click', this.clicks)
+        this.$refs.img.removeEventListener('wheel', this.zoom)
+        this.isClicked = false
+      }
+    },
     move(e) {
       const zoom = this.$refs.zoom
       const zoomImg = this.$refs.zoomImg
@@ -100,6 +112,12 @@ export default {
 
       this.zoomObj.left = `${zoomLeft}px`
       this.zoomObj.top = `${zoomTop}px`
+    },
+    zoom(e) {
+      e.preventDefault()
+      e.deltaY > 0 ? this.zoomLevel++ : this.zoomLevel--
+      if (this.zoomLevel < 1) this.zoomLevel = 1
+      if (this.zoomLevel > 5) this.zoomLevel = 5
     },
   },
 }

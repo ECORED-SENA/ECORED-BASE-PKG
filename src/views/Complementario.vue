@@ -42,7 +42,7 @@ export default {
           }
         } else if (item.descarga) {
           if (typeof item.descarga === 'string') {
-            nuevoLink.push(item.descarga)
+            nuevoLink.push(this.obtenerLink(item.descarga))
           } else {
             item.descarga.forEach(link => {
               nuevoLink.push(this.obtenerLink(link))

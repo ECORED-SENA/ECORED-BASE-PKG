@@ -50,13 +50,15 @@ export default {
       const container = document.querySelector('#slyderY')
       const elm = document.querySelector(`#sl-${this.elements[0].id}`)
       const elmComputedStyles = elm.currentStyle || window.getComputedStyle(elm)
-      const elmPaddingLeft = parseInt(elmComputedStyles.paddingLeft)
-      const elmtsPerContainer = parseInt(
-        (container.offsetWidth + elmPaddingLeft * 2) / elm.offsetWidth,
+      const elmPaddingLeft = parseFloat(elmComputedStyles.paddingLeft)
+      const elmtsPerContainer = Math.round(
+        parseFloat(
+          (container.offsetWidth + elmPaddingLeft * 2) / elm.offsetWidth,
+        ),
       )
       const newIds =
         elmtsPerContainer > 1
-          ? ids.splice(0, ids.length - elmtsPerContainer)
+          ? ids.slice(0, ids.length - (elmtsPerContainer - 1))
           : ids
       const idxOfSelected = newIds.indexOf(this.selected)
       if (idxOfSelected < newIds.length - 1) {
