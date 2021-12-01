@@ -3,7 +3,7 @@
   
   .slyder-f__btn.pe-3(@click="clickAnterior")
     i.fas.fa-chevron-left
-  #slyderY.slyder-f__main
+  .slyder-f__main(:id="'slyder-f-' + mainId")
     ScrollHorizontal(
       v-if="elements.length && rendered" 
       :selectedId="'sl-' + selected"
@@ -47,15 +47,13 @@ export default {
     },
     clickSiguiente() {
       const ids = this.elements.map(element => element.id)
-      const container = document.querySelector('#slyderY')
+      const container = document.querySelector('#slyder-f-' + this.mainId)
+      const containerComputedStyles = window.getComputedStyle(container)
+      const containerWidth = parseFloat(containerComputedStyles.width)
       const elm = document.querySelector(`#sl-${this.elements[0].id}`)
-      const elmComputedStyles = elm.currentStyle || window.getComputedStyle(elm)
-      const elmPaddingLeft = parseFloat(elmComputedStyles.paddingLeft)
-      const elmtsPerContainer = Math.round(
-        parseFloat(
-          (container.offsetWidth + elmPaddingLeft * 2) / elm.offsetWidth,
-        ),
-      )
+      const elmComputedStyles = window.getComputedStyle(elm)
+      const elmWidth = parseFloat(elmComputedStyles.width)
+      const elmtsPerContainer = Math.round(containerWidth / elmWidth)
       const newIds =
         elmtsPerContainer > 1
           ? ids.slice(0, ids.length - (elmtsPerContainer - 1))

@@ -2,6 +2,14 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 4.0.2 - 01-12-2021
+
+### Arreglado
+
+- Componente SlyderF en algunos casos los botones no funcionaban como se esperaba
+
+#
+
 ## 4.0.1 - 09-11-2021
 
 ### Arreglado
