@@ -21,7 +21,7 @@
       .col-md-6.mb-4.mb-md-0
         .tarjeta.credito.p-3.text-center.h-100
           img.d-inline-block(src="@/assets/template/creditos-img.svg" style="width: 70px")
-          p Fotografias y vectores tomados de 
+          p Fotografías y vectores tomados de 
             a(href="https://www.freepik.es/" target="_blank") www.freepik.es
             | ,  
             a(href="https://www.shutterstock.com/" target="_blank") www.shutterstock.com

@@ -2,6 +2,14 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 4.0.3 - 03-03-2021
+
+### Arreglado
+
+- Se le puso tilde a Fotografías en los creditos
+
+#
+
 ## 4.0.2 - 01-12-2021
 
 ### Arreglado
