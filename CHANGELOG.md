@@ -2,6 +2,14 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 5.0.0 - 01-06-2022
+
+### Arreglado
+
+- Nuevo material complementario
+
+#
+
 ## 4.0.3 - 03-03-2021
 
 ### Arreglado
