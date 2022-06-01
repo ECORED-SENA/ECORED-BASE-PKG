@@ -6,12 +6,14 @@
       table
         thead
           tr
-            th(colspan='8' scope="col") Autor, (año del documento o material), Nombre del documento o material
-            th(colspan='2' scope="col") Tipo de material
+            th(colspan='3' scope="col") Tema
+            th(colspan='5' scope="col") Referencia APA del material
+            th(colspan='2' scope="col") Tipo 
             th(colspan='2' scope="col") Enlace
         tbody
           tr(v-for="(item, index) in computedData" :key="'complementario-'+index")
-            td(colspan='8' scope="row" v-html="item.texto")
+            td.text-start(colspan='3' scope="row" v-html="item.tema")
+            td.text-start(colspan='5' scope="row" v-html="item.referencia")
             td(colspan='2' v-html="item.tipo")
             td(colspan='2')
               .complementario__enlaces
@@ -50,8 +52,7 @@ export default {
           }
         }
         return {
-          texto: item.texto,
-          tipo: item.tipo,
+          ...item,
           link: nuevoLink,
         }
       })
@@ -81,6 +82,4 @@ table
   th, td
     padding: 25px 20px
     text-align: center
-    &:first-child
-      text-align: left
 </style>
