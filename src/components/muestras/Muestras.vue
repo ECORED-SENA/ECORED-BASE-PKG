@@ -1,5 +1,11 @@
 <template lang="pug">
 div.mb-5
+  
+  Audio(:audio="require('../../assets/componentes/audios/audio-ej.mp3')")
+  
+  TextoAudio(:audio="require('../../assets/componentes/audios/audio-ej.mp3')")
+    span asldk as;ldka s;l
+
   #encabezados.titulo-segundo.color-acento-botones
     h2 Encabezados
 
