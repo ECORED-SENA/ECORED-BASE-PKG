@@ -14,12 +14,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.audio
-  width: 34px
-  &__btn
-    width: 100%
-    display: block
-    padding: 0
-    background-color: transparent
-</style>
+<style lang="sass" scoped></style>

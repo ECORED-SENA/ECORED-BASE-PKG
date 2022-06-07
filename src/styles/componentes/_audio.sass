@@ -1,0 +1,138 @@
+.audio
+  width: 34px
+  &__btn
+    border-radius: 50%
+    width: 100%
+    display: block
+    padding: 0
+  &.color-primario
+    .audio__btn
+      background-color: $color-primario
+      transition-property: background-color, transform  
+      transition-duration: 0.3s
+      &:hover
+        background-color: darken($color-primario,10% )
+        transform: scale(1.1)
+  &.color-secundario
+    .audio__btn
+      background-color: $color-secundario
+      transition-property: background-color, transform  
+      transition-duration: 0.3s
+      &:hover
+        background-color: darken($color-secundario,10% )
+        transform: scale(1.1)
+  &.color-acento-contenido
+    .audio__btn
+      background-color: $color-acento-contenido
+      transition-property: background-color, transform  
+      transition-duration: 0.3s
+      &:hover
+        background-color: darken($color-acento-contenido,10% )
+        transform: scale(1.1)
+  &.color-acento-botones
+    .audio__btn
+      background-color: $color-acento-botones
+      transition-property: background-color, transform  
+      transition-duration: 0.3s
+      &:hover
+        background-color: darken($color-acento-botones,10% )
+        transform: scale(1.1)
+
+
+
+
+
+.tarjeta-audio
+  border: 2px solid 
+  padding: 1em 1.5em 
+  border-radius: 20px
+  &__input
+    input
+      -webkit-appearance: none
+      cursor: pointer
+      border: none
+      width: 100%
+      &::-webkit-slider-runnable-track
+        height: 4px
+      &::-webkit-slider-thumb
+        -webkit-appearance: none
+        width: 7px
+        height: 7px
+        margin-top: -1px
+        border-radius: 50%
+      
+
+
+  &__btn__button
+    border-radius: 50%
+    display: block
+    padding: 0
+    width: 30px
+    transition-property: background-color, transform  
+    transition-duration: 0.3s
+    &:hover
+      transform: scale(1.1)
+  &.color-primario
+    border-color: $color-primario
+    .tarjeta-audio__texto
+      color: $color-primario
+    .tarjeta-audio__btn__button
+      background-color: $color-primario
+      &:hover
+        background-color: darken($color-primario,10% )
+    .tarjeta-audio__input
+      input[type=range]::-webkit-slider-runnable-track
+        background-color: rgba($color-primario, 0.2)
+      input[type=range]::-ms-fill-lower
+        background-color: $color-primario
+      input[type=range]::-webkit-slider-thumb
+        background-color: $color-primario
+    span
+      color: $color-primario
+  &.color-secundario
+    border-color: $color-secundario
+    .tarjeta-audio__texto
+      color: $color-secundario
+    .tarjeta-audio__btn__button
+      background-color: $color-secundario
+      &:hover
+        background-color: darken($color-secundario,10% )
+    .tarjeta-audio__input
+      input[type=range]::-webkit-slider-runnable-track
+        background-color: rgba($color-secundario, 0.2)
+      input[type=range]::-ms-fill-lower
+        background-color: $color-secundario
+      input[type=range]::-webkit-slider-thumb
+        background-color: $color-secundario
+  &.color-acento-contenido
+    border-color: $color-acento-contenido
+    .tarjeta-audio__texto
+      color: $color-acento-contenido
+    .tarjeta-audio__btn__button
+      background-color: $color-acento-contenido
+      &:hover
+        background-color: darken($color-acento-contenido,10% )
+    .tarjeta-audio__input
+      input[type=range]::-webkit-slider-runnable-track
+        background-color: rgba($color-acento-contenido, 0.2)
+      input[type=range]::-ms-fill-lower
+        background-color: $color-acento-contenido
+      input[type=range]::-webkit-slider-thumb
+        background-color: $color-acento-contenido
+  &.color-acento-botones
+    border-color: $color-acento-botones
+    .tarjeta-audio__texto
+      color: $color-acento-botones
+    .tarjeta-audio__btn__button
+      background-color: $color-acento-botones
+      &:hover
+        background-color: darken($color-acento-botones,10% )
+    .tarjeta-audio__input
+      input[type=range]::-webkit-slider-runnable-track
+        background-color: rgba($color-acento-botones, 0.2)
+      input[type=range]::-ms-fill-lower
+        background-color: $color-acento-botones
+      input[type=range]::-webkit-slider-thumb
+        background-color: $color-acento-botones
+
+
