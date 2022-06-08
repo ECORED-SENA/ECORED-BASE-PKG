@@ -128,16 +128,18 @@ div.mb-5
   Separador
   .titulo-segundo.color-acento-botones
     h2.mb-2 Tarjetas Audio 
+  //- Añadir la clase .no-bar para ocultar la barra de avance. 
+    - Este componente admite etiquetas HTML 
   .row
     .col-lg-6
       TarjetaAudio.color-primario.mb-3(
-        texto="Texto de muestra "
+        texto="Texto de muestra  "
         :audio="require('../../assets/componentes/audios/audio-ej.mp3')"
         @audio-hover="mostrarIndicadorTarjetaAudio = false"
       )
         .indicador--click(v-if="mostrarIndicadorTarjetaAudio")
       TarjetaAudio.color-secundario.mb-3(
-        texto="Texto de muestra "
+        texto="Texto de muestra <br> Texto de muestra "
         :audio="require('../../assets/componentes/audios/audio-ej.mp3')")
       TarjetaAudio.color-acento-contenido.mb-3(
         texto="Texto de muestra "

@@ -2,7 +2,7 @@
 .tarjeta-audio
   .row.align-items-center
     .col
-      .tarjeta-audio__texto.h5.fst-italic.mb-2 {{texto}}
+      .tarjeta-audio__texto.h5.fst-italic.mb-2(v-html="texto")
       .tarjeta-audio__input
         input(
           v-model="sliderVal",
