@@ -1,6 +1,9 @@
 <template lang="pug">
-.audio
-  button.audio__btn( v-if="state ==='pause'"  @click="play")
+.audio.position-relative(@mouseover.once="$emit('audio-hover')")
+  slot
+  .spinner-border.spinner-border-sm(v-if="!audioCanPlay" role="status")
+    span.visually-hidden Loading..
+  button.audio__btn( v-else-if="state ==='pause'"  @click="play")
     img(src="../assets/template/audio.svg")
   button.audio__btn(v-else @click="pause")
     img(src="../assets/template/pause.svg")
@@ -14,4 +17,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass"></style>

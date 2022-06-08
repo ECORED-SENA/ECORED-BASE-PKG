@@ -2,16 +2,23 @@
 .tarjeta-audio
   .row.align-items-center
     .col
-      .tarjeta-audio__texto.h4.fst-italic {{texto}}
+      .tarjeta-audio__texto.h5.fst-italic.mb-2 {{texto}}
       .tarjeta-audio__input
-        input( v-model="sliderVal" ref="sliderElement" type="range" max="100" @input="onSliderMove")
-    .col-auto
-      .tarjeta-audio__btn
+        input(
+          v-model="sliderVal",
+          ref="sliderElement",
+          type="range" max="100", 
+          :style="{'background-size': `${this.sliderVal}% 100%`}",
+          @input="onSliderMove"
+        )
+    .col-auto.ps-0
+      .audio.position-relative(@mouseover.once="$emit('audio-hover')")
+        slot
         .spinner-border.spinner-border-sm(v-if="!audioCanPlay" role="status")
           span.visually-hidden Loading..
-        button.tarjeta-audio__btn__button(v-else-if="state ==='pause'"  @click="play")
+        button.audio__btn(v-else-if="state ==='pause'"  @click="play" @mouseover="mostrarIndicador = false")
           img(src="../assets/template/audio.svg")
-        button.tarjeta-audio__btn__button(v-else @click="pause")
+        button.audio__btn(v-else @click="pause")
           img(src="../assets/template/pause.svg")
 
 </template>
@@ -45,4 +52,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass"></style>

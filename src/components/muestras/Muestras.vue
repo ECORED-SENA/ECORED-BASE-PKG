@@ -117,7 +117,11 @@ div.mb-5
   .titulo-segundo.color-acento-botones
     h2.mb-2 Botones de audio
   .d-flex.mb-5
-    Audio.color-primario.mx-3(:audio="require('../../assets/componentes/audios/audio-ej.mp3')")
+    Audio.color-primario.mx-3(
+      :audio="require('../../assets/componentes/audios/audio-ej.mp3')"
+      @audio-hover="mostrarIndicadorAudio = false"
+    )
+      .indicador--click(v-if="mostrarIndicadorAudio")
     Audio.color-secundario.mx-3(:audio="require('../../assets/componentes/audios/audio-ej.mp3')")
     Audio.color-acento-contenido.mx-3(:audio="require('../../assets/componentes/audios/audio-ej.mp3')")
     Audio.color-acento-botones.mx-3(:audio="require('../../assets/componentes/audios/audio-ej.mp3')")
@@ -128,7 +132,10 @@ div.mb-5
     .col-lg-6
       TarjetaAudio.color-primario.mb-3(
         texto="Texto de muestra "
-        :audio="require('../../assets/componentes/audios/audio-ej.mp3')")
+        :audio="require('../../assets/componentes/audios/audio-ej.mp3')"
+        @audio-hover="mostrarIndicadorTarjetaAudio = false"
+      )
+        .indicador--click(v-if="mostrarIndicadorTarjetaAudio")
       TarjetaAudio.color-secundario.mb-3(
         texto="Texto de muestra "
         :audio="require('../../assets/componentes/audios/audio-ej.mp3')")
@@ -2325,6 +2332,8 @@ export default {
     indicadorImagenZoom: true,
     indicadorTarjetaFlip: true,
     indicadorTarjetaSlide: true,
+    mostrarIndicadorAudio: true,
+    mostrarIndicadorTarjetaAudio: true,
     modal1: false,
     modal2: false,
     datosLineaTiempoA: [
