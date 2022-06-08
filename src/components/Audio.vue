@@ -4,9 +4,9 @@
   .spinner-border.spinner-border-sm(v-if="!audioCanPlay" role="status")
     span.visually-hidden Loading..
   button.audio__btn( v-else-if="state ==='pause'"  @click="play")
-    img(src="../assets/template/audio.svg")
+    img(src="@/assets/template/audio.svg")
   button.audio__btn(v-else @click="pause")
-    img(src="../assets/template/pause.svg")
+    img(src="@/assets/template/pause.svg")
 </template>
 
 <script>
