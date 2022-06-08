@@ -2,6 +2,13 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 5.1.1 - 08-06-2022
+
+### Arreglado
+
+- Rutas para las imagenes de los Componentes Audio y TarjetaAudio arregladas
+
+#
 ## 5.1.0 - 08-06-2022
 
 ### Agregado
