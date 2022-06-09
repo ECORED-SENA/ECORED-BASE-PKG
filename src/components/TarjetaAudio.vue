@@ -2,8 +2,8 @@
 .tarjeta-audio
   .row.align-items-center
     .col
-      .tarjeta-audio__texto.h5.fst-italic.mb-2(v-html="texto")
-      .tarjeta-audio__input
+      .tarjeta-audio__texto.h5.fst-italic.mb-0(v-html="texto")
+      .tarjeta-audio__input.mt-2(v-if="!noBarra")
         input(
           v-model="sliderVal",
           ref="sliderElement",
@@ -33,14 +33,20 @@ export default {
       type: String,
       required: true,
     },
+    noBarra: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     sliderVal: 0,
   }),
   mounted() {
-    this.audioElement.ontimeupdate = () => {
-      this.sliderVal =
-        (this.audioElement.currentTime / this.audioDuration) * 100
+    if (!this.noBarra) {
+      this.audioElement.ontimeupdate = () => {
+        this.sliderVal =
+          (this.audioElement.currentTime / this.audioDuration) * 100
+      }
     }
   },
   methods: {
