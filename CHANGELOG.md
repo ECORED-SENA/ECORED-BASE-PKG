@@ -2,6 +2,13 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 5.1.2 - 09-06-2022
+
+### Arreglado
+
+- En componente TarjetaAudio se agrego prop para quitar la barra de progreso
+
+#
 ## 5.1.1 - 08-06-2022
 
 ### Arreglado
