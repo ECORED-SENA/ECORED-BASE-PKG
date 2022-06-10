@@ -1,6 +1,8 @@
 <template lang="pug">
 
 div.mb-5
+
+  Dialogo.mb-5
   
 
   #encabezados.titulo-segundo.color-acento-botones
