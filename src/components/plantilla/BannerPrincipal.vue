@@ -16,6 +16,8 @@
 
       .d-none.d-lg-block.col-lg-5.px-0.banner-principal__img
         img(:src="globalData.imagenBannerPrincipal")
+        div(v-for="img in extraImgs" :class="img.clases")
+          img(:src="img.imagen")
 </template>
 
 <script>
@@ -26,6 +28,9 @@ export default {
   computed: {
     globalData() {
       return this.$config.global
+    },
+    extraImgs() {
+      return this.$config.global.imagenesDecorativasBanner
     },
   },
 }
@@ -40,6 +45,11 @@ export default {
     background-color: $color-banner-fondo
     background-size: cover
     background-position: center
+
+  &__img
+    position: relative
+    &>div
+      position: absolute
 
   &__info
     display: flex
