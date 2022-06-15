@@ -1,10 +1,10 @@
 <template lang="pug">
 
 div.mb-5
-  
 
   #encabezados.titulo-segundo.color-acento-botones
     h2 Encabezados
+  Dialogo
 
   //- .titulo-principal debe ir acompañado de una de una de estas clases => 
   //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
