@@ -16,7 +16,7 @@
   .spinner-border
     border-right-color: transparent !important
 
-.audio, .tarjeta-audio
+.audio, .tarjeta-audio, .tarjeta-dialogo
   &.color-primario
     .audio__btn
       background-color: $color-primario
@@ -45,6 +45,20 @@
         background-color: darken($color-acento-botones,10%)
     .spinner-border
       border-color: $color-acento-botones
+  &.color-adicional-1
+    .audio__btn
+      background-color: $color-adicional-1
+      &:hover
+        background-color: darken($color-adicional-1,10%)
+    .spinner-border
+      border-color: $color-adicional-1
+  &.color-adicional-2
+    .audio__btn
+      background-color: $color-adicional-2
+      &:hover
+        background-color: darken($color-adicional-2,10%)
+    .spinner-border
+      border-color: $color-adicional-2
 
 .tarjeta-audio
   border: 2px solid 

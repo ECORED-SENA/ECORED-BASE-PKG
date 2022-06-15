@@ -1,0 +1,127 @@
+.tarjeta-dialogo
+  border: 2px solid
+  border-radius: 10px
+  overflow: hidden
+  background-color: #f8f9ff
+  &.color-primario
+    border-color: $color-primario
+    .tarjeta-dialogo__cabecera
+      background-color: $color-primario
+    button
+      background-color: $color-primario
+  &.color-secundario
+    border-color: $color-secundario
+    .tarjeta-dialogo__cabecera
+      background-color: $color-secundario
+    button
+      background-color: $color-secundario
+
+  &.color-acento-contenido
+    border-color: $color-acento-contenido
+    .tarjeta-dialogo__cabecera
+      background-color: $color-acento-contenido
+    button
+      background-color: $color-acento-contenido
+  &.color-acento-botones
+    border-color: $color-acento-botones
+    .tarjeta-dialogo__cabecera
+      background-color: $color-acento-botones
+    button
+      background-color: $color-acento-botones
+  &.color-adicional-1
+    border-color: $color-adicional-1
+    .tarjeta-dialogo__cabecera
+      background-color: $color-adicional-1
+    button
+      background-color: $color-adicional-1
+  &.color-adicional-2
+    border-color: $color-adicional-2
+    .tarjeta-dialogo__cabecera
+      background-color: $color-adicional-2
+    button
+      background-color: $color-adicional-2
+  .tarjeta-dialogo__cabecera
+    padding: 1rem 2rem
+    p,h3
+      color: $white
+.dialogo__personajes
+  display: flex
+  align-items: flex-start
+  img
+    width: 50px
+    border-radius: 50%
+.dialogo
+  position: relative
+  &__texto
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-end
+    &--tarjeta
+      z-index: 1
+      position: relative
+      border-radius: 10px
+      background-color: $white
+      padding: 1.5em
+      display: flex
+      justify-content: space-between
+    &--traduccion
+      border-radius: 0px 0px 10px 10px
+      display: inline-block
+      p
+        color: $white
+  &__bocadillo
+    position: absolute
+    top: 0
+    left: 0
+    width: 25px
+    height: 25px
+    transform: translate(-10px, 10px ) rotate(45deg)
+    box
+    background-color: $white
+    z-index: 0
+    &.color-primario
+      h5
+        color: $color-primario
+    &.color-secundario
+      h5
+        color: $color-secundario
+    &.color-acento-contenido
+      h5
+        color: $color-acento-contenido
+    &.color-acento-botones
+      h5
+        color: $color-acento-botones
+    &.color-adicional-1
+      h5
+        color: $color-adicional-1
+    &.color-adicional-2
+      h5
+        color: $color-adicional-2
+  &:nth-child(odd)
+    .dialogo__bocadillo
+      right: 0
+      left: auto
+      transform: translate(10px, 10px ) rotate(45deg)
+    .dialogo__texto
+      align-items: flex-start
+
+
+.container-dialogos
+  padding-right: 2em
+  overflow-y: scroll
+  overflow-x: hidden
+  height: calc(90vh - 125px)
+  &::-webkit-scrollbar
+    width: 10px
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    background-color: #e5e5e5
+  &::-webkit-scrollbar-thumb
+    background-color: #b4bfd8
+    height: 20px
+    border-radius: 10px
+  &::-webkit-scrollbar-thumb:hover
+    background-color: $color-acento-contenido
+  &::-webkit-scrollbar-thumb:active
+    background-color: $color-acento-contenido
