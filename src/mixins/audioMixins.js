@@ -22,6 +22,9 @@ export default {
     this.audioElement.oncanplay = () => {
       this.audioCanPlay = true
     }
+    this.audioElement.onloadedmetadata = () => {
+      this.audioCanPlay = true
+    }
     this.audioElement.onended = () => {
       this.audioElement.currentTime = 0
       this.state = 'pause'
