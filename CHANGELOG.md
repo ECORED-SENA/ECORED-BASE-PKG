@@ -2,6 +2,17 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 5.3.0 - 19-06-2022
+
+### Agregado
+
+- Componente dialogo de arrastrar y soltar para ingles
+
+### Arreglado
+
+- compativilidad del componente audio con mobiles
+
+#
 ## 5.2.0 - 10-06-2022
 
 ### Agregado
