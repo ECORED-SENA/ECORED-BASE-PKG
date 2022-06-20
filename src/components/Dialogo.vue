@@ -87,7 +87,7 @@
           .dialogo__score.mt-3(v-if="score")
             .dialogo__score.p-3.approved(v-if="score === 'approved'")
               .row.align-items-center
-                .col-3
+                .col-2
                   .dialogo__score__icon
                     img(src="@/assets/template/green-check.svg")
                 .col
@@ -95,7 +95,7 @@
 
             .dialogo__score.px-3.py-2.disapproved(v-if="score === 'disapproved'")
               .row.align-items-center
-                .col-3
+                .col-2
                   .dialogo__score__icon
                     img(src="@/assets/template/red-x.svg")
                 .col
@@ -248,25 +248,6 @@ export default {
     resetDragElm(id) {
       const dragElm = this.$refs[`word-${id}`][0]
       dragElm.classList.remove('touch-drag')
-    },
-    createElement(x, y, w, h, color) {
-      const id = `dot-${Math.floor(Math.random() * 10 ** 10)}`
-      const dot = document.createElement('div')
-      dot.classList.add('dot')
-      dot.style.position = `fixed`
-      dot.style.top = `${y}px`
-      dot.style.left = `${x}px`
-      dot.style.width = `${w}px`
-      dot.style.height = `${h}px`
-      dot.style.opacity = 0.5
-
-      dot.style.backgroundColor = color || 'red'
-      dot.id = id
-      document.body.appendChild(dot)
-      dot.addEventListener('click', e => {
-        const eDot = document.getElementById(id)
-        document.body.removeChild(eDot)
-      })
     },
     // HELPERS
     toggleTranslate(id) {
