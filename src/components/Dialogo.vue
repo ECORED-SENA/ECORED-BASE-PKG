@@ -1,8 +1,10 @@
 <template lang="pug">
-.dialogo.mb-5
+.dialogo
   .dialogo__header.px-3.px-lg-4.py-2.py-lg-3
-    p.mb-1 Tipo de actividad
-    h3.mb-0 Titulo de actividad - Completa la conversación
+    .mb-1
+      slot(name="nombre-actividad") Arrastrar y soltar
+    .h3.mb-0 
+      slot(name="titulo-actividad") Titulo de actividad - Completa la conversación
   .px-2.py-3.p-lg-4
     .row.g-0
       .col-md-8.dialogo__chat(:ref="`chat-${uid}`")
@@ -53,24 +55,34 @@
                 ) Ver traducción
           .col-1
       .col-12.d-md-none
-        hr
+        hr.mb-3.mt-4
       .col.dialogo__words
         .dialogo__words__content
-          .dialogo__words__content__explanation.mb-3 Arrastra las words Nam non neque lorem. Pellentesque ex nunc, ullamcorper vel velit ac, rhoncus pulvinar massa. 
-          .h5.dialogo__words__word(
-            v-for="word in wordsToShow"
-            :key="`word-${word.id}`"
-            :ref="`word-${word.id}`"
-            @dragstart="onStartDrag(word.id)"
-            @dragend="onEndDrag()"
-            draggable
-            @touchstart.prevent="onTouchStart(word.id)" 
-            @touchmove.prevent="onTouchMove($event,word.id)"
-            @touchend.prevent="onTouchEnd($event,word.id)"
-            @touchcancel.prevent="onTouchCancel($event,word.id)"
-            :class="{'grabbing': word.id === dragId}"
-            v-html="word.palabra"
-          )
+          .dialogo__words__content__explanation 
+            slot(name="descripcion-actividad") Arrastra y suelta las palabras en la conversación
+          .dialogo__words__content__words__container.mt-md-3.mb-3.mb-md-0(v-if="wordsToShow.length")
+            template(v-if="touchScreen")
+              .h5.dialogo__words__word(
+                v-for="word in wordsToShow"
+                :key="`word-${word.id}`"
+                :ref="`word-${word.id}`"
+                @touchstart.prevent="onTouchStart(word.id)" 
+                @touchmove.prevent="onTouchMove($event,word.id)"
+                @touchend.prevent="onTouchEnd($event,word.id)"
+                @touchcancel.prevent="onTouchCancel($event,word.id)"
+                :class="{'grabbing': word.id === dragId}"
+                v-html="word.palabra"
+              )
+            template(v-else)
+              .h5.dialogo__words__word(
+                v-for="word in wordsToShow"
+                :key="`word-${word.id}`"
+                @dragstart="onStartDrag(word.id)"
+                @dragend="onEndDrag()"
+                draggable
+                :class="{'grabbing': word.id === dragId}"
+                v-html="word.palabra"
+              )
         .dialogo__words__footer
           .dialogo__score.mt-3(v-if="score")
             .dialogo__score.p-3.approved(v-if="score === 'approved'")
@@ -104,6 +116,12 @@ export default {
   components: {
     Audio,
   },
+  props: {
+    dialogo: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
   data: () => ({
     uid: Math.floor(Math.random() * 10 ** 10),
     touchScreen: false,
@@ -112,64 +130,13 @@ export default {
     answers: {},
     translations: [],
     score: null,
-    dialogo: {
-      personajes: [
-        {
-          nombre: 'Hanna',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-        {
-          nombre: 'Jhon',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-      ],
-      dialogo: [
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology book and the sheets.',
-          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Jhon',
-          textoIng:
-            'I need the *** book and the sheets book and the sheets book and the sheets book and the sheets.',
-          textoEsp:
-            'Yo necesito el libro de *** y las diapositivas Yo necesito el libro de Yo necesito el libro de Yo necesito el libro de .',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'Biology1',
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the ***.',
-          textoEsp: 'Yo necesito el libro de biologia y las ***.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'sheets2',
-        },
-        {
-          personaje: 'Jhon',
-          textoIng: 'I *** the biology books and the sheets',
-          textoEsp: 'Yo *** el libro de biologia y las diapositivas.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'need3',
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the ***.',
-          textoEsp: 'Yo necesito el libro de biologia y las ***.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'sheets4',
-        },
-      ],
-    },
   }),
   computed: {
     dialogoComputed() {
-      if (!this.dialogo.dialogo) return
-
+      if (!this.dialogo.dialogo) return []
       return this.dialogo.dialogo.map((line, idx) => ({
-        id: this.uid + idx + 1,
         ...line,
+        id: this.uid + idx + 1,
         textoIng: this.splitPhrase(line.textoIng),
         textoEsp: this.splitPhrase(line.textoEsp),
         personaje: this.dialogo.personajes.find(
@@ -193,11 +160,6 @@ export default {
   },
   created() {
     this.touchScreen = 'ontouchstart' in document.documentElement
-    if ('ontouchstart' in document.documentElement) {
-      console.log('touch')
-    } else {
-      console.log('no touch')
-    }
   },
   methods: {
     // DRAG EVENTS
@@ -224,12 +186,10 @@ export default {
     },
     // TOUCH EVENTS
     onTouchStart(dragId) {
-      console.log('TOUCH START')
       const dragElm = this.$refs[`word-${dragId}`][0]
       dragElm.classList.add('touch-drag')
     },
     onTouchMove(event, dragId) {
-      console.log('TOUCH MOVE')
       const dragElm = this.$refs[`word-${dragId}`][0]
       const dragElmRect = dragElm.getBoundingClientRect()
       const touch = event.touches[0]
@@ -237,7 +197,6 @@ export default {
       dragElm.style.left = `${touch.clientX - dragElmRect.width / 2}px`
     },
     onTouchEnd(event, dragId) {
-      console.log('TOUCH END')
       if (event.changedTouches.length > 1) {
         this.resetDragElm(dragId)
         return
@@ -248,7 +207,6 @@ export default {
       const isInsideContX =
         touch.clientX > contElmRect.x &&
         touch.clientX < contElmRect.x + contElmRect.width
-
       const isInsideContY =
         touch.clientY > contElmRect.y &&
         touch.clientY < contElmRect.y + contElmRect.height
@@ -262,12 +220,14 @@ export default {
       const isTouching = this.words.some(wordObj => {
         const drop = this.$refs[`phrase-${wordObj.id}`][0]
         const dropRect = drop.getBoundingClientRect()
+        const extraDrop = 25
         const isInsideX =
-          touch.clientX > dropRect.x &&
-          touch.clientX < dropRect.x + dropRect.width
+          touch.clientX > dropRect.x - extraDrop &&
+          touch.clientX < dropRect.x + dropRect.width + extraDrop
         const isInsideY =
-          touch.clientY > dropRect.y &&
-          touch.clientY < dropRect.y + dropRect.height
+          touch.clientY > dropRect.y - extraDrop &&
+          touch.clientY < dropRect.y + dropRect.height + extraDrop
+
         if (isInsideX && isInsideY) {
           dropId = wordObj.id
         }
@@ -283,19 +243,23 @@ export default {
       this.resetDragElm(dragId)
     },
     onTouchCancel(dragId) {
-      console.log('TOUCH CANCEL')
       this.resetDragElm(dragId)
     },
     resetDragElm(id) {
       const dragElm = this.$refs[`word-${id}`][0]
       dragElm.classList.remove('touch-drag')
     },
-    createElement(x, y, color) {
+    createElement(x, y, w, h, color) {
       const id = `dot-${Math.floor(Math.random() * 10 ** 10)}`
       const dot = document.createElement('div')
       dot.classList.add('dot')
+      dot.style.position = `fixed`
       dot.style.top = `${y}px`
       dot.style.left = `${x}px`
+      dot.style.width = `${w}px`
+      dot.style.height = `${h}px`
+      dot.style.opacity = 0.5
+
       dot.style.backgroundColor = color || 'red'
       dot.id = id
       document.body.appendChild(dot)
@@ -340,9 +304,4 @@ export default {
 }
 </script>
 
-<style lang="sass">
-.dot
-  position: fixed
-  width: 10px
-  height: 10px
-</style>
+<style lang="sass"></style>

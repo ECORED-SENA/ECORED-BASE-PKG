@@ -23,13 +23,14 @@
       background-color: $color-acento-contenido
     &::-webkit-scrollbar-thumb:active
       background-color: $color-acento-contenido
-    @media (max-width: 768px)
-      height: 350px
+    @media only screen and (max-width: 768px)
+      height: 300px
       margin-right: 0
       padding-right: 0.5rem
-      // padding: 0
       .dialogo__chat__item
         margin-right: 0
+    @media only screen and (max-width: 450px)
+      height: 250px
     &__item
       display: flex
       align-items: flex-start
@@ -122,6 +123,10 @@
     flex-direction: column
     &__content
       flex: 1 0 0%
+      display: flex
+      flex-direction: column
+      @media only screen and (max-width: 768px)
+        flex-direction: column-reverse
     &__word
       display: inline-block
       padding: 0.2em  0.4em
