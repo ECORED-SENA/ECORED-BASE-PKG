@@ -91,7 +91,7 @@
                   .dialogo__score__icon
                     img(src="@/assets/template/green-check.svg")
                 .col
-                  .dialogo__score__text.h5.mb-0 ¡Muy bien! 
+                  slot.dialogo__score__text.h5.mb-0(name="feedback-correcto") ¡Muy bien!
 
             .dialogo__score.px-3.py-2.disapproved(v-if="score === 'disapproved'")
               .row.align-items-center
@@ -99,13 +99,13 @@
                   .dialogo__score__icon
                     img(src="@/assets/template/red-x.svg")
                 .col
-                  .dialogo__score__text.h5.mb-0 ¡Casi!
+                  slot.dialogo__score__text.h5.mb-0(name="feedback-incorrecto") Incorrecto
 
           .dialogo__words__footer__actions.text-end.mt-3(
             v-if="Object.values(answers).length === words.length"
           )
             button(v-if="score === null" @click="onCheck") Comprobar
-            button(v-else-if="score === 'disapproved'" @click="reset") Volver a empezar
+            button(v-else-if="score === 'disapproved'" @click="reset") Prueba otra vez
 
 </template>
 
