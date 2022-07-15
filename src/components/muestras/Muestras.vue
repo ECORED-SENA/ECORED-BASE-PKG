@@ -1,6 +1,7 @@
 <template lang="pug">
 
 div.mb-5
+  TraduccionAudio.color-primario(:dialogo="traduccionAudio")
 
   #encabezados.titulo-segundo.color-acento-botones
     h2 Encabezados
@@ -1356,13 +1357,20 @@ div.mb-5
   #actividad-dialogo.titulo-segundo.color-acento-botones
     h2 Actividad dialogo Ingles
 
-  Dialogo.color-primario(:dialogo="dialogo")
+  Dialogo.color-primario.mb-5(:dialogo="dialogo")
     template(#nombre-actividad) Arrastrar y Soltar
     template(#titulo-actividad) Titulo de actividad - Completa la conversación.
     template(#descripcion-actividad) Arrastra y suelta el cada una de las palabras en el orden correcto.
     //- template(#feedback-correcto) Bien!
     //- template(#feedback-incorrecto) Mal!
 
+  #actividad-dialogo.titulo-segundo.color-acento-botones
+    h2 Complementos dialogo Ingles
+
+  TraduccionAudio.mb-5.color-primario(:dialogo="traduccionAudio")
+  Traduccion.mb-5.color-secundario(:dialogo="traduccion")
+  DialogoChat.mb-5.color-acento-contenido(:dialogo="dialogoChat")
+  TraduccionChat.mb-5.color-primario(:dialogo="traduccionChat")     
 
   Separador
 
@@ -2390,6 +2398,111 @@ export default {
           personaje: 'Jhon',
           textoIng: 'I *** the biology books and the sheets',
           textoEsp: 'Yo *** el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'need3',
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the ***.',
+          textoEsp: 'Yo necesito el libro de biologia y las ***.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'sheets4',
+        },
+      ],
+    },
+    traduccionAudio: [
+      {
+        textoIng: '(To forget / olvidar) - She is forgetting the keys.',
+        textoEsp: 'Ella está olvidando las llaves.',
+        audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+      },
+    ],
+    traduccion: {
+      dialogo: [
+        {
+          textoIng: 'Charles drinks a soda.',
+          textoEsp: 'Charles bebe un refresco.',
+        },
+      ],
+    },
+    dialogoChat: {
+      personajes: [
+        {
+          nombre: 'Hanna',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+        {
+          nombre: 'Jhon',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+      ],
+      dialogo: [
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology book and the sheets.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng:
+            'I need the book and the sheets book and the sheets book and the sheets book and the sheets.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I the biology books and the sheets',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+      ],
+    },
+    traduccionChat: {
+      personajes: [
+        {
+          nombre: 'Hanna',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+        {
+          nombre: 'Jhon',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+      ],
+      dialogo: [
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology book and the sheets.',
+          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng:
+            'I need the book and the sheets book and the sheets book and the sheets book and the sheets.',
+          textoEsp:
+            'Yo necesito el libro de y las diapositivas Yo necesito el libro de Yo necesito el libro de Yo necesito el libro de .',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'Biology1',
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the ***.',
+          textoEsp: 'Yo necesito el libro de biologia y las ***.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'sheets2',
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I the biology books and the sheets',
+          textoEsp: 'Yo el libro de biologia y las diapositivas.',
           audio: require('@/assets/componentes/audios/audio-ej.mp3'),
           palabra: 'need3',
         },
