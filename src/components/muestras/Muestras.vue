@@ -1363,7 +1363,8 @@ div.mb-5
     template(#descripcion-actividad) Arrastra y suelta el cada una de las palabras en el orden correcto.
     //- template(#feedback-correcto) Bien!
     //- template(#feedback-incorrecto) Mal!
-
+    
+  Separador
   #actividad-dialogo.titulo-segundo.color-acento-botones
     h2 Complementos dialogo Ingles
 
