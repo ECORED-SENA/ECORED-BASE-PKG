@@ -92,8 +92,7 @@
 
     .hide
       opacity: 0
-      pointer-events: none    
-
+      pointer-events: none
 
 .slyder-b
   &__img
@@ -126,8 +125,7 @@
 
   .indicador__container
     transform: translateY(5px)
-  
-  
+
 .slyder
   &__action
     display: flex
@@ -153,8 +151,9 @@
 .slyder-f
   display: flex
   &__main
-    // flex-grow: 1
     width: 84%
+    .horizontal-scroll
+      align-items: stretch !important
 
   &__btn
     width: 8%
@@ -162,6 +161,9 @@
     align-items: center
     justify-content: center
     cursor: pointer
-    // flex-shrink: 1
     i
       font-size: 4rem
+
+  &__slyde
+    & > .tarjeta
+      height: 100%

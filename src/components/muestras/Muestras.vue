@@ -1,7 +1,6 @@
 <template lang="pug">
 
 div.mb-5
-  TraduccionAudio.color-primario(:dialogo="traduccionAudio")
 
   #encabezados.titulo-segundo.color-acento-botones
     h2 Encabezados
@@ -190,7 +189,8 @@ div.mb-5
       ol.lista-ol
         li 
           span.text-bold 1. 
-          | Item lista ordenada 1
+          | Item lista ordenada 1 
+          i Texto en Italica
         li 
           span.text-bold 2. 
           | Item lista ordenada 2
@@ -208,7 +208,8 @@ div.mb-5
       ol.lista-ol
         li 
           span.text-bold a. 
-          | Item lista ordenada a
+          | Item lista ordenada a 
+          i Texto en Italica
         li 
           span.text-bold b. 
           | Item lista ordenada b
@@ -226,7 +227,8 @@ div.mb-5
       ol.lista-ol.lista-ol--separador
         li 
           span.text-bold a. 
-          | Item lista ordenada a
+          | Item lista ordenada a 
+          i Texto en Italica
         li 
           span.text-bold b. 
           | Item lista ordenada b
@@ -247,7 +249,8 @@ div.mb-5
         li 
           .lista-ol--cuadro__vineta
             span 1
-          | Item lista ordenada 1
+          | Item lista ordenada 1 
+          i Texto en Italica
         li 
           .lista-ol--cuadro__vineta
             span 2
@@ -348,13 +351,15 @@ div.mb-5
               | Item lista no ordenada
             li 
               i.fas.fa-angle-right
-              | Item lista no ordenada
+              | Item lista no ordenada 
+              i Texto en Italica
         li 
           i.fas.fa-angle-right
           | Item lista no ordenada
         li 
           i.fas.fa-angle-right
-          | Item lista no ordenada
+          | Item lista no ordenada 
+          i Texto en Italica
 
     .col-sm
       h4 Listado no ordenado básico + separadores
@@ -384,7 +389,8 @@ div.mb-5
       ul.lista-ul--color
         li 
           i.lista-ul__vineta
-          | Item lista no ordenada
+          | Item lista no ordenada 
+          i Texto en Italica
         li
           ul
             li 
@@ -405,7 +411,8 @@ div.mb-5
       ul.lista-ul--color
         li 
           i.fas.fa-brain
-          | Item lista no ordenada
+          | Item lista no ordenada 
+          i Texto en Italica
         li
           ul
             li 
@@ -426,12 +433,14 @@ div.mb-5
       ul.lista-ul--color.lista-ul--separador
         li 
           i.fas.fa-feather
-          | Item lista no ordenada
+          | Item lista no ordenada 
+          i Texto en Italica
         li.pb-0
           ul
             li 
               i.fas.fa-cookie
-              | Item lista no ordenada
+              | Item lista no ordenada 
+              b texto bold
             li 
               i.fas.fa-hat-wizard
               | Item lista no ordenada
@@ -813,7 +822,17 @@ div.mb-5
         img(src='@/assets/template/img-placeholder-1-1.svg', alt='Texto que describa la imagen')
 
   h3.titulo-tercero Cajón texto color G
-  .bloque-texto-g.color-secundario.p-3.p-sm-4.p-md-5
+  .bloque-texto-g.color-secundario.p-3.p-sm-4.p-md-5.mb-5
+    .bloque-texto-g__img(
+      :style="{'background-image': `url(${require('@/assets/curso/img.jpg')})`}"
+    )
+    .bloque-texto-g__texto.p-4
+      p.mb-0 Think about all the possibilities. A good composition is the result of a hierarchy consisting of clearly contrasting elements set with distinct alignments containing irregular intervals of negative space. Nothing of without working at it. Be impossible to ignore.
+        br
+        br
+        | Stand so tall that they can’t look past you. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect accept possibility of failure. 
+
+  .bloque-texto-g.bloque-texto-g--inverso.color-secundario.p-3.p-sm-4.p-md-5
     .bloque-texto-g__img(
       :style="{'background-image': `url(${require('@/assets/curso/img.jpg')})`}"
     )
@@ -950,7 +969,7 @@ div.mb-5
         .col-8
           img(src='@/assets/componentes/ej-05.svg' alt='AvatarTop')
       h2.text-center FIRST
-      p.text-center moment. Abandon the shelter of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
+      p.text-center moment. Abandon the shelter  asdf asdf asdf asdf asdfasdf asaasdfa sdf asdfsadf asd fasd dsf sdf asdfa sdfasdf asd of insecurity. Be bold. Greatness isn’t the height of your stature, it’s the heft of your spirit.
 
     .tarjeta.color-acento-botones.p-4
       .row.justify-content-center.mb-3
@@ -1357,7 +1376,7 @@ div.mb-5
   #actividad-dialogo.titulo-segundo.color-acento-botones
     h2 Actividad dialogo Ingles
 
-  Dialogo.color-primario.mb-5(:dialogo="dialogo")
+  DialogoActividad.color-primario.mb-5(:dialogo="dialogoActividad")
     template(#nombre-actividad) Arrastrar y Soltar
     template(#titulo-actividad) Titulo de actividad - Completa la conversación.
     template(#descripcion-actividad) Arrastra y suelta el cada una de las palabras en el orden correcto.
@@ -1368,10 +1387,9 @@ div.mb-5
   #actividad-dialogo.titulo-segundo.color-acento-botones
     h2 Complementos dialogo Ingles
 
-  TraduccionAudio.mb-5.color-primario(:dialogo="traduccionAudio")
-  Traduccion.mb-5.color-secundario(:dialogo="traduccion")
-  DialogoChat.mb-5.color-acento-contenido(:dialogo="dialogoChat")
-  TraduccionChat.mb-5.color-primario(:dialogo="traduccionChat")     
+  DialogoBurbuja.color-primario.borde.mb-3(:dialogoItem="dialogoItem")
+
+  Dialogo.mb-5.color-secundario.borde(:dialogo="dialogo")  
 
   Separador
 
@@ -2361,161 +2379,6 @@ export default {
     mostrarIndicadorTarjetaAudio: true,
     modal1: false,
     modal2: false,
-    dialogo: {
-      personajes: [
-        {
-          nombre: 'Hanna',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-        {
-          nombre: 'Jhon',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-      ],
-      dialogo: [
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology book and the sheets.',
-          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Jhon',
-          textoIng:
-            'I need the *** book and the sheets book and the sheets book and the sheets book and the sheets.',
-          textoEsp:
-            'Yo necesito el libro de *** y las diapositivas Yo necesito el libro de Yo necesito el libro de Yo necesito el libro de .',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'Biology1',
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the ***.',
-          textoEsp: 'Yo necesito el libro de biologia y las ***.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'sheets2',
-        },
-        {
-          personaje: 'Jhon',
-          textoIng: 'I *** the biology books and the sheets',
-          textoEsp: 'Yo *** el libro de biologia y las diapositivas.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'need3',
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the ***.',
-          textoEsp: 'Yo necesito el libro de biologia y las ***.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'sheets4',
-        },
-      ],
-    },
-    traduccionAudio: [
-      {
-        textoIng: '(To forget / olvidar) - She is forgetting the keys.',
-        textoEsp: 'Ella está olvidando las llaves.',
-        audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-      },
-    ],
-    traduccion: {
-      dialogo: [
-        {
-          textoIng: 'Charles drinks a soda.',
-          textoEsp: 'Charles bebe un refresco.',
-        },
-      ],
-    },
-    dialogoChat: {
-      personajes: [
-        {
-          nombre: 'Hanna',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-        {
-          nombre: 'Jhon',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-      ],
-      dialogo: [
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology book and the sheets.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Jhon',
-          textoIng:
-            'I need the book and the sheets book and the sheets book and the sheets book and the sheets.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Jhon',
-          textoIng: 'I the biology books and the sheets',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-      ],
-    },
-    traduccionChat: {
-      personajes: [
-        {
-          nombre: 'Hanna',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-        {
-          nombre: 'Jhon',
-          img: require('@/assets/componentes/ej-05.svg'),
-        },
-      ],
-      dialogo: [
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology book and the sheets.',
-          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-        },
-        {
-          personaje: 'Jhon',
-          textoIng:
-            'I need the book and the sheets book and the sheets book and the sheets book and the sheets.',
-          textoEsp:
-            'Yo necesito el libro de y las diapositivas Yo necesito el libro de Yo necesito el libro de Yo necesito el libro de .',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'Biology1',
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the ***.',
-          textoEsp: 'Yo necesito el libro de biologia y las ***.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'sheets2',
-        },
-        {
-          personaje: 'Jhon',
-          textoIng: 'I the biology books and the sheets',
-          textoEsp: 'Yo el libro de biologia y las diapositivas.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'need3',
-        },
-        {
-          personaje: 'Hanna',
-          textoIng: 'I need the biology books and the ***.',
-          textoEsp: 'Yo necesito el libro de biologia y las ***.',
-          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
-          palabra: 'sheets4',
-        },
-      ],
-    },
     datosLineaTiempoA: [
       {
         ano: '100.000 - 10.000 A.C.',
@@ -2594,6 +2457,109 @@ export default {
         leyendaImagen: 'Leyenda de la imagen',
       },
     ],
+    dialogoItem: {
+      personaje: {
+        nombre: 'Jhon',
+        img: require('@/assets/componentes/ej-05.svg'),
+      },
+      textoIng: 'She is forgetting the keys.',
+      textoEsp: 'Ella está olvidando las llaves.',
+      audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+    },
+    dialogo: {
+      personajes: [
+        {
+          nombre: 'Hanna',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+        {
+          nombre: 'Jhon',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+      ],
+      dialogo: [
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology book and the sheets.',
+          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I need the book and the sheets',
+          textoEsp: 'Yo necesito el libro de y las diapositivas',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the.',
+          textoEsp: 'Yo necesito el libro de biologia y las.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I the biology books and the sheets',
+          textoEsp: 'Yo el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the.',
+          textoEsp: 'Yo necesito el libro de biologia y las.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+      ],
+    },
+    dialogoActividad: {
+      personajes: [
+        {
+          nombre: 'Hanna',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+        {
+          nombre: 'Jhon',
+          img: require('@/assets/componentes/ej-05.svg'),
+        },
+      ],
+      dialogo: [
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology book and the sheets.',
+          textoEsp: 'Yo necesito el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+        },
+        {
+          personaje: 'Jhon',
+          textoIng:
+            'I need the *** book and the sheets book and the sheets book and the sheets book and the sheets.',
+          textoEsp:
+            'Yo necesito el libro de *** y las diapositivas Yo necesito el libro de Yo necesito el libro de Yo necesito el libro de .',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'Biology1',
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the ***.',
+          textoEsp: 'Yo necesito el libro de biologia y las ***.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'sheets2',
+        },
+        {
+          personaje: 'Jhon',
+          textoIng: 'I *** the biology books and the sheets',
+          textoEsp: 'Yo *** el libro de biologia y las diapositivas.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'need3',
+        },
+        {
+          personaje: 'Hanna',
+          textoIng: 'I need the biology books and the ***.',
+          textoEsp: 'Yo necesito el libro de biologia y las ***.',
+          audio: require('@/assets/componentes/audios/audio-ej.mp3'),
+          palabra: 'sheets4',
+        },
+      ],
+    },
   }),
 }
 </script>

@@ -30,7 +30,6 @@
     &:before
       background-color: $color-acento-botones
 
-
 .bloque-texto-b
   position: relative
   &:before
@@ -150,9 +149,8 @@
   &.color-acento-botones
     background-color: $color-acento-botones
 
-
 .bloque-texto-f
-  display: flex;
+  display: flex
   flex-direction: column
   position: relative
   padding-bottom: 50px
@@ -166,7 +164,7 @@
     bottom: 50px
   &__comillas
     position: initial
-    
+
     i
       position: absolute
       font-size: 2.5em
@@ -183,7 +181,7 @@
         right: 10px
         margin: 0
         transform: translate(-50%,-50%)
-  
+
   &__texto
     position: relative
     *
@@ -239,6 +237,13 @@
     background-color: rgba( $white, .95 )
     *
       display: inline
+
+  &--inverso
+    justify-content: flex-start
+    .bloque-texto-g
+      &__img
+        left: auto
+        right: 0
 
   @media (max-width: $bp-max-md)
     padding-top: 40% !important

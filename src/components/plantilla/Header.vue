@@ -3,7 +3,7 @@ header.header.container-fluid
   .row.align-items-center.justify-content-between
     .col.col-sm-auto.d-flex.align-items-center.justify-content-between.justify-content-sm-start
       
-      .header__menu.me-4.me-sm-5(v-if="$route.name != 'inicio'" @click="toggleMenu(!menuOpen)")
+      .header__menu.me-4.me-sm-5(v-if="$route.name != 'inicio'" @click="toggleMenu")
         .header__menu__btn(:class="{'header__menu__btn--open': menuOpen}")
           .line-2
           .line-1
@@ -42,8 +42,8 @@ export default {
     },
   },
   methods: {
-    toggleMenu(newVal) {
-      this.$store.dispatch('toggleMenu', newVal)
+    toggleMenu() {
+      this.$store.dispatch('toggleMenu', !this.menuOpen)
     },
   },
 }

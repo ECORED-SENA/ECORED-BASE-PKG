@@ -1,57 +1,60 @@
 <template lang="pug">
-aside.aside-menu(:class="{'aside-menu--open': menuOpen}")
-  nav.aside-menu__content
-    .aside-menu__header
-      h4 Desarrollo de contenidos
-    ul.aside-menu__menu
-      template(v-for="(item,index) of menuData")
-        li.aside-menu__menu__item(
-          :key="`menu-item-${index}`"
-          :class="{'aside-menu__menu__item--active' : $route.name == item.nombreRuta}"
-        )
-          router-link.aside-menu__menu__item__lnk(
-            :to="{name: item.nombreRuta}"
-          )
-            span(v-if="item.hasOwnProperty('numero')" v-html="item.numero")
-            span(v-html="item.titulo")
-
-        template(
-          v-if="item.hasOwnProperty('subMenu') && item.subMenu.length"
-        )
-          li.aside-menu__menu__item--sub-menu(
-            v-for="(subItem, subItemIndex) of item.subMenu"
-            :key="`submenu-item-${index}-${subItemIndex}`"
-            :class="{'aside-menu__menu__item--sub-menu--active': $route.hash == `#${subItem.hash}`}"
-          )
-            router-link.aside-menu__menu__item__lnk(
-              :to="{ name: item.nombreRuta , hash: `#${subItem.hash}` }"
+aside
+  transition(name="main-menu" duration="295")
+    .aside-menu(v-if="menuOpen")
+      .aside-menu__black-background(@click="toggleMenu(false)")
+      nav.aside-menu__content
+        .aside-menu__header
+          h4 Desarrollo de contenidos
+        ul.aside-menu__menu
+          template(v-for="(item,index) of menuData")
+            li.aside-menu__menu__item(
+              :key="`menu-item-${index}`"
+              :class="{'aside-menu__menu__item--active' : $route.name == item.nombreRuta}"
             )
-              i(:class="subItem.icono")
-              span(v-html="subItem.numero")
-              span(v-html="subItem.titulo")
+              router-link.aside-menu__menu__item__lnk(
+                :to="{name: item.nombreRuta}"
+              )
+                span(v-if="item.hasOwnProperty('numero')" v-html="item.numero")
+                span(v-html="item.titulo")
 
-    ul.aside-menu__sec-menu
-      template(
-        v-for="(secMenuItem, secMenuIndex) of subMenuData",
-      )
-        li.aside-menu__sec-menu__item(
-          :key="`secMenu-item-${secMenuIndex}`"
-          :class="{'d-none':secMenuItem.titulo.includes('material') && isLocal()}"
-        )
-          a.aside-menu__sec-menu__item__lnk(
-            v-if="secMenuItem.hasOwnProperty('download')"
-            :href="obtenerLink(secMenuItem.download)"
-            target="_blank"
-          )
-            i(:class="secMenuItem.icono")
-            span(v-html="secMenuItem.titulo")
+            template(
+              v-if="item.hasOwnProperty('subMenu') && item.subMenu.length"
+            )
+              li.aside-menu__menu__item--sub-menu(
+                v-for="(subItem, subItemIndex) of item.subMenu"
+                :key="`submenu-item-${index}-${subItemIndex}`"
+                :class="{'aside-menu__menu__item--sub-menu--active': $route.hash == `#${subItem.hash}`}"
+              )
+                router-link.aside-menu__menu__item__lnk(
+                  :to="{ name: item.nombreRuta , hash: `#${subItem.hash}` }"
+                )
+                  i(:class="subItem.icono")
+                  span(v-html="subItem.numero")
+                  span(v-html="subItem.titulo")
 
-          router-link.aside-menu__sec-menu__item__lnk(
-            v-else
-            :to="{name: secMenuItem.nombreRuta}"
+        ul.aside-menu__sec-menu
+          template(
+            v-for="(secMenuItem, secMenuIndex) of subMenuData",
           )
-            i(:class="secMenuItem.icono")
-            span(v-html="secMenuItem.titulo")
+            li.aside-menu__sec-menu__item(
+              :key="`secMenu-item-${secMenuIndex}`"
+              :class="{'d-none':secMenuItem.titulo.includes('material') && isLocal()}"
+            )
+              a.aside-menu__sec-menu__item__lnk(
+                v-if="secMenuItem.hasOwnProperty('download')"
+                :href="obtenerLink(secMenuItem.download)"
+                target="_blank"
+              )
+                i(:class="secMenuItem.icono")
+                span(v-html="secMenuItem.titulo")
+
+              router-link.aside-menu__sec-menu__item__lnk(
+                v-else
+                :to="{name: secMenuItem.nombreRuta}"
+              )
+                i(:class="secMenuItem.icono")
+                span(v-html="secMenuItem.titulo")
 
 </template>
 
@@ -89,23 +92,25 @@ export default {
 
 <style lang="sass">
 .aside-menu
-  position: sticky
+  position: fixed
   top: 70px
-  flex: 0 0 0
-  width: 0
   min-height: calc(100vh - 70px)
   max-height: calc(100vh - 70px)
   background-color: $color-sistema-g
   transition: flex 0.5s ease-in-out, width 0.5s ease-in-out
   overflow-x: hidden
   z-index: 100001
+  width: 300px
+
+  &__black-background
+    position: fixed
+    inset: 0
+    top: 70px
+    background: transparentize($black, 0.2)
+    cursor: pointer
 
   a
     color: $color-sistema-a
-
-  &--open
-    flex: 0 0 300px
-    width: 300px
 
   &__content
     width: 300px
@@ -115,6 +120,8 @@ export default {
     min-height: calc(100vh - 70px)
     max-height: calc(100vh - 70px)
     border-right: 1px solid $color-sistema-e
+    position: absolute
+    background: $white
 
     @media (max-height: 800px)
       min-height: 800px
@@ -200,16 +207,32 @@ export default {
         &:hover
           background-color: $white
 
-  @media (max-width: $bp-max-md)
-    position: fixed
-    top: 70px
-    // width: 300px
-
-    &__content
-      // min-height: 100vh
-      // max-height: 100vh
-
   @media (max-width: $bp-max-xs)
     &__sec-menu
       padding-bottom: 110px
+
+.main-menu-enter-active
+  animation: main-menu-open-animation .3s;
+  .aside-menu__black-background
+    animation:  main-menu-background-animation .3s
+
+
+.main-menu-leave-active
+  animation: main-menu-open-animation .3s reverse
+  .aside-menu__black-background
+    animation:  main-menu-background-animation .3s reverse
+
+@keyframes main-menu-open-animation
+  0%
+    width: 0
+
+  100%
+    width: 300px
+
+@keyframes main-menu-background-animation
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
 </style>

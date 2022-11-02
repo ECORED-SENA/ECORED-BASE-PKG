@@ -1,11 +1,7 @@
 <template lang="pug">
 .curso-main-container.pb-3
   BannerInterno
-  .container.tarjeta.tarjeta--blanca.p-4.p-md-5
-    TraduccionAudio.mb-5.color-primario(:dialogo="traduccionAudio")
-    Traduccion.mb-5.color-secundario(:dialogo="traduccion")
-    DialogoChat.mb-5.color-acento-contenido(:dialogo="dialogoChat")
-    TraduccionChat.mb-5.color-primario(:dialogo="traduccionChat")         
+  .container.tarjeta.tarjeta--blanca.p-4.p-md-5    
     //- El componente "Muestras" tiene las aplicaciones de todos los componentes de la base
     //- se encuentra en src/components/Muestras.vue
     //- Una vez el componente "Muestras" no se necesite 
@@ -16,19 +12,11 @@
 </template>
 
 <script>
-import TraduccionAudio from '../../components/TraduccionAudio.vue'
-import Traduccion from '../../components/Traduccion.vue'
-import DialogoChat from '../../components/DialogoChat.vue'
-import TraduccionChat from '../../components/TraduccionChat.vue'
 import Muestras from '../../components/muestras/Muestras' // borrar una vez el componente "Muestras" no se necesite
 export default {
   name: 'Tema1',
   components: {
     Muestras, // borrar una vez el componente "Muestras" no se necesite
-    TraduccionAudio,
-    Traduccion,
-    DialogoChat,
-    TraduccionChat,
   },
   data: () => ({
     traduccionAudio: [
