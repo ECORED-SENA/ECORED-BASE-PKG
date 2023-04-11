@@ -10,7 +10,7 @@ header.header.container-fluid
           .line-3
         span MENÚ
 
-      img.header__logo.me-4.me-sm-5(src="@/assets/template/logo-sena-naranja.svg")
+      img.header__logo.me-4.me-sm-5(src="@/assets/template/logo-sena.svg")
 
       .d-none.d-md-flex.align-items-center(v-if="isInicio")
         a(href="#contenidos").me-5 Contenidos

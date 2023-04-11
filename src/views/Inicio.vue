@@ -36,8 +36,8 @@ section.inicio
         hr(v-if="index != creditosInicio.length -1")
 
     .text-center(v-else)
-      img.d-inline-block.mb-2(src="@/assets/template/logo-sena-naranja.svg" style="width: 100px")
-      h5.mb-0 Ecosistema de recursos educativos digitales
+      img.d-inline-block.mb-2(src="@/assets/template/logo-sena.svg" style="width: 100px")
+      h5.mb-0 Ecosistema de Recursos Educativos Digitales
   Footer
   
 

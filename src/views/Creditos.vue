@@ -4,15 +4,16 @@
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5
     .creditos.mb-4.mb-md-5
       .creditos__item(
-        v-for="(creditoKey, index) of Object.keys(creditosData)"
-        :class="index != Object.keys(creditosData).length -1 ? 'mb-4' : ''" 
+        v-for="(creditoObj, index) of creditosData"
+        :key="'credito-'+index"
+        :class="index != creditosData.length -1 ? 'mb-4' : ''" 
       )
-        .creditos__titulo {{configTitulos[creditoKey]}}
+        .creditos__titulo {{creditoObj.titulo}}
         table
           tbody
             tr(
-              v-for="(item, idx) of creditosData[creditoKey]" 
-              :key="creditoKey+idx"
+              v-for="(item, idx) of creditoObj.autores" 
+              :key="'autor-'+idx"
             )
               td.text-bold(colspan='2' v-html="renderText(item.nombre)")
               td(colspan='2' v-html="renderText(item.cargo)")
@@ -21,20 +22,11 @@
       .col-md-6.mb-4.mb-md-0
         .tarjeta.credito.p-3.text-center.h-100
           img.d-inline-block(src="@/assets/template/creditos-img.svg" style="width: 70px")
-          p Fotografías y vectores tomados de 
-            a(href="https://www.freepik.es/" target="_blank") www.freepik.es
-            | ,  
-            a(href="https://www.shutterstock.com/" target="_blank") www.shutterstock.com
-            | , 
-            a(href="https://unsplash.com/" target="_blank") unsplash.com 
-            | y 
-            a(href="https://www.flaticon.com/" target="_blank") www.flaticon.com
+          p(v-html="creditosAdicionales.imagenes")
       .col-md-6
         .tarjeta.credito.p-3.text-center.h-100
           img.d-inline-block(src="@/assets/template/creditos-cc.svg" style="width: 70px;")
-          p.mb-0 Licencia creative commons CC BY-NC-SA
-            br
-            a(href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank") ver licencia
+          p.mb-0(v-html="creditosAdicionales.creativeCommons")
 
     Footer(all-round)
   
@@ -62,6 +54,9 @@ export default {
   computed: {
     creditosData() {
       return this.$config.creditos
+    },
+    creditosAdicionales() {
+      return this.$config.creditosAdicionales
     },
   },
   methods: {
