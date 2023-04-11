@@ -1,6 +1,6 @@
 {
   "name": "ecored-base-pkg",
-  "version": "5.4.0",
+  "version": "6.0.0",
   "description": "paquete para la base de desarrollo del SENA 2021",
   "main": "src/main.js",
   "keywords": [
