@@ -14,8 +14,10 @@ aside
             )
               router-link.aside-menu__menu__item__lnk(
                 :to="{name: item.nombreRuta}"
+                @click.native="toggleMenu(false)"
               )
                 span(v-if="item.hasOwnProperty('numero')" v-html="item.numero")
+                i(v-if="item.icono" :class="item.icono")
                 span(v-html="item.titulo")
 
             template(
@@ -28,9 +30,10 @@ aside
               )
                 router-link.aside-menu__menu__item__lnk(
                   :to="{ name: item.nombreRuta , hash: `#${subItem.hash}` }"
+                  @click.native="toggleMenu(false)"
                 )
-                  i(:class="subItem.icono")
-                  span(v-html="subItem.numero")
+                  i(v-if="subItem.icono" :class="subItem.icono")
+                  span(v-if="subItem.numero" v-html="subItem.numero")
                   span(v-html="subItem.titulo")
 
         ul.aside-menu__sec-menu
@@ -46,14 +49,15 @@ aside
                 :href="obtenerLink(secMenuItem.download)"
                 target="_blank"
               )
-                i(:class="secMenuItem.icono")
+                i(v-if="secMenuItem.icono" :class="secMenuItem.icono")
                 span(v-html="secMenuItem.titulo")
 
               router-link.aside-menu__sec-menu__item__lnk(
                 v-else
                 :to="{name: secMenuItem.nombreRuta}"
+                @click.native="toggleMenu(false)"
               )
-                i(:class="secMenuItem.icono")
+                i(v-if="secMenuItem.icono" :class="secMenuItem.icono")
                 span(v-html="secMenuItem.titulo")
 
 </template>
