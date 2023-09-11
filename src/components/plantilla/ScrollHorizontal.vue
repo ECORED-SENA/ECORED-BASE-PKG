@@ -60,10 +60,7 @@ export default {
         selectedElement === null
       )
         return
-      const isSafary = !(
-        navigator.userAgent.includes('Chrome/') ||
-        navigator.userAgent.includes('Firefox/')
-      )
+      const isSafary = false
       const container = this.$refs.hContainer
       const scrollContentTotalWidth =
         selectedElement.offsetWidth * this.ids.length
