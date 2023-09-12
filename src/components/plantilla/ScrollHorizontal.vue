@@ -60,13 +60,10 @@ export default {
         selectedElement === null
       )
         return
-      const isSafary = false
       const container = this.$refs.hContainer
       const scrollContentTotalWidth =
         selectedElement.offsetWidth * this.ids.length
-      let newScrollVal = isSafary
-        ? selectedElement.offsetLeft - container.offsetLeft
-        : selectedElement.offsetLeft
+      let newScrollVal = selectedElement.offsetLeft
       const elementsFitInContainer =
         container.offsetWidth / selectedElement.offsetWidth
       if (
