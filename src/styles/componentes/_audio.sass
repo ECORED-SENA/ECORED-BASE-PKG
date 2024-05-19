@@ -9,7 +9,7 @@
     width: 100%
     display: block
     padding: 0
-    transition-property: background-color, transform  
+    transition-property: background-color, transform
     transition-duration: 0.2s
     &:hover
       transform: scale(1.1)
@@ -61,8 +61,8 @@
       border-color: $color-adicional-2
 
 .tarjeta-audio
-  border: 2px solid 
-  padding: 0.65em 0.7em 0.7em 1.5em 
+  border: 2px solid
+  padding: 0.65em 0.7em 0.7em 1.5em
   border-radius: 30px
   min-height: 60px
 
@@ -89,6 +89,9 @@
         width: 10px
         height: 10px
         border: none
+  &__tiempo
+    font-weight: bold
+    line-height: 1.1em
 
   &.color-primario
     border-color: $color-primario
@@ -97,13 +100,15 @@
     .tarjeta-audio__input
       input[type=range]
         background: rgba($color-primario, 0.2)
+        background-image: linear-gradient($color-primario, $color-primario)
         &::-webkit-slider-runnable-track
           background: rgba($color-primario, 0.2)
         &::-webkit-slider-thumb
           background-color: $color-primario
         &::-moz-range-thumb
           background-color: $color-primario
-        background-image: linear-gradient($color-primario, $color-primario)
+    .tarjeta-audio__tiempo
+      color: $color-primario
 
   &.color-secundario
     border-color: $color-secundario
@@ -118,7 +123,9 @@
           background-color: $color-secundario
         &::-moz-range-thumb
           background-color: $color-secundario
-        background-image: linear-gradient($color-secundario, $color-secundario)
+          background-image: linear-gradient($color-secundario, $color-secundario)
+    .tarjeta-audio__tiempo
+      color: $color-secundario
 
   &.color-acento-contenido
     border-color: $color-acento-contenido
@@ -133,7 +140,9 @@
           background-color: $color-acento-contenido
         &::-moz-range-thumb
           background-color: $color-acento-contenido
-        background-image: linear-gradient($color-acento-contenido, $color-acento-contenido)
+          background-image: linear-gradient($color-acento-contenido, $color-acento-contenido)
+    .tarjeta-audio__tiempo
+      color: $color-acento-contenido
 
   &.color-acento-botones
     border-color: $color-acento-botones
@@ -148,6 +157,6 @@
           background-color: $color-acento-botones
         &::-moz-range-thumb
           background-color: $color-acento-botones
-        background-image: linear-gradient($color-acento-botones, $color-acento-botones)
-
-
+          background-image: linear-gradient($color-acento-botones, $color-acento-botones)
+    .tarjeta-audio__tiempo
+      color: $color-acento-botones

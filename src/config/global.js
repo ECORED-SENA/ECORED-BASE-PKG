@@ -238,6 +238,13 @@ export default {
           },
         ],
       },
+      {
+        nombreRuta: 'actividadDidactica',
+        icono: 'far fa-file-alt',
+        numero: '3',
+        titulo: 'Actividad Nueva',
+        desarrolloContenidos: true,
+      },
     ],
     subMenu: [
       // {

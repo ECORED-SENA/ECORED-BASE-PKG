@@ -7,7 +7,15 @@
     //- Una vez el componente "Muestras" no se necesite 
     //- Se debe borrar el "import Muestras from '../components/Muestras'" y en "components" en "<script"
     //- esto evitará que se compile en la carpeta final de distribución
-    Muestras
+
+    div(style="width: 50%")
+      TarjetaAudio.color-primario.mb-3(
+        texto="Texto de muestra  "
+        :audio="require('../../assets/componentes/audios/audio-ej.mp3')"
+        tiempo
+        @audio-hover="mostrarIndicadorTarjetaAudio = false"
+      )
+    //- Muestras
   
 </template>
 

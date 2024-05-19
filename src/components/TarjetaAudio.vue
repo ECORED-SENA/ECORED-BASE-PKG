@@ -8,9 +8,10 @@
           v-model="sliderVal",
           ref="sliderElement",
           type="range" max="100", 
-          :style="{'background-size': `${this.sliderVal}% 100%`}",
+          :style="{'background-size': `${sliderVal}% 100%`}",
           @input="onSliderMove"
         )
+      .tarjeta-audio__tiempo.text-end.pt-1(v-if="tiempo") {{currentTimeDisplay}}/{{audioDurationDisplay}}
     .col-auto.ps-0
       .audio.position-relative(@mouseover.once="$emit('audio-hover')")
         slot
@@ -37,17 +38,16 @@ export default {
       type: Boolean,
       default: false,
     },
+    tiempo: {
+      type: Boolean,
+      default: false,
+    },
   },
-  data: () => ({
-    sliderVal: 0,
-  }),
-  mounted() {
-    if (!this.noBarra) {
-      this.audioElement.ontimeupdate = () => {
-        this.sliderVal =
-          (this.audioElement.currentTime / this.audioDuration) * 100
-      }
-    }
+  data: () => ({}),
+  computed: {
+    sliderVal() {
+      return (this.currentTime / this.audioDuration) * 100
+    },
   },
   methods: {
     onSliderMove() {

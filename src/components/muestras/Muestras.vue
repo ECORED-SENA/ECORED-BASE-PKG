@@ -146,6 +146,7 @@ div.mb-5
       )
       TarjetaAudio.color-acento-botones.mb-3(
         texto="Texto de muestra "
+        tiempo
         :audio="require('../../assets/componentes/audios/audio-ej.mp3')"
       )
   Separador

@@ -53,6 +53,14 @@ const router = new VueRouter({
       //   import(/* webpackChunkName: "actividad" */ '../views/Actividad.vue'),
     },
     {
+      path: '/actividad-didactica',
+      name: 'actividadDidactica',
+      component: () =>
+        import(
+          /* webpackChunkName: "actividad" */ '../views/ActividadDidactica.vue'
+        ),
+    },
+    {
       path: '/glosario',
       name: 'glosario',
       component: () =>

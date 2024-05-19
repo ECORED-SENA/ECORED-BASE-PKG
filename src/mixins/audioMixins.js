@@ -8,13 +8,20 @@ export default {
   data: () => ({
     audioElement: null,
     audioCanPlay: false,
+    audioDuration: 0,
+    currentTime: 0,
     state: 'pause',
   }),
   computed: {
-    audioDuration() {
-      if (!this.audioElement) return
-      const audioElBuff = this.audioElement.buffered
-      return audioElBuff.end(audioElBuff.length - 1)
+    currentTimeDisplay() {
+      return this.currentTime
+        .toFixed(2)
+        .toLocaleString({ style: 'unit', unit: 'second' })
+    },
+    audioDurationDisplay() {
+      return this.audioDuration
+        .toFixed(2)
+        .toLocaleString({ style: 'unit', unit: 'second' })
     },
   },
   mounted() {
@@ -22,12 +29,16 @@ export default {
     this.audioElement.oncanplay = () => {
       this.audioCanPlay = true
     }
-    this.audioElement.onloadedmetadata = () => {
+    this.audioElement.onloadedmetadata = ({ target }) => {
       this.audioCanPlay = true
+      this.audioDuration = target.duration
     }
     this.audioElement.onended = () => {
       this.audioElement.currentTime = 0
       this.state = 'pause'
+    }
+    this.audioElement.ontimeupdate = ({ target }) => {
+      this.currentTime = target.currentTime
     }
   },
   beforeDestroy() {
