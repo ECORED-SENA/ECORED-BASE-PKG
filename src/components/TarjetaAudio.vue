@@ -6,12 +6,14 @@
       .tarjeta-audio__input.mt-2(v-if="!noBarra")
         input(
           v-model="sliderVal",
-          ref="sliderElement",
-          type="range" max="100", 
+          type="range", 
+          max="100", 
           :style="{'background-size': `${sliderVal}% 100%`}",
           @input="onSliderMove"
         )
-      .tarjeta-audio__tiempo.text-end.pt-1(v-if="tiempo") {{currentTimeDisplay}}/{{audioDurationDisplay}}
+      .tarjeta-audio__tiempo.text-end.pt-1(v-if="tiempo")
+        span {{currentTimeDisplay}}
+        span {{audioDurationDisplay}}
     .col-auto.ps-0
       .audio.position-relative(@mouseover.once="$emit('audio-hover')")
         slot
@@ -43,10 +45,12 @@ export default {
       default: false,
     },
   },
-  data: () => ({}),
-  computed: {
-    sliderVal() {
-      return (this.currentTime / this.audioDuration) * 100
+  data: () => ({
+    sliderVal: 0,
+  }),
+  watch: {
+    currentTime() {
+      this.sliderVal = (this.currentTime / this.audioDuration) * 100
     },
   },
   methods: {

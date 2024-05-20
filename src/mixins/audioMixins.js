@@ -14,14 +14,10 @@ export default {
   }),
   computed: {
     currentTimeDisplay() {
-      return this.currentTime
-        .toFixed(2)
-        .toLocaleString({ style: 'unit', unit: 'second' })
+      return this.getTimeFormated(this.currentTime)
     },
     audioDurationDisplay() {
-      return this.audioDuration
-        .toFixed(2)
-        .toLocaleString({ style: 'unit', unit: 'second' })
+      return this.getTimeFormated(this.audioDuration)
     },
   },
   mounted() {
@@ -45,6 +41,14 @@ export default {
     this.audioElement.remove()
   },
   methods: {
+    getTimeFormated(time) {
+      const totalSeconds = Math.floor(time)
+      let minutes = Math.floor(totalSeconds / 60)
+      let seconds = totalSeconds % 60
+      minutes = minutes < 10 ? `0${minutes}` : minutes
+      seconds = seconds < 10 ? `0${seconds}` : seconds
+      return `${minutes}:${seconds}`
+    },
     createAudioElement() {
       const audioElement = document.createElement('audio')
       audioElement.setAttribute('preload', 'metadata')
