@@ -52,6 +52,10 @@ export default {
       type: Object,
       required: true,
     },
+    mezclarRespuestas: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     intentos: 0,
@@ -64,7 +68,9 @@ export default {
       if (!this.cuestionario.preguntas) return []
       return this.shuffle(this.cuestionario.preguntas).map(pregunta => ({
         ...pregunta,
-        opciones: this.shuffle(pregunta.opciones),
+        opciones: this.mezclarRespuestas
+          ? this.shuffle(pregunta.opciones)
+          : pregunta.opciones,
         intentos: this.intentos,
       }))
     },
