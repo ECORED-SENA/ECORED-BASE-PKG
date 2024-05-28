@@ -65,10 +65,14 @@ export default {
   }),
   computed: {
     preguntas() {
-      if (!this.cuestionario.preguntas) return []
-      return this.shuffle(this.cuestionario.preguntas).map(pregunta => ({
+      const { preguntas, barajarPreguntas } = this.cuestionario
+      if (!preguntas) return []
+      const preguntasFinales = barajarPreguntas
+        ? this.shuffle(preguntas)
+        : preguntas
+      return preguntasFinales.map(pregunta => ({
         ...pregunta,
-        opciones: this.mezclarRespuestas
+        opciones: pregunta.barajarRespuestas
           ? this.shuffle(pregunta.opciones)
           : pregunta.opciones,
         intentos: this.intentos,

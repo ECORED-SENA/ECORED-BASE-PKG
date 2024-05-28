@@ -19,11 +19,13 @@ export default {
       tema: 'Tema de cuestionario',
       titulo: 'Titulo del Cuestionario',
       introduccion: 'Breve descripción o instrucciones del cuestionario.',
+      barajarPreguntas: false,
       preguntas: [
         {
           id: 1,
-          texto: 'Texto de la primera pregunta',
+          texto: 'Texto de la primera pregunta 1',
           imagen: require('@/assets/curso/banner-princiapal.svg'),
+          barajarRespuestas: true,
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
             { id: 'b', texto: 'Opción B', esCorrecta: true },
@@ -36,8 +38,9 @@ export default {
         },
         {
           id: 2,
-          texto: 'Texto de la segunda pregunta',
+          texto: 'Texto de la segunda pregunta 2',
           imagen: require('@/assets/curso/banner-princiapal.svg'),
+          barajarRespuestas: true,
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
             { id: 'b', texto: 'Opción B', esCorrecta: false },
@@ -50,7 +53,7 @@ export default {
         },
         {
           id: 3,
-          texto: 'Texto de la tercera pregunta',
+          texto: 'Texto de la tercera pregunta 3',
           imagen: require('@/assets/curso/banner-princiapal.svg'),
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
@@ -63,8 +66,9 @@ export default {
         },
         {
           id: 4,
-          texto: 'Texto de la cuarta pregunta',
+          texto: 'Texto de la cuarta pregunta 4',
           imagen: require('@/assets/curso/banner-princiapal.svg'),
+          barajarRespuestas: true,
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: true },
             { id: 'b', texto: 'Opción B', esCorrecta: false },
@@ -76,7 +80,7 @@ export default {
         },
         {
           id: 5,
-          texto: 'Texto de la quinta pregunta',
+          texto: 'Texto de la quinta pregunta 5',
           imagen: require('@/assets/curso/banner-princiapal.svg'),
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
