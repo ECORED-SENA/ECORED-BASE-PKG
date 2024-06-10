@@ -2,6 +2,16 @@
 
 Estos son los cambios hechos en la ECORED-BASE-2021
 
+## 6.0.2 - 10-06-2024
+
+### Agregado
+
+- Nuevo componente de actividad de aprendizaje (Actividad)
+
+### Arreglado
+
+- Mejora en tarjeta de audio para mostrar tiempo de reproduccion
+
 ## 6.0.1 - 16-04-2023
 
 ### Arreglado
