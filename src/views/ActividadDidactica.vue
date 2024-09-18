@@ -24,7 +24,7 @@ export default {
         {
           id: 1,
           texto: 'Texto de la primera pregunta 1',
-          imagen: require('@/assets/curso/banner-princiapal.svg'),
+          imagen: require('@/assets/componentes/pregunta_1.svg'),
           barajarRespuestas: true,
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
@@ -39,7 +39,7 @@ export default {
         {
           id: 2,
           texto: 'Texto de la segunda pregunta 2',
-          imagen: require('@/assets/curso/banner-princiapal.svg'),
+          imagen: require('@/assets/componentes/pregunta_1.svg'),
           barajarRespuestas: true,
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
@@ -54,7 +54,7 @@ export default {
         {
           id: 3,
           texto: 'Texto de la tercera pregunta 3',
-          imagen: require('@/assets/curso/banner-princiapal.svg'),
+          imagen: require('@/assets/componentes/pregunta_1.svg'),
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
             { id: 'b', texto: 'Opción B', esCorrecta: false },
@@ -67,7 +67,7 @@ export default {
         {
           id: 4,
           texto: 'Texto de la cuarta pregunta 4',
-          imagen: require('@/assets/curso/banner-princiapal.svg'),
+          imagen: require('@/assets/componentes/pregunta_1.svg'),
           barajarRespuestas: true,
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: true },
@@ -81,7 +81,7 @@ export default {
         {
           id: 5,
           texto: 'Texto de la quinta pregunta 5',
-          imagen: require('@/assets/curso/banner-princiapal.svg'),
+          imagen: require('@/assets/componentes/pregunta_1.svg'),
           opciones: [
             { id: 'a', texto: 'Opción A', esCorrecta: false },
             { id: 'b', texto: 'Opción B', esCorrecta: true },
