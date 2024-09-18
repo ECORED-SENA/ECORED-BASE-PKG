@@ -15,7 +15,7 @@
         <template v-if="aprobado">
           <h3>¡BUEN TRABAJO!</h3>
           <p class="mb-0 text-center">
-            Se evidencia una buen manejo de los conceptos estudiados en esta
+            Se evidencia un buen manejo de los conceptos estudiados en esta
             unidad.
           </p>
         </template>
