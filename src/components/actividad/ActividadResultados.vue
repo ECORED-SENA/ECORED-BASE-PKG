@@ -1,8 +1,8 @@
 <template>
   <div class="row align-items-center justify-content-around">
     <div class="col-5">
-      <img v-if="aprobado" src="@/assets/curso/banner-princiapal.svg" alt="" />
-      <img v-else src="@/assets/curso/banner-princiapal.svg" alt="" />
+      <img v-if="aprobado" src="" alt="" />
+      <img v-else src="" alt="" />
     </div>
     <div class="col-4">
       <div class="d-flex align-items-center flex-column">
